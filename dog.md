@@ -48,7 +48,7 @@
 ```
 
 ###第三方账号登录
-####接口:/user/oauth/reg
+####接口:/user/oauth/login
 ####请求方式:POST/GET
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
@@ -77,19 +77,124 @@
 }
 ```
 
-
 ###邮箱注册
-
-
+####接口:/user/reg
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|email|字符串|用户注册邮箱|是|test@holaverse.com|
+|nickname|字符串|用户昵称|是|165464616546|
+|password|字符串|用户密码|是|123456|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":{
+        "token":"",
+        "userId":"",
+        "nickname":"",
+        "avatar":"",
+        "thumbnail":""
+    }
+}
+```
+####失败返回值
+```
+{
+    "ret":500,
+    "errcode":"SERVER_ERROR"
+}
+```
 
 ###邮箱登录
-
+####接口:/user/login
+####请求方式:POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|email|字符串|用户注册邮箱|是|test@holaverse.com|
+|password|字符串|用户密码|是|123456|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":{
+        "token":"",
+        "userId":"",
+        "nickname":"",
+        "avatar":"",
+        "thumbnail":""
+    }
+}
+```
+####失败返回值
+```
+{
+    "ret":500,
+    "errcode":"SERVER_ERROR"
+}
+```
 
 
 ###已有账号绑定第三方账号
-
+####接口:/user/bind
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|accessToken|字符串|第三方登录成功凭证|是|asdf2jr2ojflajfjlkajfsdfsaf|
+|oauthId|字符串|第三方系统唯一标识|是|165464616546|
+|from|字符串|第三方账号来源,如fb或者gg|是|fb|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+####失败返回值
+```
+{
+    "ret":500,
+    "errcode":"SERVER_ERROR"
+}
+```
 
 
 ###已有账号加入家庭
+####接口:/user/join
+####请求方式:POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|userId|字符串|用户唯一id|是|asdf2jr2ojflajfjlkajfsdfsaf|
+|familyId|字符串|家庭唯一id|是|165464616546|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+####失败返回值
+```
+{
+    "ret":500,
+    "errcode":"SERVER_ERROR"
+}
+```
 #错误码
 |错误码|含义|
+|---|---|
+|SERVER_ERROR|系统错误|
+|PARAM_ERROR|参数错误|
+|USER_NOT_LOGIN|用户未登录|
+|USER_LOGIN_FAIL|用户登录失败|
+|USER_IS_CANCELED|用户被封禁|
+|NICKNAME_HAS_EXIST|昵称已经存在|
+|NICKNAME_IS_INVALID|昵称不合法|
+|OAUTH_ALREADY_BIND|第三方账号已经绑定别的用户|
+|USER_EXISTS|用户已经存在|
+|USER_NOT_EXIST|用户已经加入某个家庭|
+|USER_NOT_EXIST|用户不存在|
