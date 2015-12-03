@@ -3,6 +3,7 @@
 |---|---|---|---|---|
 |token|字符串|用户登录凭证|是(登录、注册接口除外)||
 |tz|字符串|用户所在时区|是|Asia/Shanghai|
+|pf|字符串|客户端平台类型,ios或者android|是|ios|
 #接口域名
   测试:api.test.enterest.me
   正式:api.enterest.me
