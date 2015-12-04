@@ -5,8 +5,34 @@
 |tz|字符串|用户所在时区|是|Asia/Shanghai|
 |pf|字符串|客户端平台类型,ios或者android|是|ios|
 #接口域名
+```
   测试:api.test.enterest.me
   正式:api.enterest.me
+```
+#接口返回值说明
+1:接口返回类型均为json格式
+2:ret参数用于表示是否成功,200为成功,500为失败
+3:若成功,可以在data里获得结果,失败则可以通过errcode获得出错原因,错误代码列表可见本文末尾
+如成功:
+```
+{
+    "ret":200,
+    "data":{
+        "token":"",
+        "userId":"",
+        "nickname":"",
+        "avatar":"",
+        "thumbnail":""
+    }
+}
+```
+失败:
+```
+{
+    "ret":500,
+    "errcode":"SERVER_ERROR"
+}
+```
 #接口列表
 ##用户相关接口
 ###第三方账号注册
@@ -40,13 +66,6 @@
     }
 }
 ```
-####失败返回值
-```
-{
-    "ret":500,
-    "errcode":"SERVER_ERROR"
-}
-```
 
 ###第三方账号登录
 ####接口:/user/oauth/login
@@ -70,13 +89,6 @@
     }
 }
 ```
-####失败返回值
-```
-{
-    "ret":500,
-    "errcode":"SERVER_ERROR"
-}
-```
 
 ###邮箱注册
 ####接口:/user/reg
@@ -85,8 +97,9 @@
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
 |email|字符串|用户注册邮箱|是|test@holaverse.com|
-|nickname|字符串|用户昵称|是|165464616546|
+|nickname|字符串|用户昵称|是|Jimmy|
 |password|字符串|用户密码|是|123456|
+|avatar|字符串|用户头像|否|/avatar/321323.jpg|
 ####成功返回值
 ```
 {
@@ -98,13 +111,6 @@
         "avatar":"",
         "thumbnail":""
     }
-}
-```
-####失败返回值
-```
-{
-    "ret":500,
-    "errcode":"SERVER_ERROR"
 }
 ```
 
@@ -129,14 +135,6 @@
     }
 }
 ```
-####失败返回值
-```
-{
-    "ret":500,
-    "errcode":"SERVER_ERROR"
-}
-```
-
 
 ###已有账号绑定第三方账号
 ####接口:/user/bind
@@ -154,14 +152,6 @@
     "data":""
 }
 ```
-####失败返回值
-```
-{
-    "ret":500,
-    "errcode":"SERVER_ERROR"
-}
-```
-
 
 ###已有账号加入家庭
 ####接口:/user/join
@@ -178,13 +168,7 @@
     "data":""
 }
 ```
-####失败返回值
-```
-{
-    "ret":500,
-    "errcode":"SERVER_ERROR"
-}
-```
+
 #错误码
 |错误码|含义|
 |---|---|
@@ -199,3 +183,4 @@
 |USER_EXISTS|用户已经存在|
 |USER_NOT_EXIST|用户已经加入某个家庭|
 |USER_NOT_EXIST|用户不存在|
+|VALID_FAILED|第三方账号二次校验失败|
