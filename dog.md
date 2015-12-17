@@ -36,24 +36,17 @@
 ```
 #接口列表
 ##用户相关接口
-###第三方账号注册
-####接口:/user/oauth/reg
-####请求方式:POST/GET
+###用户登录
+####接口:/passport/login
+####请求方式:POST
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|accessToken|字符串|第三方登录成功凭证|是|asdf2jr2ojflajfjlkajfsdfsaf|
-|oauthId|字符串|第三方系统唯一标识|是|165464616546|
-|nickname|字符串|用户昵称,必须唯一|是|张三|
-|from|字符串|第三方账号来源,如fb或者gg|是|fb|
-|avatar|字符串|用户头像|是|/avatar/232.png|
-|birthday|字符串|用户生日,格式为yyyy-MM-dd|否|1985-02-14|
-|gender|字符串|第三方系统里的用户性别|否|male|
-|locale|字符串|用户语言|否||
-|timezone|字符串|用户所在时区|是|8|
-|locationId|字符串|用户所在地区id|否||
-|locationName|字符串|用户所在地区名|否||
-|familyId|字符串|用户需要加入的家庭id|否|sldfjsljfoi32uor23rf2jl|
+|accessToken|字符串|第三方登录成功凭证|是(type为fb或gg时必须)|asdf2jr2ojflajfjlkajfsdfsaf|
+|oauthId|字符串|第三方系统唯一标识|是(type为fb或gg时必须)|165464616546|
+|type|字符串|第三方账号来源,值为:fb\gg\email|是|fb|
+|email|字符串|邮箱|是(type为email时必须)|/avatar/232.png|
+|password|字符串|密码|是(type为email时必须)|1985-02-14|
 ####成功返回值
 ```
 {
@@ -68,7 +61,7 @@
 }
 ```
 
-###第三方账号登录
+###用户注册
 ####接口:/user/oauth/login
 ####请求方式:POST/GET
 ####接口参数
@@ -88,116 +81,6 @@
         "avatar":"",
         "thumbnail":""
     }
-}
-```
-
-###邮箱注册
-####接口:/user/reg
-####请求方式:GET/POST
-####接口参数
-|参数名|类型|描述|是否必须|示例|
-|---|---|---|---|---|
-|email|字符串|用户注册邮箱|是|test@holaverse.com|
-|nickname|字符串|用户昵称|是|Jimmy|
-|password|字符串|用户密码|是|123456|
-|avatar|字符串|用户头像|否|/avatar/321323.jpg|
-####成功返回值
-```
-{
-    "ret":200,
-    "data":{
-        "token":"",
-        "userId":"",
-        "nickname":"",
-        "avatar":"",
-        "thumbnail":""
-    }
-}
-```
-
-###邮箱登录
-####接口:/user/login
-####请求方式:POST
-####接口参数
-|参数名|类型|描述|是否必须|示例|
-|---|---|---|---|---|
-|email|字符串|用户注册邮箱|是|test@holaverse.com|
-|password|字符串|用户密码|是|123456|
-####成功返回值
-```
-{
-    "ret":200,
-    "data":{
-        "token":"",
-        "userId":"",
-        "nickname":"",
-        "avatar":"",
-        "thumbnail":""
-    }
-}
-```
-
-###已有账号绑定第三方账号
-####接口:/user/bind
-####请求方式:GET/POST
-####接口参数
-|参数名|类型|描述|是否必须|示例|
-|---|---|---|---|---|
-|accessToken|字符串|第三方登录成功凭证|是|asdf2jr2ojflajfjlkajfsdfsaf|
-|oauthId|字符串|第三方系统唯一标识|是|165464616546|
-|from|字符串|第三方账号来源,如fb或者gg|是|fb|
-####成功返回值
-```
-{
-    "ret":200,
-    "data":""
-}
-```
-
-###已有账号加入家庭
-####接口:/user/join
-####请求方式:POST
-####接口参数
-|参数名|类型|描述|是否必须|示例|
-|---|---|---|---|---|
-|userId|字符串|用户唯一id|是|asdf2jr2ojflajfjlkajfsdfsaf|
-|familyId|字符串|家庭唯一id|是|165464616546|
-####成功返回值
-```
-{
-    "ret":200,
-    "data":""
-}
-```
-
-##存储相关接口
-###获得上传token
-####接口:/store/token
-####请求方式:POST/GET
-####接口参数
-无
-####成功返回值
-```
-{
-    "ret":200,
-    "data":"saldfjasfsdfsadfsadfsdf"
-}
-```
-
-###批量删除文件
-####接口:/store/delete
-####请求方式:POST/GET
-####接口参数
-|参数名|类型|描述|是否必须|示例|
-|---|---|---|---|---|
-|fileKey|字符串|文件路径|是|/avatar/2323424.jpg|
-|fileKey|字符串|文件路径|是|/avatar/2323425.jpg|
-有多张图片,则fileKey重复多次
-####成功返回值
-```
-{
-    "ret":200,
-    "data":true
 }
 ```
 
