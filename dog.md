@@ -56,7 +56,18 @@
         "userId":"",
         "nickname":"",
         "avatar":"",
-        "thumbnail":""
+        "thumbnail":"",
+        "families":[
+          {
+            "familyId" : "",
+            "pets" : [
+              "id" : "",
+              "name" : "",
+              "avatar" : "",
+              "gender" : ""
+            ]
+          }
+        ]
     }
 }
 ```
