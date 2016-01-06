@@ -251,24 +251,24 @@ familyId:若有,则看isApply,看是否是申请,若isApply为true代表是申�
 }
 ```
 
-###阅读信息
+###阅读信息,根据会话id,返回所有未读的消息
 ####接口:/chat/read
 ####请求方式:GET/POST
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|messageId|字符串|推送中获得的消息id|是|dsdfsldfjlasfe|
+|sessionId|字符串|推送中获得的会话id|是|dsdfsldfjlasfe|
 ####成功返回值
 ```
 {
     "ret":200,
-    "data":{
+    "data":[{
       "id":"sdflsjdflsjldfjslfdjlsdjflsf",
       "from":"sdfsdafsadfasdfsdfasdfasf23223",
       "to":"sdfasfweefweafaef2324e",
       "type":"TEXT",
       "sessionId":"1346654664"
-    }
+    }]
 }
 ```
 
@@ -289,12 +289,14 @@ familyId:若有,则看isApply,看是否是申请,若isApply为true代表是申�
       "id":"sdflsjdflsjldfjslfdjlsdjflsf",
       "from":"sdfsdafsadfasdfsdfasdfasf23223",
       "to":"sdfasfweefweafaef2324e",
+      "content":"你好啊,美女",
       "type":"TEXT"
     },{
       "id":"sdflsjdflsjldfjslfdjlsdjflsf",
       "from":"sdfsdafsadfasdfsdfasdfasf23223",
       "to":"sdfasfweefweafaef2324e",
-      "type":"TEXT"
+      "url":"http://xxx.xxx/xxx.jpg",
+      "type":"IMAGE"
     }]
 }
 ```
