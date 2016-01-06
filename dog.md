@@ -230,6 +230,75 @@ familyId:若有,则看isApply,看是否是申请,若isApply为true代表是申�
 }
 ```
 
+##聊天接口
+###发送信息
+####接口:/chat/send
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|to|字符串|接收用户id|是|dsdfsldfjlasfe|
+|content|字符串|正文|否,当且仅当是文字信息时为必须|你好啊,美女|
+|url|字符串|资源地址|否,当且仅当不是文字信息时为必须|http://sss/sss.amr|
+|type|字符串|消息类型,可选值为(TEXT,AUDIO,VEDIO,IMAGE,LOCATION)|是|text|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":{
+      "messageId":"sdflsjdflsjldfjslfdjlsdjflsf"
+    }
+}
+```
+
+###阅读信息
+####接口:/chat/read
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|messageId|字符串|推送中获得的消息id|是|dsdfsldfjlasfe|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":{
+      "id":"sdflsjdflsjldfjslfdjlsdjflsf",
+      "from":"sdfsdafsadfasdfsdfasdfasf23223",
+      "to":"sdfasfweefweafaef2324e",
+      "type":"TEXT",
+      "sessionId":"1346654664"
+    }
+}
+```
+
+###获得会话信息
+####接口:/chat/list
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|sessionId|字符串|推送中获得的会话id|是|dsdfsldfjlasfe|
+|page|数字|分页|否,默认为1|1|
+|psize|数字|消息数|否,默认为10|15|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":[{
+      "id":"sdflsjdflsjldfjslfdjlsdjflsf",
+      "from":"sdfsdafsadfasdfsdfasdfasf23223",
+      "to":"sdfasfweefweafaef2324e",
+      "type":"TEXT"
+    },{
+      "id":"sdflsjdflsjldfjslfdjlsdjflsf",
+      "from":"sdfsdafsadfasdfsdfasdfasf23223",
+      "to":"sdfasfweefweafaef2324e",
+      "type":"TEXT"
+    }]
+}
+```
+
 #错误码
 |错误码|含义|
 |---|---|
