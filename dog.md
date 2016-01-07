@@ -237,7 +237,7 @@ familyId:若有,则看isApply,看是否是申请,若isApply为true代表是申�
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|to|字符串|接收用户id|是|dsdfsldfjlasfe|
+|receiver|字符串|接收用户id|是|dsdfsldfjlasfe|
 |content|字符串|正文|否,当且仅当是文字信息时为必须|你好啊,美女|
 |url|字符串|资源地址|否,当且仅当不是文字信息时为必须|http://sss/sss.amr|
 |type|字符串|消息类型,可选值为(TEXT,AUDIO,VEDIO,IMAGE,LOCATION)|是|text|
@@ -264,8 +264,8 @@ familyId:若有,则看isApply,看是否是申请,若isApply为true代表是申�
     "ret":200,
     "data":[{
       "id":"sdflsjdflsjldfjslfdjlsdjflsf",
-      "from":"sdfsdafsadfasdfsdfasdfasf23223",
-      "to":"sdfasfweefweafaef2324e",
+      "sender":"sdfsdafsadfasdfsdfasdfasf23223",
+      "receiver":"sdfasfweefweafaef2324e",
       "type":"TEXT",
       "sessionId":"1346654664"
     }]
@@ -279,22 +279,22 @@ familyId:若有,则看isApply,看是否是申请,若isApply为true代表是申�
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
 |sessionId|字符串|推送中获得的会话id|是|dsdfsldfjlasfe|
-|page|数字|分页|否,默认为1|1|
-|psize|数字|消息数|否,默认为10|15|
+|maxId|字符串|最后一条记录|是|2323rfasdfasdfasdfsaf|
+|size|数字|消息数|否,默认为10|15|
 ####成功返回值
 ```
 {
     "ret":200,
     "data":[{
       "id":"sdflsjdflsjldfjslfdjlsdjflsf",
-      "from":"sdfsdafsadfasdfsdfasdfasf23223",
-      "to":"sdfasfweefweafaef2324e",
+      "sender":"sdfsdafsadfasdfsdfasdfasf23223",
+      "receiver":"sdfasfweefweafaef2324e",
       "content":"你好啊,美女",
       "type":"TEXT"
     },{
       "id":"sdflsjdflsjldfjslfdjlsdjflsf",
-      "from":"sdfsdafsadfasdfsdfasdfasf23223",
-      "to":"sdfasfweefweafaef2324e",
+      "sender":"sdfsdafsadfasdfsdfasdfasf23223",
+      "receiver":"sdfasfweefweafaef2324e",
       "url":"http://xxx.xxx/xxx.jpg",
       "type":"IMAGE"
     }]
