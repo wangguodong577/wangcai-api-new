@@ -246,8 +246,11 @@ familyId:若有,则看isApply,看是否是申请,若isApply为true代表是申�
 {
     "ret":200,
     "data":{
-      "messageId":"sdflsjdflsjldfjslfdjlsdjflsf",
-      "sessionId":"sdflsjdflsjldfjslfdjlsd15465"
+      "id":"sdflsjdflsjldfjslfdjlsdjflsf",
+      "sender":"sdfsdafsadfasdfsdfasdfasf23223",
+      "receiver":"sdfasfweefweafaef2324e",
+      "type":"TEXT",
+      "sessionId":"1346654664"
     }
 }
 ```
