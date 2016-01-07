@@ -337,3 +337,5 @@ familyId:若有,则看isApply,看是否是申请,若isApply为true代表是申�
 |USER_NOT_EXIST|用户已经加入某个家庭|
 |USER_NOT_EXIST|用户不存在|
 |VALID_FAILED|第三方账号二次校验失败|
+|PUSH_FAILED|推送失败|
+|NO_PERMISSION|没有权限|
