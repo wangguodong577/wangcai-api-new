@@ -250,18 +250,22 @@ familyId:若有,则看isApply,看是否是申请,若isApply为true代表是申�
       "sender":"sdfsdafsadfasdfsdfasdfasf23223",
       "receiver":"sdfasfweefweafaef2324e",
       "type":"TEXT",
-      "sessionId":"1346654664"
+      "hasRead":false,
+      "sendTime":1234564561646546,
+      "url":"",
+      "content":"abcdefg",
+      "sessionId":"sdfasfweefweafaef2324e"
     }
 }
 ```
 
-###阅读信息,根据会话id,返回所有未读的消息
+###阅读信息,根据当前用户与目标用户之间的所有未读的消息
 ####接口:/chat/read
 ####请求方式:GET/POST
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|sessionId|字符串|推送中获得的会话id|是|dsdfsldfjlasfe|
+|userId|字符串|对方的用户id|是|dsdfsldfjlasfe|
 ####成功返回值
 ```
 {
@@ -271,7 +275,21 @@ familyId:若有,则看isApply,看是否是申请,若isApply为true代表是申�
       "sender":"sdfsdafsadfasdfsdfasdfasf23223",
       "receiver":"sdfasfweefweafaef2324e",
       "type":"TEXT",
-      "sessionId":"1346654664"
+      "hasRead":false,
+      "sendTime":1234564561646546,
+      "url":"",
+      "content":"abcdefg",
+      "sessionId":"sdfasfweefweafaef2324e"
+    },{
+      "id":"sdflsjdflsjldfjslfdjlsdjflsdddddf",
+      "sender":"sdfsdafsadfasdfsdfasdfasf23223",
+      "receiver":"sdfasfweefweafaef2324e",
+      "type":"TEXT",
+      "hasRead":false,
+      "sendTime":1234564561646546,
+      "url":"",
+      "content":"dfa",
+      "sessionId":"sdfasfweefweafaef2324e"
     }]
 }
 ```
@@ -282,7 +300,7 @@ familyId:若有,则看isApply,看是否是申请,若isApply为true代表是申�
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|sessionId|字符串|推送中获得的会话id|是|dsdfsldfjlasfe|
+|userId|字符串|对方的用户id|是|dsdfsldfjlasfe|
 |maxId|字符串|最后一条记录|是|2323rfasdfasdfasdfsaf|
 |size|数字|消息数|否,默认为10|15|
 ####成功返回值
@@ -293,34 +311,25 @@ familyId:若有,则看isApply,看是否是申请,若isApply为true代表是申�
       "id":"sdflsjdflsjldfjslfdjlsdjflsf",
       "sender":"sdfsdafsadfasdfsdfasdfasf23223",
       "receiver":"sdfasfweefweafaef2324e",
-      "content":"你好啊,美女",
-      "type":"TEXT"
+      "type":"TEXT",
+      "hasRead":false,
+      "sendTime":1234564561646546,
+      "url":"",
+      "content":"abcdefg",
+      "sessionId":"sdfasfweefweafaef2324e"
     },{
-      "id":"sdflsjdflsjldfjslfdjlsdjflsf",
+      "id":"sdflsjdflsjldfjslfdjlsdjflsdddddf",
       "sender":"sdfsdafsadfasdfsdfasdfasf23223",
       "receiver":"sdfasfweefweafaef2324e",
-      "url":"http://xxx.xxx/xxx.jpg",
-      "type":"IMAGE"
+      "type":"TEXT",
+      "hasRead":false,
+      "sendTime":1234564561646546,
+      "url":"",
+      "content":"dfa",
+      "sessionId":"sdfasfweefweafaef2324e"
     }]
 }
 ```
-###获得会话ID
-####接口:/chat/session
-####请求方式:GET/POST
-####接口参数
-|参数名|类型|描述|是否必须|示例|
-|---|---|---|---|---|
-|userId|字符串|要对话的用户ID|是|dsdfsldfjlasfe|
-####成功返回值
-```
-{
-    "ret":200,
-    "data":{
-      "sessionId":"jsldfjsldjfwljefowjfs"
-    }
-}
-```
-
 
 #错误码
 |错误码|含义|
