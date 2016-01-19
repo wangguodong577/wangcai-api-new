@@ -189,7 +189,18 @@ familyId:若有,则看isApply,看是否是申请,若isApply为true代表是申�
 ```
 {
     "ret":200,
-    "data":[]
+    "data":[{
+      "authToken":"sdfasdfsadfasdfs",
+      "id":"xxdfassdffsdfsdaf",
+      "members":2,
+      "pets":1
+    }
+    },{
+      "authToken":"sdfasdfsadfasdfs",
+      "id":"xxdfasdfsdaf",
+      "members":5,
+      "pets":1
+    }]
 }
 ```
 
