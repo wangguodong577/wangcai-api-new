@@ -202,6 +202,21 @@
 }
 ```
 
+###面对面加入家庭
+####接口:/families/join
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|authToken|字符串|面对面token|是|asdf2jr2ojflajfjlkajfsdfsaf|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+
 ###家长审核申请
 ####接口:/families/audit
 ####请求方式:GET/POST
