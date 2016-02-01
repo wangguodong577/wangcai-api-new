@@ -59,7 +59,7 @@
         "nickname":"",
         "avatar":"",
         "thumbnail":"",
-        "families":{
+        "family":{
             "familyId" : "",
             "pets" : [
               "id" : "",
@@ -67,7 +67,14 @@
               "avatar" : "",
               "gender" : ""
             ]
-        }
+        },
+        "groups":[{
+          "name":"global",
+          "id":"xxxx"
+        },{
+          "name":"loser",
+          "id":"xxxxx"
+        }]
     }
 }
 ```
