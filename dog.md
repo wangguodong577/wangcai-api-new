@@ -368,6 +368,117 @@
 }
 ```
 
+##友邻接口
+###申请加为友邻
+####接口:/neighbor/apply
+####请求方式:POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|familyId|字符串|家庭id|是|dsdfsldfjlasfe|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+
+###获得申请友邻详情
+####接口:/neighbor/apply
+####请求方式:GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|applyId|字符串|申请id|是|dsdfsldfjlasfe|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":{
+		"id":"xxxxxx",
+		"applyUserId":"sfsdfasdfasdfsadfasdfasdfs",
+		"reason":"美女你好啊,交个朋友呗",
+		"operator":"xxxxxxxxx",
+		"familyId":"xdsfjakldfsaldfjsdf",
+		"applyTime":"15646545616546"
+	}
+}
+```
+
+###审核友邻申请
+####接口:/neighbor/audit
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|applyId|字符串|申请id|是|dsdfsldfjlasfe|
+|accept|布尔值|是否同意|是|true|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+
+###解除友邻关系
+####接口:/neighbor/move
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|familyId|字符串|待退出的家庭id|是|dsdfsldfjlasfe|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+
+###显示某个家庭所有的友邻列表
+####接口:/neighbor/list
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|familyId|字符串|待退出的家庭id|是|dsdfsldfjlasfe|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":[{
+		"id":"xxx",
+		"familyId":"xxxxxx",
+		"userId":"dfklasjdflsjfl",
+		"time":"23232323232"
+	}]
+}
+```
+
+###显示所有的友邻申请
+####接口:/neighbor/applys
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|familyId|字符串|待退出的家庭id|是|dsdfsldfjlasfe|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":[{
+		"id":"xxxxxx",
+		"applyUserId":"sfsdfasdfasdfsadfasdfasdfs",
+		"reason":"美女你好啊,交个朋友呗",
+		"operator":"xxxxxxxxx",
+		"familyId":"xdsfjakldfsaldfjsdf",
+		"applyTime":"15646545616546"
+	}]
+}
+```
+
 #错误码
 |错误码|含义|
 |---|---|
