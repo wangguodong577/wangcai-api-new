@@ -190,6 +190,7 @@
     "data":[{
       "authToken":"sdfasdfsadfasdfs",
       "id":"xxdfassdffsdfsdaf",
+      "name":"",
       "members":[{
       	"id":"",
       	"avatar":"",
@@ -205,6 +206,7 @@
     },{
       "authToken":"sdfasdfsadfasdfs",
       "id":"xxdfasdfsdaf",
+      "name":"",
       "members":[{
       	"id":"",
       	"avatar":"",
