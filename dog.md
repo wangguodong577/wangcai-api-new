@@ -190,14 +190,30 @@
     "data":[{
       "authToken":"sdfasdfsadfasdfs",
       "id":"xxdfassdffsdfsdaf",
-      "members":2,
-      "pets":1
+      "members":[{
+      	"id":"",
+      	"avatar":"",
+      	"name":""
+      }],
+      "pets":[{
+      	"name":"",
+      	"avatar":"",
+      	"breed":""
+      }]
     }
     },{
       "authToken":"sdfasdfsadfasdfs",
       "id":"xxdfasdfsdaf",
-      "members":5,
-      "pets":1
+      "members":[{
+      	"id":"",
+      	"avatar":"",
+      	"name":""
+      }],
+      "pets":[{
+      	"name":"",
+      	"avatar":"",
+      	"breed":""
+      }]
     }]
 }
 ```
