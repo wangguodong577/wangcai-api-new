@@ -193,7 +193,8 @@
       "members":[{
       	"id":"",
       	"avatar":"",
-      	"name":""
+      	"name":"",
+      	"background":""
       }],
       "pets":[{
       	"name":"",
@@ -207,7 +208,8 @@
       "members":[{
       	"id":"",
       	"avatar":"",
-      	"name":""
+      	"name":"",
+      	"background":""
       }],
       "pets":[{
       	"name":"",
