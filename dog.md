@@ -499,6 +499,164 @@
 }
 ```
 
+##溜溜相关接口
+###出发遛狗
+####接口:/walk/setoff
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|dogs|字符串数组|本次遛的狗们|是|dogs=ekwjldjslfjasldfj&dogs=sdfjlsdfjlsadfsdf|
+|visible|布尔值|是否对其他人可见|是|true|
+|notice|布尔值|是否通知好友|是|false|
+|lat|double|维度|否|111.8834140000|
+|lng|double|经度|否|37.2888310000|
+####成功返回值,返回本次遛狗唯一编号,walkId
+```
+{
+    "ret":200,
+    "data":{
+		"id":"xxxxxxxxxx"
+	}
+}
+```
+
+###结束遛狗
+####接口:/walk/finish
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|walkId|字符串|本次遛狗id|是|ekwjldjslfjasldfj|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":{
+		"walkDogs":[{
+			"id":"",
+			"walkId":"",
+			"userId":"",
+			"dogId":"",
+			"startTime":"",
+			"endTime":"",
+			"visible":"",
+			"duration":"",
+			"distance":"",
+			"calorie":""
+		},{
+			"id":"",
+			"walkId":"",
+			"userId":"",
+			"dogId":"",
+			"startTime":"",
+			"endTime":"",
+			"visible":"",
+			"duration":"",
+			"distance":"",
+			"calorie":""
+		}]
+	}
+}
+```
+
+###结束遛狗
+####接口:/walk/finish
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|walkId|字符串|本次遛狗id|是|ekwjldjslfjasldfj|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":{
+		"walkDogs":[{
+			"id":"",
+			"walkId":"",
+			"userId":"",
+			"dogId":"",
+			"startTime":"",
+			"endTime":"",
+			"visible":"",
+			"duration":"",
+			"distance":"",
+			"calorie":""
+		},{
+			"id":"",
+			"walkId":"",
+			"userId":"",
+			"dogId":"",
+			"startTime":"",
+			"endTime":"",
+			"visible":"",
+			"duration":"",
+			"distance":"",
+			"calorie":""
+		}]
+	}
+}
+```
+
+###遛狗坐标上报
+####接口:/walk/location
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|walkId|字符串|本次遛狗id|是|ekwjldjslfjasldfj|
+|lat|double|维度|是|111.8834140000|
+|lng|double|经度|是|37.2888310000|
+|remain|布尔值|是否依然在遛狗,若遛狗时间超过最大遛狗时间,需要明确指明,否则会提示错误|否|true|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+
+###查看附近的人
+####接口:/walk/nearby
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|distance|double|半径范围,单位是米|是|3000|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":{
+		"family":[{
+			"name":"",
+			"avatar":"",
+			"location":{
+				"longitude":111.8834140000,
+				"latitude":37.2888310000
+			}
+		}],
+		"neighbor":[{
+			"name":"",
+			"avatar":"",
+			"location":{
+				"longitude":111.8834140000,
+				"latitude":37.2888310000
+			}
+		}],
+		"stranger":[{
+			"name":"",
+			"avatar":"",
+			"location":{
+				"longitude":111.8834140000,
+				"latitude":37.2888310000
+			}
+		}]
+	}
+}
+```
+
 #错误码
 |错误码|含义|
 |---|---|
