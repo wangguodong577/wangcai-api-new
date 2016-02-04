@@ -516,3 +516,6 @@
 |VALID_FAILED|第三方账号二次校验失败|
 |PUSH_FAILED|推送失败|
 |NO_PERMISSION|没有权限|
+|WALK_DOG_FINISH|遛狗已经结束|
+|WALK_DOG_NOT_FINISH|遛狗还未结束|
+|OVER_MAX_WALK_TIME|超过最大遛狗时间|
