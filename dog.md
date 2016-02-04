@@ -167,7 +167,7 @@
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
 |familyId|字符串|家庭id|是|asdf2jr2ojflajfjlkajfsdfsaf|
-|email|字符串|被邀请人的邮箱|是|165464616546|
+|email|字符串|被邀请人的邮箱|是|jimmy.zhang@holaverse.com|
 ####成功返回值
 ```
 {
