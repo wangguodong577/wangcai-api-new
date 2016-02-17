@@ -173,6 +173,25 @@
     "data":""
 }
 ```
+##动态接口
+###发布动态
+####接口:/note/publish
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|photo|字符串|图片url|是|http://xxxx.xxx.xxx/xxx.jpg|
+|words|字符串|配文字|否|xxx|
+|topicId|字符串|所属话题|否|asdf2jr2ojflajfjlkajfsdfsaf|
+|mentionUserId|字符串数组|否|提到的用户,最多5个人|asdf2jr2ojflajfjlkajfsdfsaf|
+|mentionDogId|字符串数组|否|提到的狗,最多5条|asdf2jr2ojflajfjlkajfsdfsaf|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": ""
+}
+```
 
 ##家庭相关接口
 ###邀请加入家庭
