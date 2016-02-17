@@ -183,8 +183,26 @@
 |photo|字符串|图片url|是|http://xxxx.xxx.xxx/xxx.jpg|
 |words|字符串|配文字|否|xxx|
 |topicId|字符串|所属话题|否|asdf2jr2ojflajfjlkajfsdfsaf|
-|mentionUserId|字符串数组|否|提到的用户,最多5个人|asdf2jr2ojflajfjlkajfsdfsaf|
-|mentionDogId|字符串数组|否|提到的狗,最多5条|asdf2jr2ojflajfjlkajfsdfsaf|
+|mentionUserId|字符串数组|提到的用户,最多5个人|否|asdf2jr2ojflajfjlkajfsdfsaf|
+|mentionDogId|字符串数组|提到的狗,最多5条|否|asdf2jr2ojflajfjlkajfsdfsaf|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": ""
+}
+```
+
+##评论相关接口
+###评论动态
+####接口:/note/reply
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|words|字符串|评论正文|是|我是一条评论|
+|noteId|字符串|动态id|是|asdf2jr2ojflajfjlkajfsdfsaf|
+|userId|字符串|回复的用户id|否|asdf2jr2ojflajfjlkajfsdfsaf|
 ####成功返回值
 ```
 {
