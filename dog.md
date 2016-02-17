@@ -284,6 +284,52 @@
 }
 ```
 
+###获得家庭基本信息接口
+####接口:/families/info
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|familyId|字符串|家庭名称|是|asdf2jr2ojflajfjlkajfsdfsaf|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":{
+        "id":"",
+        "name":"",
+        "background":"",
+        "createTime":"",
+        "creator":"",
+		"owner":"",
+        "neighbors":[{
+            "id" : "",
+            "nickname" : "",
+			"avatar" : ""
+        },{
+            "id" : "",
+            "nickname" : "",
+			"avatar" : ""
+        }],
+        "family":[{
+            "id" : "",
+            "nickname" : "",
+			"avatar" : ""
+        },{
+            "id" : "",
+            "nickname" : "",
+			"avatar" : ""
+        }],
+		"dogs":[{
+			"id" : "",
+			"name" : "",
+			"avatar" : "",
+			"breed" : ""
+        }]
+    }
+}
+```
+
 ##用户相关接口
 ###更新token信息
 ####接口:/user/push/token
