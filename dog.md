@@ -237,6 +237,61 @@
 }
 ```
 
+###获得家庭的所有notes
+####接口:/families/notes
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|familyId|字符串|家庭名称|是|asdf2jr2ojflajfjlkajfsdfsaf|
+|maxId|字符串|最大noteid,分页用|否,若为空,则从最新的开始|asdf2jr2ojflajfjlkajfsdfsaf|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": {
+        "id": "56c44b7de4b0aa30100150da",
+        "userId": "56b00a46e4b021083bb2c8e7",
+        "familyId": "56b00a46e4b021083bb2c8e8",
+        "photoUrl": "http://fanyi.baidu.com/static/i18n/zh/widget/translate/head/logo/logo_16ea8bb7.png",
+        "words": "",
+        "topicId": "",
+        "likes": 99,
+        "comments": [
+            {
+                "id": "56c44b7de4b0aa30100150db",
+                "noteId": "56c44b7de4b0aa30100150da",
+                "userId": "56b00a46e4b021083bb2c8e7",
+                "words": "I'm a reply...",
+                "replyUserId": "",
+                "createTime": 1455704957130,
+                "author": {
+                    "id": "56b00a46e4b021083bb2c8e7",
+                    "thumbnail": "",
+                    "lastLoginDate": "",
+                    "status": "NORMAL",
+                    "nickname": "Junrui Kang",
+                    "familyId": "56b00a46e4b021083bb2c8e8",
+                    "regDate": "",
+                    "avatar": ""
+                }
+            }
+        ],
+        "createTime": 1455704957109,
+        "author": {
+            "id": "56b00a46e4b021083bb2c8e7",
+            "thumbnail": "",
+            "lastLoginDate": "",
+            "status": "NORMAL",
+            "nickname": "Junrui Kang",
+            "familyId": "56b00a46e4b021083bb2c8e8",
+            "regDate": "",
+            "avatar": ""
+        }
+    }
+}
+```
+
 ###面对面加入家庭
 ####接口:/families/join
 ####请求方式:GET/POST
