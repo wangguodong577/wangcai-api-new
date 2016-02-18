@@ -243,11 +243,11 @@
       "authToken":"sdfasdfsadfasdfs",
       "id":"xxdfassdffsdfsdaf",
       "name":"",
+      "background":"",
       "members":[{
       	"id":"",
       	"avatar":"",
-      	"name":"",
-      	"background":""
+      	"name":""
       }],
       "pets":[{
       	"name":"",
@@ -259,11 +259,11 @@
       "authToken":"sdfasdfsadfasdfs",
       "id":"xxdfasdfsdaf",
       "name":"",
+      "background":"",
       "members":[{
       	"id":"",
       	"avatar":"",
-      	"name":"",
-      	"background":""
+      	"name":""
       }],
       "pets":[{
       	"name":"",
