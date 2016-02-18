@@ -286,46 +286,48 @@
 ```
 {
     "ret": 200,
-    "data": {
-        "id": "56c44b7de4b0aa30100150da",
-        "userId": "56b00a46e4b021083bb2c8e7",
-        "familyId": "56b00a46e4b021083bb2c8e8",
-        "photoUrl": "http://fanyi.baidu.com/static/i18n/zh/widget/translate/head/logo/logo_16ea8bb7.png",
-        "words": "",
-        "topicId": "",
-        "likes": 99,
-        "comments": [
-            {
-                "id": "56c44b7de4b0aa30100150db",
-                "noteId": "56c44b7de4b0aa30100150da",
-                "userId": "56b00a46e4b021083bb2c8e7",
-                "words": "I'm a reply...",
-                "replyUserId": "",
-                "createTime": 1455704957130,
-                "author": {
-                    "id": "56b00a46e4b021083bb2c8e7",
-                    "thumbnail": "",
-                    "lastLoginDate": "",
-                    "status": "NORMAL",
-                    "nickname": "Junrui Kang",
-                    "familyId": "56b00a46e4b021083bb2c8e8",
-                    "regDate": "",
-                    "avatar": ""
-                }
-            }
-        ],
-        "createTime": 1455704957109,
-        "author": {
-            "id": "56b00a46e4b021083bb2c8e7",
-            "thumbnail": "",
-            "lastLoginDate": "",
-            "status": "NORMAL",
-            "nickname": "Junrui Kang",
+    "data": [
+        {
+            "id": "56c527eee4b0d4e743a592a1",
+            "userId": "56b00a46e4b021083bb2c8e7",
             "familyId": "56b00a46e4b021083bb2c8e8",
-            "regDate": "",
-            "avatar": ""
+            "photoUrl": "http://fanyi.baidu.com/static/i18n/zh/widget/translate/head/logo/logo_16ea8bb7.png",
+            "words": "",
+            "topicId": "",
+            "likes": 99,
+            "comments": [
+                {
+                    "id": "56c527eee4b0d4e743a592a2",
+                    "noteId": "56c527eee4b0d4e743a592a1",
+                    "userId": "56b00a46e4b021083bb2c8e7",
+                    "words": "I'm a reply...",
+                    "replyUserId": "",
+                    "createTime": 1455761390650,
+                    "author": {
+                        "id": "56b00a46e4b021083bb2c8e7",
+                        "thumbnail": "",
+                        "lastLoginDate": "",
+                        "status": "NORMAL",
+                        "nickname": "Junrui Kang",
+                        "familyId": "56b00a46e4b021083bb2c8e8",
+                        "regDate": "",
+                        "avatar": ""
+                    }
+                }
+            ],
+            "createTime": 1455761390606,
+            "author": {
+                "id": "56b00a46e4b021083bb2c8e7",
+                "thumbnail": "",
+                "lastLoginDate": "",
+                "status": "NORMAL",
+                "nickname": "Junrui Kang",
+                "familyId": "56b00a46e4b021083bb2c8e8",
+                "regDate": "",
+                "avatar": ""
+            }
         }
-    }
+    ]
 }
 ```
 
