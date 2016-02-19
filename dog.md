@@ -60,8 +60,8 @@
         "avatar":"",
         "thumbnail":"",
         "family":{
-            "familyId" : "",
-            "pets" : [
+            "id" : "",
+            "dogs" : [
               "id" : "",
               "name" : "",
               "avatar" : "",
@@ -439,6 +439,30 @@
 {
     "ret":200,
     "data":""
+}
+```
+
+###获得联系人列表
+####接口:/user/contacts
+####请求方式:GET/POST
+####接口参数
+无
+####成功返回值
+```
+{
+    "ret":200,
+    "data":[
+    	{
+        	"id": "56b00a46e4b021083bb2c8e7",
+                "thumbnail": "",
+                "lastLoginDate": "",
+                "status": "NORMAL",
+                "nickname": "Junrui Kang",
+                "familyId": "56b00a46e4b021083bb2c8e8",
+                "regDate": "",
+                "avatar": ""
+    	}
+    ]
 }
 ```
 
