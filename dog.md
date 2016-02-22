@@ -462,6 +462,57 @@
 }
 ```
 
+##小贴士接口
+###获得用户的小贴士
+####接口:/tip/list
+####请求方式:POST/GET
+####接口参数
+无
+####成功返回值
+返回值说明:
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|type|字符串|类型(NOTICE:通知\疫情\突发事件,KNOWLEDGE:一般性知识,REMIND:提醒,如洗澡等,SWITH:季节切换,成长阶段变化等)|是|NOTICE|
+|rating|整型|事件紧急程度,五星表示,一到五|否(当type是NOTICE时为必须)|4|
+|remainDays|整型|剩余天数|否(当type为REMIND时必须)|3|
+```
+{
+    "ret": 200,
+    "data": [
+        {
+            "type": "NOTICE",
+            "header": "紧急疫情预警",
+            "title": "加州南部爆发大规模疫情",
+            "summary": "这里是内容,摘要,什么乱七八糟的东西...",
+            "url": "",
+            "image": "http://static.360buyimg.com/finance/base/1.1.0/images/logo-slogan.png",
+            "rating": 4,
+            "remainDays": 0
+        },
+        {
+            "type": "REMIND",
+            "header": "bobo和leilei该洗澡了",
+            "title": "为啥需要洗澡呢?",
+            "summary": "因为洗澡好啊,皮肤好啊,什么乱七八糟的东西...",
+            "url": "http://www.baidu.com",
+            "image": "http://static.360buyimg.com/finance/base/1.1.0/images/logo-slogan.png",
+            "rating": 0,
+            "remainDays": 3
+        },
+        {
+            "type": "SWITH",
+            "header": "迎来成犬期",
+            "title": "如何安抚发情期的爱犬?",
+            "summary": "这里就是这条资讯的内容,什么乱七八糟的东西...",
+            "url": "http://www.baidu.com",
+            "image": "",
+            "rating": 0,
+            "remainDays": 0
+        }
+    ]
+}
+```
+
 ##用户相关接口
 ###更新token信息
 ####接口:/user/push/token
