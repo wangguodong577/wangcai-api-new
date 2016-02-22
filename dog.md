@@ -496,6 +496,31 @@
 }
 ```
 
+##狗相关接口
+###获得某个家庭所有的狗
+####接口:/user/contacts
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|familyId|字符串|家庭id|是|dsdfsldfjlasfe|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":[
+    	{
+        	"id": "56b00a46e4b021083bb2c8e7",
+                "name": "",
+                "avatar": "",
+                "birthday": "NORMAL",
+                "gender": "Junrui Kang",
+                "breed": "56b00a46e4b021083bb2c8e8"
+    	}
+    ]
+}
+```
+
 ##聊天接口
 ###发送信息
 ####接口:/chat/send
