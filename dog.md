@@ -355,7 +355,15 @@
                 "familyId": "56b00a46e4b021083bb2c8e8",
                 "regDate": "",
                 "avatar": ""
-            }
+            },
+            "dogs" : [{
+            	"id":"",
+            	"name":"",
+            	"avatar":"",
+            	"breed":"",
+            	"birthday":"",
+            	"createTime":""
+            }]
         }
     ]
 }
