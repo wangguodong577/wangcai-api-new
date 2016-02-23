@@ -426,38 +426,34 @@
 ####成功返回值
 ```
 {
-    "ret":200,
-    "data":{
-        "id":"",
-        "name":"",
-        "background":"",
-        "createTime":"",
-        "creator":"",
-		"owner":"",
-        "neighbors":[{
-            "id" : "",
-            "nickname" : "",
-			"avatar" : ""
-        },{
-            "id" : "",
-            "nickname" : "",
-			"avatar" : ""
-        }],
-        "family":[{
-            "id" : "",
-            "nickname" : "",
-			"avatar" : ""
-        },{
-            "id" : "",
-            "nickname" : "",
-			"avatar" : ""
-        }],
-		"dogs":[{
-			"id" : "",
-			"name" : "",
-			"avatar" : "",
-			"breed" : ""
-        }]
+    "ret": 200,
+    "data": {
+        "id": "",
+        "name": "",
+        "background": "",
+        "createTime": "",
+        "creator": "",
+        "owner": "",
+        "family": [
+            {
+                "id": "",
+                "nickname": "",
+                "avatar": ""
+            },
+            {
+                "id": "",
+                "nickname": "",
+                "avatar": ""
+            }
+        ],
+        "dogs": [
+            {
+                "id": "",
+                "name": "",
+                "avatar": "",
+                "breed": ""
+            }
+        ]
     }
 }
 ```
@@ -697,14 +693,14 @@
 }
 ```
 
-##友邻接口
-###申请加为友邻
-####接口:/neighbor/apply
+##朋友相关接口
+###申请加为朋友
+####接口:/friend/apply
 ####请求方式:POST
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|familyId|字符串|家庭id|是|dsdfsldfjlasfe|
+|userId|字符串|对方的id|是|dsdfsldfjlasfe|
 ####成功返回值
 ```
 {
@@ -713,8 +709,8 @@
 }
 ```
 
-###获得申请友邻详情
-####接口:/neighbor/apply
+###获得申请交朋友详情
+####接口:/friend/apply
 ####请求方式:GET
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
@@ -729,14 +725,14 @@
 		"applyUserId":"sfsdfasdfasdfsadfasdfasdfs",
 		"reason":"美女你好啊,交个朋友呗",
 		"operator":"xxxxxxxxx",
-		"familyId":"xdsfjakldfsaldfjsdf",
+		"handle":false,
 		"applyTime":"15646545616546"
 	}
 }
 ```
 
-###审核友邻申请
-####接口:/neighbor/audit
+###审核朋友申请
+####接口:/friend/audit
 ####请求方式:GET/POST
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
@@ -751,13 +747,13 @@
 }
 ```
 
-###解除友邻关系
-####接口:/neighbor/move
+###友尽接口
+####接口:/friend/breakup
 ####请求方式:GET/POST
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|familyId|字符串|待退出的家庭id|是|dsdfsldfjlasfe|
+|userId|字符串|待绝交的好友id|是|dsdfsldfjlasfe|
 ####成功返回值
 ```
 {
@@ -766,13 +762,11 @@
 }
 ```
 
-###显示某个家庭所有的友邻列表
-####接口:/neighbor/list
+###显示某个人所有的好友列表
+####接口:/friend/list
 ####请求方式:GET/POST
 ####接口参数
-|参数名|类型|描述|是否必须|示例|
-|---|---|---|---|---|
-|familyId|字符串|待退出的家庭id|是|dsdfsldfjlasfe|
+无
 ####成功返回值
 ```
 {
@@ -786,13 +780,11 @@
 }
 ```
 
-###显示所有的友邻申请
-####接口:/neighbor/applys
+###显示所有的好友申请
+####接口:/friend/applys
 ####请求方式:GET/POST
 ####接口参数
-|参数名|类型|描述|是否必须|示例|
-|---|---|---|---|---|
-|familyId|字符串|待退出的家庭id|是|dsdfsldfjlasfe|
+无
 ####成功返回值
 ```
 {
@@ -948,7 +940,7 @@
 				"latitude":37.2888310000
 			}
 		}],
-		"neighbor":[{
+		"friend":[{
 			"name":"",
 			"avatar":"",
 			"location":{
