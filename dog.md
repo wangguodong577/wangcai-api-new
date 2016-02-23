@@ -701,6 +701,7 @@
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
 |userId|字符串|对方的id|是|dsdfsldfjlasfe|
+|reason|字符串|理由|否|美女,你的狗好萌啊!我们交个朋友吧?你晚上有空吗?|
 ####成功返回值
 ```
 {
@@ -708,7 +709,6 @@
     "data":""
 }
 ```
-
 ###获得申请交朋友详情
 ####接口:/friend/apply
 ####请求方式:GET
@@ -728,6 +728,21 @@
 		"handle":false,
 		"applyTime":"15646545616546"
 	}
+}
+```
+
+###取消好友申请
+####接口:/friend/cancel
+####请求方式:GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|userId|字符串|对方的用户id|是|dsdfsldfjlasfe|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
 }
 ```
 
@@ -794,7 +809,7 @@
 		"applyUserId":"sfsdfasdfasdfsadfasdfasdfs",
 		"reason":"美女你好啊,交个朋友呗",
 		"operator":"xxxxxxxxx",
-		"familyId":"xdsfjakldfsaldfjsdf",
+		"userId":"xdsfjakldfsaldfjsdf",
 		"applyTime":"15646545616546"
 	}]
 }
