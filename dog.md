@@ -127,18 +127,93 @@
     "data":""
 }
 ```
-###用户面对面加好友或加入家庭
-####接口:/passport/facing
+###用户获得面对面加好友或加入家庭的token
+####接口:/face/token
 ####请求方式:POST/GET
 ####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
 |type|字符串|类型,family代表加入家庭,friend代表添加好友|是|family|
 ####成功返回值
 ```
 {
     "ret":200,
     "data":{
-      "facing":"xxxxxxxxxxxxxxx"
+      "faceToken":"xxxxxxxxxxxxxxx"
     }
+}
+```
+###面对面加入家庭或加为好友的目标详情,家庭基本信息或者用户基本信息
+####接口:/face/detail
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|authToken|字符串|面对面token|是|asdf2jr2ojflajfjlkajfsdfsaf|
+####成功返回值
+当类型是加入家庭时:
+```
+{
+    "ret": 200,
+    "data": {
+        "id": "",
+        "name": "",
+        "background": "",
+        "createTime": "",
+        "creator": "",
+        "owner": "",
+        "family": [
+            {
+                "id": "",
+                "nickname": "",
+                "avatar": ""
+            },
+            {
+                "id": "",
+                "nickname": "",
+                "avatar": ""
+            }
+        ],
+        "dogs": [
+            {
+                "id": "",
+                "name": "",
+                "avatar": "",
+                "breed": ""
+            }
+        ]
+    }
+}
+```
+当类型是添加好友时:
+```
+{
+    "ret": 200,
+    "data": {
+        "id": "56b00a46e4b021083bb2c8e7",
+        "thumbnail": "",
+        "lastLoginDate": "",
+        "status": "NORMAL",
+        "nickname": "Junrui Kang",
+        "familyId": "56b00a46e4b021083bb2c8e8",
+        "regDate": "",
+        "avatar": ""
+    }
+}
+```
+
+###面对面加入家庭或加为好友的具体操作,加入家庭或者加为好友
+####接口:/face/action
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|authToken|字符串|面对面token|是|asdf2jr2ojflajfjlkajfsdfsaf|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
 }
 ```
 
@@ -366,21 +441,6 @@
             }]
         }
     ]
-}
-```
-
-###面对面加入家庭
-####接口:/families/join
-####请求方式:GET/POST
-####接口参数
-|参数名|类型|描述|是否必须|示例|
-|---|---|---|---|---|
-|authToken|字符串|面对面token|是|asdf2jr2ojflajfjlkajfsdfsaf|
-####成功返回值
-```
-{
-    "ret":200,
-    "data":""
 }
 ```
 
@@ -694,20 +754,6 @@
 ```
 
 ##朋友相关接口
-###通过面对面token加为朋友
-####接口:/friend/make
-####请求方式:POST
-####接口参数
-|参数名|类型|描述|是否必须|示例|
-|---|---|---|---|---|
-|authToken|字符串|面对面token|是|dsdfsldfjlasfe|
-####成功返回值
-```
-{
-    "ret":200,
-    "data":""
-}
-```
 ###申请加为朋友
 ####接口:/friend/apply
 ####请求方式:POST
