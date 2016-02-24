@@ -127,6 +127,40 @@
     "data":""
 }
 ```
+
+###用户删除(测试用)
+####接口:/passport/delete
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|accessToken|字符串|第三方登录成功凭证|是(type为fb或gg时必须)|asdf2jr2ojflajfjlkajfsdfsaf|
+|oauthId|字符串|第三方系统唯一标识|是(type为fb或gg时必须)|165464616546|
+|type|字符串|第三方账号来源,值为:fb\gg\email|是|fb|
+|email|字符串|邮箱|是(type为email时必须)|/avatar/232.png|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+###用户忘记密码
+####接口:/passport/forgetpasswd
+####请求方式:POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|email|字符串|邮箱|是|jimmy.zhang@holaverse.com|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+
+##面对面相关接口
 ###用户获得面对面加好友或加入家庭的token
 ####接口:/face/token
 ####请求方式:POST/GET
@@ -217,37 +251,6 @@
 }
 ```
 
-###用户删除(测试用)
-####接口:/passport/delete
-####请求方式:POST/GET
-####接口参数
-|参数名|类型|描述|是否必须|示例|
-|---|---|---|---|---|
-|accessToken|字符串|第三方登录成功凭证|是(type为fb或gg时必须)|asdf2jr2ojflajfjlkajfsdfsaf|
-|oauthId|字符串|第三方系统唯一标识|是(type为fb或gg时必须)|165464616546|
-|type|字符串|第三方账号来源,值为:fb\gg\email|是|fb|
-|email|字符串|邮箱|是(type为email时必须)|/avatar/232.png|
-####成功返回值
-```
-{
-    "ret":200,
-    "data":""
-}
-```
-###用户忘记密码
-####接口:/passport/forgetpasswd
-####请求方式:POST
-####接口参数
-|参数名|类型|描述|是否必须|示例|
-|---|---|---|---|---|
-|email|字符串|邮箱|是|jimmy.zhang@holaverse.com|
-####成功返回值
-```
-{
-    "ret":200,
-    "data":""
-}
-```
 ##动态接口
 ###发布动态
 ####接口:/note/publish
