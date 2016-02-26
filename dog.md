@@ -616,6 +616,33 @@
 ```
 
 ##狗相关接口
+
+###添加狗到一个家庭
+####接口:/dog/adopt
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|name|字符串|狗的名字|是|bobo|
+|avatar|字符串|狗的头像链接|是|http://xxx.xx/xx.jpg|
+|gender|字符串|狗的性别,可选值为male或female|是|male|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":[
+    	{
+        	"id": "56b00a46e4b021083bb2c8e7",
+                "name": "",
+                "avatar": "",
+                "birthday": "NORMAL",
+                "gender": "Junrui Kang",
+                "breed": "56b00a46e4b021083bb2c8e8"
+    	}
+    ]
+}
+```
+
 ###获得某个家庭所有的狗
 ####接口:/dog/list
 ####请求方式:GET/POST
