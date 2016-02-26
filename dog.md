@@ -726,27 +726,27 @@
 ####成功返回值
 ```
 {
-    "ret":200,
-    "data":{
-      "id":"sdflsjdflsjldfjslfdjlsdjflsf",
-      "sender":"sdfsdafsadfasdfsdfasdfasf23223",
-      "senderUser":{
-	"id": "",
-	"nickname": "",
-	"avatar": ""
-      },
-      "receiverUser":{
-	"id": "",
-	"nickname": "",
-	"avatar": ""
-      },
-      "receiver":"sdfasfweefweafaef2324e",
-      "type":"TEXT",
-      "hasRead":false,
-      "sendTime":1234564561646546,
-      "url":"",
-      "content":"abcdefg",
-      "sessionId":"sdfasfweefweafaef2324e"
+    "ret": 200,
+    "data": {
+        "id": "sdflsjdflsjldfjslfdjlsdjflsf",
+        "sender": "sdfsdafsadfasdfsdfasdfasf23223",
+        "senderUser": {
+            "id": "",
+            "nickname": "",
+            "avatar": ""
+        },
+        "receiverUser": {
+            "id": "",
+            "nickname": "",
+            "avatar": ""
+        },
+        "receiver": "sdfasfweefweafaef2324e",
+        "type": "TEXT",
+        "hasRead": false,
+        "sendTime": 1234564561646546,
+        "url": "",
+        "content": "abcdefg",
+        "sessionId": "sdfasfweefweafaef2324e"
     }
 }
 ```
@@ -761,48 +761,51 @@
 ####成功返回值
 ```
 {
-    "ret":200,
-    "data":[{
-      "id":"sdflsjdflsjldfjslfdjlsdjflsf",
-      "sender":"sdfsdafsadfasdfsdfasdfasf23223",
-      "receiver":"sdfasfweefweafaef2324e",
-      "senderUser":{
-	"id": "",
-	"nickname": "",
-	"avatar": ""
-      },
-      "receiverUser":{
-	"id": "",
-	"nickname": "",
-	"avatar": ""
-      },
-      "type":"TEXT",
-      "hasRead":false,
-      "sendTime":1234564561646546,
-      "url":"",
-      "content":"abcdefg",
-      "sessionId":"sdfasfweefweafaef2324e"
-    },{
-      "id":"sdflsjdflsjldfjslfdjlsdjflsdddddf",
-      "sender":"sdfsdafsadfasdfsdfasdfasf23223",
-      "receiver":"sdfasfweefweafaef2324e",
-      "senderUser":{
-	"id": "",
-	"nickname": "",
-	"avatar": ""
-      },
-      "receiverUser":{
-	"id": "",
-	"nickname": "",
-	"avatar": ""
-      },
-      "type":"TEXT",
-      "hasRead":false,
-      "sendTime":1234564561646546,
-      "url":"",
-      "content":"dfa",
-      "sessionId":"sdfasfweefweafaef2324e"
-    }]
+    "ret": 200,
+    "data": [
+        {
+            "id": "sdflsjdflsjldfjslfdjlsdjflsf",
+            "sender": "sdfsdafsadfasdfsdfasdfasf23223",
+            "receiver": "sdfasfweefweafaef2324e",
+            "senderUser": {
+                "id": "",
+                "nickname": "",
+                "avatar": ""
+            },
+            "receiverUser": {
+                "id": "",
+                "nickname": "",
+                "avatar": ""
+            },
+            "type": "TEXT",
+            "hasRead": false,
+            "sendTime": 1234564561646546,
+            "url": "",
+            "content": "abcdefg",
+            "sessionId": "sdfasfweefweafaef2324e"
+        },
+        {
+            "id": "sdflsjdflsjldfjslfdjlsdjflsdddddf",
+            "sender": "sdfsdafsadfasdfsdfasdfasf23223",
+            "receiver": "sdfasfweefweafaef2324e",
+            "senderUser": {
+                "id": "",
+                "nickname": "",
+                "avatar": ""
+            },
+            "receiverUser": {
+                "id": "",
+                "nickname": "",
+                "avatar": ""
+            },
+            "type": "TEXT",
+            "hasRead": false,
+            "sendTime": 1234564561646546,
+            "url": "",
+            "content": "dfa",
+            "sessionId": "sdfasfweefweafaef2324e"
+        }
+    ]
 }
 ```
 
@@ -833,48 +836,51 @@
 ####成功返回值
 ```
 {
-    "ret":200,
-    "data":[{
-      "id":"sdflsjdflsjldfjslfdjlsdjflsf",
-      "sender":"sdfsdafsadfasdfsdfasdfasf23223",
-      "receiver":"sdfasfweefweafaef2324e",
-      "senderUser":{
-	"id": "",
-	"nickname": "",
-	"avatar": ""
-      },
-      "receiverUser":{
-	"id": "",
-	"nickname": "",
-	"avatar": ""
-      },
-      "type":"TEXT",
-      "hasRead":false,
-      "sendTime":1234564561646546,
-      "url":"",
-      "content":"abcdefg",
-      "sessionId":"sdfasfweefweafaef2324e"
-    },{
-      "id":"sdflsjdflsjldfjslfdjlsdjflsdddddf",
-      "sender":"sdfsdafsadfasdfsdfasdfasf23223",
-      "receiver":"sdfasfweefweafaef2324e",
-      "senderUser":{
-	"id": "",
-	"nickname": "",
-	"avatar": ""
-      },
-      "receiverUser":{
-	"id": "",
-	"nickname": "",
-	"avatar": ""
-      },
-      "type":"TEXT",
-      "hasRead":false,
-      "sendTime":1234564561646546,
-      "url":"",
-      "content":"dfa",
-      "sessionId":"sdfasfweefweafaef2324e"
-    }]
+    "ret": 200,
+    "data": [
+        {
+            "id": "sdflsjdflsjldfjslfdjlsdjflsf",
+            "sender": "sdfsdafsadfasdfsdfasdfasf23223",
+            "receiver": "sdfasfweefweafaef2324e",
+            "senderUser": {
+                "id": "",
+                "nickname": "",
+                "avatar": ""
+            },
+            "receiverUser": {
+                "id": "",
+                "nickname": "",
+                "avatar": ""
+            },
+            "type": "TEXT",
+            "hasRead": false,
+            "sendTime": 1234564561646546,
+            "url": "",
+            "content": "abcdefg",
+            "sessionId": "sdfasfweefweafaef2324e"
+        },
+        {
+            "id": "sdflsjdflsjldfjslfdjlsdjflsdddddf",
+            "sender": "sdfsdafsadfasdfsdfasdfasf23223",
+            "receiver": "sdfasfweefweafaef2324e",
+            "senderUser": {
+                "id": "",
+                "nickname": "",
+                "avatar": ""
+            },
+            "receiverUser": {
+                "id": "",
+                "nickname": "",
+                "avatar": ""
+            },
+            "type": "TEXT",
+            "hasRead": false,
+            "sendTime": 1234564561646546,
+            "url": "",
+            "content": "dfa",
+            "sessionId": "sdfasfweefweafaef2324e"
+        }
+    ]
 }
 ```
 
