@@ -521,6 +521,52 @@
 }
 ```
 
+###显示家庭成员和好友列表接口,只能显示自己的家庭和好友
+####接口:/families/member
+####请求方式:GET/POST
+####接口参数
+无
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": {
+        "family": [
+            {
+                "id": "",
+                "nickname": "",
+                "avatar": ""
+            },
+            {
+                "id": "",
+                "nickname": "",
+                "avatar": ""
+            }
+        ],
+        "friends": [
+            {
+                "id": "",
+                "nickname": "",
+                "avatar": ""
+            },
+            {
+                "id": "",
+                "nickname": "",
+                "avatar": ""
+            }
+        ],
+        "dogs": [
+            {
+                "id": "",
+                "name": "",
+                "avatar": "",
+                "breed": ""
+            }
+        ]
+    }
+}
+```
+
 ##小贴士接口
 ###获得用户的小贴士
 ####接口:/tip/list
