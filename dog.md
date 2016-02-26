@@ -1085,3 +1085,5 @@
 |WALK_DOG_FINISH|遛狗已经结束|
 |WALK_DOG_NOT_FINISH|遛狗还未结束|
 |OVER_MAX_WALK_TIME|超过最大遛狗时间|
+|ALREADY_LIKE|已经点赞|
+|OVER_MAX_DOGS|超过一个家庭所能拥有的最大狗数目|
