@@ -630,7 +630,7 @@
 ```
 {
     "ret":200,
-    "data":[
+    "data":
     	{
         	"id": "56b00a46e4b021083bb2c8e7",
                 "name": "",
@@ -639,7 +639,6 @@
                 "gender": "Junrui Kang",
                 "breed": "56b00a46e4b021083bb2c8e8"
     	}
-    ]
 }
 ```
 
