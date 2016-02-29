@@ -69,7 +69,7 @@
 |oauthId|字符串|第三方系统唯一标识|是(type为fb或gg时必须)|165464616546|
 |type|字符串|第三方账号来源,值为:fb\gg\email|是|fb|
 |email|字符串|邮箱|是(type为email时必须)|/avatar/232.png|
-|password|字符串|密码|是(type为email时必须)|1985-02-14|
+|password|字符串|密码,进行32位md5|是(type为email时必须),进行32位md5|1985-02-14|
 |pf|字符串|平台(ios或者android)|是|ios|
 |pushToken|字符串|推送token|是|sdfsdfawefawfasfd|
 ####成功返回值
@@ -116,7 +116,7 @@
 |gender|字符串|第三方系统里的用户性别|否|male|
 |authToken|字符串|认证token,若为面对面加入家庭或者email申请加入,则为必填|是|lsdfjlsdfjlsdjf|
 |email|字符串|用户邮箱,若type为email或通过邀请邮箱注册,则必须|是|test@holaverse.com|
-|password|字符串|用户密码,若type为email,则必须|是|23232323|
+|password|字符串|用户密码,若type为email,则必须,进行32位md5|是|23232323|
 |dogName|字符串|狗的名字,有狗为必填|是|旺财|
 |dogAvatar|字符串|狗的头像,有狗为必填|是|/avatar/dog/lsdfj.jpg|
 |locale|字符串|用户语言|否||
