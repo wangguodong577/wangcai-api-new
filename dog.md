@@ -660,6 +660,40 @@
 }
 ```
 
+###修改密码
+####接口:/user/modify/passwd
+####请求方式:POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|password|字符串|新密码，32位md5加密|是|dsdfsldfjlasfe|
+|oldPasswd|字符串|原始密码，32位md5加密|是|dsdfsldfjlasfe|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+
+###修改资料
+####接口:/user/modify/profile
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|avatar|字符串|新头像|否|http://xxxx.jpg|
+|email|字符串|新邮箱|否|dsdfsldf@test.com|
+|nickname|字符串|昵称|否|abc|
+|gender|字符串|性别,male,female|否|male|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+
 ###获得联系人列表
 ####接口:/user/contacts
 ####请求方式:GET/POST
