@@ -325,8 +325,8 @@
 ```
 
 ##评论相关接口
-###评论动态
-####接口:/note/reply
+###评论照片
+####接口:/comment/reply
 ####请求方式:GET/POST
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
@@ -334,6 +334,21 @@
 |words|字符串|评论正文|是|我是一条评论|
 |noteId|字符串|动态id|是|asdf2jr2ojflajfjlkajfsdfsaf|
 |userId|字符串|回复的用户id|否|asdf2jr2ojflajfjlkajfsdfsaf|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": ""
+}
+```
+
+###删除评论
+####接口:/comment/delete
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|commentId|字符串|评论id|是|asdf2jr2ojflajfjlkajfsdfsaf|
 ####成功返回值
 ```
 {
@@ -667,7 +682,7 @@
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
 |password|字符串|新密码，32位md5加密|是|dsdfsldfjlasfe|
-|oldPasswd|字符串|原始密码，32位md5加密|是|dsdfsldfjlasfe|
+|oldPassword|字符串|原始密码，32位md5加密|是|dsdfsldfjlasfe|
 ####成功返回值
 ```
 {
