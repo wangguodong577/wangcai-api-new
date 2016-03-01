@@ -778,6 +778,41 @@
     	}
 }
 ```
+###遛狗记录
+####接口:/dog/walks
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|dogId|字符串|狗的id|是|xxxxxxx|
+|maxId|字符串|最后一个记录的id|否|sdsfasdfwefasedfasdfasf|
+|size|整型|待获取的记录数,若为空,则默认10条|否|12|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":
+    	{
+        	"id": "56b00a46e4b021083bb2c8e7",
+                "name": "",
+                "avatar": "",
+                "birthday": "NORMAL",
+                "gender": "Junrui Kang",
+                "breed": "56b00a46e4b021083bb2c8e8"
+                "walkDogs":[{
+                	"id":"",
+                	"walkId":"",
+                	"userId":"",
+                	"dogId":"",
+                	"startTime":"",
+                	"endTime":"",
+                	"duration":"",
+                	"distance":"",
+                	"calorie":""
+                }]
+        }
+}
+```
 
 ###提到某条狗的照片列表
 ####接口:/dog/notes
@@ -786,7 +821,7 @@
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
 |dogId|字符串|狗的id|是|xxxxxxx|
-|maxId|字符串|最后一个照片的id|是|sdsfasdfwefasedfasdfasf|
+|maxId|字符串|最后一个照片的id|否|sdsfasdfwefasedfasdfasf|
 |size|整型|待获取的记录数,若为空,则默认12条|否|12|
 ####成功返回值
 ```
@@ -799,8 +834,8 @@
                 "userId":"",
                 "familyId":"",
                 "topicId":"",
-                "likes":4,
-                "comments":5
+                "likeCount":4,
+                "commentCount":5
                 "photoUrl": ""
     	}]
 }
