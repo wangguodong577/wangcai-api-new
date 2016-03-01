@@ -1369,8 +1369,8 @@
 ```
 
 ##消息相关接口
-###获得未读消息提醒
-####接口:/message/unread
+###获得未读消息提醒,ios
+####接口:/message/unread/ios
 ####请求方式:GET/POST
 ####接口参数
 无
@@ -1388,7 +1388,29 @@
     }]
 }
 ```
+###获得未读消息提醒,android
+####接口:/message/unread/android
+####请求方式:GET/POST
+####接口参数
+无
+####成功返回值
 
+```
+{
+    "ret": 200,
+    "data": [{
+        "sender": {
+        	"id":"",
+        	"avatar":"",
+        	"name":""
+        }
+        "name": "",
+        "avatar": "",
+        "type": "message",
+        "message": "xxxxxx"
+    }]
+}
+```
 #错误码
 |错误码|含义|
 |---|---|
