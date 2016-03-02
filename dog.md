@@ -733,6 +733,42 @@
 }
 ```
 
+###个人主页接口
+####接口:/user/index
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|userId|字符串|用户id|是|sdfsdfsdfsdfsdfasdfasdfs|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":
+    	{
+        	"id": "56b00a46e4b021083bb2c8e7",
+                "thumbnail": "",
+                "lastLoginDate": "",
+                "status": "NORMAL",
+                "nickname": "Junrui Kang",
+                "familyId": "56b00a46e4b021083bb2c8e8",
+                "regDate": "",
+                "avatar": "",
+                "followCount":50,
+                "isFriend":true,//当用户是本人时,无此字段
+                "dogs":[{
+        		"id": "56b00a46e4b021083bb2c8e7",
+                	"name": "",
+                	"avatar": "",
+                	"birthday": "NORMAL",
+                	"gender": "male",
+                	"breed": "56b00a46e4b021083bb2c8e8"
+                	"hasFollow":true
+                }]
+    	}
+}
+```
+
 ##狗相关接口
 
 ###添加狗到一个家庭
@@ -754,7 +790,7 @@
                 "name": "",
                 "avatar": "",
                 "birthday": "NORMAL",
-                "gender": "Junrui Kang",
+                "gender": "male",
                 "breed": "56b00a46e4b021083bb2c8e8"
     	}
 }
@@ -787,6 +823,29 @@
 {
     "ret":200,
     "data":""
+}
+```
+
+###用户正在关注的狗列表
+####接口:/dog/following
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|userId|字符串|用户id|是|xxxxxxx|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":
+    	[{
+        	"id": "56b00a46e4b021083bb2c8e7",
+                "name": "",
+                "avatar": "",
+                "birthday": "NORMAL",
+                "gender": "Junrui Kang",
+                "breed": "56b00a46e4b021083bb2c8e8"
+    	}]
 }
 ```
 
