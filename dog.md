@@ -755,7 +755,8 @@
                 "regDate": "",
                 "avatar": "",
                 "followCount":50,
-                "isFriend":true,//当用户是本人时,无此字段
+                "isFriend":false,//当用户是本人时,无此字段
+                "hasApply":true,//是否已经发过申请,当且仅当对方不是好友,且发过申请时为true
                 "dogs":[{
         		"id": "56b00a46e4b021083bb2c8e7",
                 	"name": "",
