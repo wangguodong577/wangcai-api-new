@@ -121,8 +121,8 @@
 |dogAvatar|字符串|狗的头像,有狗为必填|是|/avatar/dog/lsdfj.jpg|
 |locale|字符串|用户语言|否||
 |timezone|字符串|用户所在时区|是|8|
-|locationId|字符串|用户所在地区id|否||
-|locationName|字符串|用户所在地区名|否||
+|country|字符串|用户所在国家|否|china|
+|city|字符串|用户所在城市|否|beijing|
 |pf|字符串|平台(ios或者android)|是|ios|
 |pushToken|字符串|推送token|是|sdfsdfawefawfasfd|
 ####成功返回值
@@ -658,6 +658,25 @@
 ```
 
 ##用户相关接口
+
+###用户地理位置上报
+####接口:/user/location
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|country|字符串|用户所在国家|是|china|
+|city|字符串|用户所在城市|是|beijing|
+|lng|浮点型|经度|是|12.315456|
+|lat|浮点型|维度|是|25.145644|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+
 ###更新token信息
 ####接口:/user/push/token
 ####请求方式:GET/POST
