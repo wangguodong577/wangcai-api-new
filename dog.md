@@ -114,11 +114,8 @@
 |avatar|字符串|用户头像|是|/avatar/232.png|
 |birthday|字符串|用户生日,格式为yyyy-MM-dd|否|1985-02-14|
 |gender|字符串|第三方系统里的用户性别|否|male|
-|authToken|字符串|认证token,若为面对面加入家庭或者email申请加入,则为必填|是|lsdfjlsdfjlsdjf|
 |email|字符串|用户邮箱,若type为email或通过邀请邮箱注册,则必须|是|test@holaverse.com|
 |password|字符串|用户密码,若type为email,则必须,进行32位md5|是|23232323|
-|dogName|字符串|狗的名字,有狗为必填|是|旺财|
-|dogAvatar|字符串|狗的头像,有狗为必填|是|/avatar/dog/lsdfj.jpg|
 |locale|字符串|用户语言|否||
 |timezone|字符串|用户所在时区|是|8|
 |country|字符串|用户所在国家|否|china|
@@ -485,6 +482,22 @@
       	"breed":""
       }]
     }]
+}
+```
+
+### 根据邀请邮箱和校验token加入家庭
+####接口:/families/byinvite
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|email|字符串|用户email|是|xxx@mail.com|
+|authToken|字符串|校验token|是|xxxxxxxxxx|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
 }
 ```
 
@@ -1590,3 +1603,7 @@
 |OVER_MAX_WALK_TIME|超过最大遛狗时间|
 |ALREADY_LIKE|已经点赞|
 |OVER_MAX_DOGS|超过一个家庭所能拥有的最大狗数目|
+|USER_IS_HOMELESS|用户未加入任何一个家庭|
+|NOT_FOLLOWED|没有关注|
+|ALREADY_FOLLOW|已经关注|
+|PASSWD_NOT_MATCH|密码不匹配|
