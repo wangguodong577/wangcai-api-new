@@ -107,7 +107,8 @@
 {
     "ret":200,
     "data":{
-      "continueDays":1
+      "continueDays":1,
+      "points":32
     }
 }
 ```
