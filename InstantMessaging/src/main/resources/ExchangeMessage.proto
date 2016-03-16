@@ -9,10 +9,10 @@ message Message
 	optional Body body = 4;
 	repeated ChatMessage chatMessage = 5;
 	enum MessageType {
-      PING = 1;
-      ACK = 2;
-      RPC = 3;
-      CHAT = 4;
+      		PING = 1;
+      		ACK = 2;
+      		RPC = 3;
+      		CHAT = 4;
 	};
 }
 
@@ -25,9 +25,9 @@ message Body {
 }
 
 message ChatMessage {
-
-	optional string sessionId = 1;
-    optional int32 seq = 2;
+	
+    optional string sessionId = 1;
+    optional string seq = 2;
     required string sender = 3;
     required string receiver = 4;
     optional string content = 5;
