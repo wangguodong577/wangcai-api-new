@@ -55,6 +55,13 @@
         "userId":"",
         "nickname":"",
         "avatar":"",
+        "code":12,
+        "shareWifiCount":1
+        "shareWifiConnectCount":1,
+        "totalCheckinDayCount":1,
+        "taskList":{
+          "beInvited":false
+        }
         "points":111
     }
 }
@@ -110,7 +117,7 @@
       "continueDays":1,
       "points":32
     }
-}
+}che
 ```
 
 ## 积分相关接口
@@ -170,6 +177,23 @@
             "createTime": 1455822060000
         }
     ]
+}
+```
+
+###获取本地积分,返回最新积分
+####接口:/points/offline
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|body|字符串|{"points",11}的加密串|是|sjldfjasdlfj2oijfio2f|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":{
+        "points":123
+    }
 }
 ```
 
