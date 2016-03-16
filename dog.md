@@ -990,6 +990,10 @@
                 "name": "",
                 "avatar": "",
                 "birthday": "NORMAL",
+                "height":43,
+                "weight":43,
+                "bodyType":"perfect",
+                "recommendExercise":43,
                 "gender": "Junrui Kang",
                 "breed": "56b00a46e4b021083bb2c8e8"
                 "walkDogs":[{
