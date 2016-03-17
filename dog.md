@@ -283,6 +283,8 @@
 |topicId|字符串|所属话题|否|asdf2jr2ojflajfjlkajfsdfsaf|
 |mentionUserId|字符串数组|提到的用户,最多5个人|否|asdf2jr2ojflajfjlkajfsdfsaf|
 |mentionDogId|字符串数组|提到的狗,最多5条|否|asdf2jr2ojflajfjlkajfsdfsaf|
+|lat|double|维度|否|111.8834140000|
+|lng|double|经度|否|37.2888310000|
 ####成功返回值
 ```
 {
@@ -375,6 +377,9 @@
             "photoUrl": "http://fanyi.baidu.com/static/i18n/zh/widget/translate/head/logo/logo_16ea8bb7.png",
             "words": "",
             "topicId": "",
+	    "hasLocation":true,
+            "lng":23.4353,
+            "lat":54.2323,
             "likes": 99,
             "comments": [
                 {
@@ -587,6 +592,9 @@
             "photoUrl": "http://fanyi.baidu.com/static/i18n/zh/widget/translate/head/logo/logo_16ea8bb7.png",
             "words": "",
             "topicId": "",
+            "hasLocation":true,
+            "lng":23.4353,
+            "lat":54.2323,
             "likes": 99,
             "comments": [
                 {
@@ -1097,6 +1105,9 @@
                 "userId":"",
                 "familyId":"",
                 "topicId":"",
+            	"hasLocation":true,
+            	"lng":23.4353,
+            	"lat":54.2323,
                 "likeCount":4,
                 "commentCount":5
                 "photoUrl": ""
