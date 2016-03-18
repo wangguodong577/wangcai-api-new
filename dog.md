@@ -1682,6 +1682,62 @@
 }
 ```
 
+#长连接RPC接口
+type=RPC
+body中的action指定方法，params中设置参数
+返回类型为ack，消息内容看返回消息的body
+
+###标记已读接口
+####接口action:MarkChatMessageAsRead
+####接口参数
+|格式说明|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|{"sessionId":seq}|sessionId:字符串,seq：long|会话及其最后一条已读消息的seq|是|{"session1":1,"session2",3}|
+####成功body返回值
+
+```
+{
+    "ret": 200,
+    "data": {
+    	"session1":true,
+    	"session2":true
+    }
+}
+```
+
+###获得有未读消息的会话列表
+####接口action:GetUnreadSessionList
+####接口参数
+无
+####成功body返回值
+
+```
+{
+    "ret": 200,
+    "data": {
+    	"session1":2,
+    	"session2":3
+    }
+}
+```
+
+###根据会话id推送该会话最老的十条未读消息,消息会通过另外一个长连接发送，此消息返回ack
+####接口action:GetUnreadMessagesBySession
+####接口参数
+|格式说明|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|sessionId=xxx|sessionId:字符串|会话Id|是|sessionId=xxxxxx|
+####成功body返回值
+
+```
+{
+    "ret": 200,
+    "data": ""
+}
+```
+
+
+
 #错误码
 |错误码|含义|
 |---|---|
