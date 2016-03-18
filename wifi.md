@@ -46,6 +46,7 @@
 |avatar|字符串|头像|否|http://xxx.xxx/xxx.jpg|
 |gender|字符串|性别|否|male|
 |locale|字符串|语言|否|zh_cn|
+|body|字符串|{"points",11}的加密串|否|sjldfjasdlfj2oijfio2f|
 ####成功返回值
 ```
 {
@@ -78,6 +79,7 @@
 {
     "ret":200,
     "data":{
+        "increment":33,
         "points":123
     }
 }
@@ -115,6 +117,7 @@
     "ret":200,
     "data":{
       "continueDays":1,
+      "increment":33,
       "points":32
     }
 }che
