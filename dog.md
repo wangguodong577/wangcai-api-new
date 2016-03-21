@@ -679,6 +679,7 @@
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
 |familyId|字符串|家庭名称|是|asdf2jr2ojflajfjlkajfsdfsaf|
+|recent|布尔值|是否获得最近六条记录|否|false|
 ####成功返回值
 ```
 {
@@ -690,6 +691,12 @@
         "createTime": "",
         "creator": "",
         "owner": "",
+        "recent":[{
+        	"id":"",
+        	"photoUrl":"",
+        	"userId":"",
+        	"familyId":""
+        }]
         "family": [
             {
                 "id": "",
