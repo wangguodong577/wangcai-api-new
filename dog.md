@@ -1501,8 +1501,8 @@
 }
 ```
 
-###结束遛狗
-####接口:/walk/finish
+###遛狗详情
+####接口:/walk/detail
 ####请求方式:GET/POST
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
@@ -1535,6 +1535,19 @@
 			"duration":"",
 			"distance":"",
 			"calorie":""
+		}],
+		"trails":[{
+			"id":"",
+			"walkId":"",
+			"lat":"",
+			"lng":"",
+			"recordTime":12232432424
+		},{
+			"id":"",
+			"walkId":"",
+			"lat":"",
+			"lng":"",
+			"recordTime":12232432424
 		}]
 	}
 }
