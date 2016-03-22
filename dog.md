@@ -1702,6 +1702,80 @@
 }
 ```
 
+###事件概况接口
+####接口:/event/summary
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|dogId|字符串|狗id|是|xxxxxxx|
+####成功返回值
+
+```
+{
+    "ret": 200,
+    "data": {
+        "BATH": {
+            "icon": "http://xxxxx.xxx/xxx.jpg",
+            "count": 12,
+            "lastRecord": {
+                "id": "",
+                "dogId": "",
+                "recorder": {
+                    "id": "",
+                    "nickname": "",
+                    "avatar": ""
+                },
+                "remark": "",
+                "cycle": 30,
+                "time": 1232312312312
+            }
+        },
+        "VACCINATE": {
+            "icon": "http://xxxxx.xxx/xxx.jpg",
+            "count": 0
+        },
+        "REPELLENT": {
+            "icon": "http://xxxxx.xxx/xxx.jpg",
+            "count": 0
+        },
+        "ESTRUS": {
+            "icon": "http://xxxxx.xxx/xxx.jpg",
+            "count": 0
+        }
+    }
+}
+```
+###事件记录列表接口
+####接口:/event/list
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|dogId|字符串|狗id|是|xxxxxxx|
+|maxId|字符串|最大的id，分页用|否|xxxxxxx|
+|size|字符串|要获取的记录数，默认10|否|10|
+####成功返回值
+
+```
+{
+    "ret": 200,
+    "data": [
+        {
+            "id": "",
+            "dogId": "",
+            "recorder": {
+                "id": "",
+                "nickname": "",
+                "avatar": ""
+            },
+            "remark": "",
+            "cycle": 30,
+            "time": 1232312312312
+        }
+    ]
+}
+```
 #长连接RPC接口
 type=RPC
 body中的action指定方法，params中设置参数
