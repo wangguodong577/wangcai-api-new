@@ -1692,7 +1692,8 @@
 |type|字符串|事件类型，有四种，分别为（BATH，VACCINATE，REPELLENT，ESTRUS）|是|BATH|
 |dogId|字符串|狗id|是|xxxxxxx|
 |remark|字符串|备注|否|在宠物店洗的|
-|cycle|整型|周期，单位是天|否|30|
+|cycle|整型|周期|否|30|
+|unit|字符串|周期单位，可选值有day,week,month,year。若有cycle，则此必须|否|day|
 ####成功返回值
 
 ```
@@ -1730,21 +1731,37 @@
                 "remark": "",
                 "cycle": 30,
                 "time": 1232312312312
+            },
+            "eventCycle": {
+                "cycle": 30,
+                "unit": "day"
             }
         },
         {
             "type": "VACCINATE",
             "icon": "http://xxxxx.xxx/xxx.jpg",
+            "eventCycle": {
+                "cycle": 1,
+                "unit": "week"
+            },
             "count": 0
         },
         {
             "type": "REPELLENT",
             "icon": "http://xxxxx.xxx/xxx.jpg",
+            "eventCycle": {
+                "cycle": 5,
+                "unit": "day"
+            },
             "count": 0
         },
         {
             "type": "ESTRUS",
             "icon": "http://xxxxx.xxx/xxx.jpg",
+            "eventCycle": {
+                "cycle": 1,
+                "unit": "year"
+            },
             "count": 0
         }
     ]
