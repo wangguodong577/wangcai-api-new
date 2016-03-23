@@ -1147,58 +1147,37 @@
 ```
 
 ##聊天接口
-###发送信息
-####接口:/chat/send
+###轮询，获得用户未读的会话列表及其未读消息数
+####接口:/chat/unread
 ####请求方式:GET/POST
 ####接口参数
-|参数名|类型|描述|是否必须|示例|
-|---|---|---|---|---|
-|receiver|字符串|接收用户id|是|dsdfsldfjlasfe|
-|content|字符串|正文|否,当且仅当是文字信息时为必须|你好啊,美女|
-|url|字符串|资源地址|否,当且仅当不是文字信息时为必须|http://sss/sss.amr|
-|type|字符串|消息类型,可选值为(TEXT,AUDIO,VEDIO,IMAGE,LOCATION)|是|text|
+无
 ####成功返回值
 ```
 {
     "ret": 200,
     "data": {
-        "id": "sdflsjdflsjldfjslfdjlsdjflsf",
-        "sender": "sdfsdafsadfasdfsdfasdfasf23223",
-        "senderUser": {
-            "id": "",
-            "nickname": "",
-            "avatar": ""
-        },
-        "receiverUser": {
-            "id": "",
-            "nickname": "",
-            "avatar": ""
-        },
-        "receiver": "sdfasfweefweafaef2324e",
-        "type": "TEXT",
-        "hasRead": false,
-        "sendTime": 1234564561646546,
-        "url": "",
-        "content": "abcdefg",
-        "sessionId": "sdfasfweefweafaef2324e"
+        "sessionId1":3,
+        "sessionId2":4
     }
 }
 ```
 
-###阅读信息,根据当前用户与目标用户之间的所有未读的消息
+###阅读信息,根据当前用户指定会话的未读的消息
 ####接口:/chat/read
 ####请求方式:GET/POST
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|userId|字符串|对方的用户id|是|dsdfsldfjlasfe|
+|sessionId|字符串|会话id，上一个接口获得|是|dsdfsldfjlasfe|
+|size|整型|获得多少条未读消息，默认为10|否|10|
 ####成功返回值
 ```
 {
     "ret": 200,
     "data": [
         {
-            "id": "sdflsjdflsjldfjslfdjlsdjflsf",
+            "seq": 10,
             "sender": "sdfsdafsadfasdfsdfasdfasf23223",
             "receiver": "sdfasfweefweafaef2324e",
             "senderUser": {
@@ -1219,7 +1198,7 @@
             "sessionId": "sdfasfweefweafaef2324e"
         },
         {
-            "id": "sdflsjdflsjldfjslfdjlsdjflsdddddf",
+            "seq": 11,
             "sender": "sdfsdafsadfasdfsdfasdfasf23223",
             "receiver": "sdfasfweefweafaef2324e",
             "senderUser": {
@@ -1249,72 +1228,13 @@
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|id|字符串数组|消息的id列表|是|id=dsdfsldfjlasfe1&id=dsdfsldfjlasfe2|
+|sessionId|字符串|会话id|是|=dsdfsldfjlasfe1|
+|seq|长整型|最后一条已读消息的序列号|是|12|
 ####成功返回值
 ```
 {
     "ret":200,
     "data":""
-}
-```
-
-###获得会话信息
-####接口:/chat/list
-####请求方式:GET/POST
-####接口参数
-|参数名|类型|描述|是否必须|示例|
-|---|---|---|---|---|
-|userId|字符串|对方的用户id|是|dsdfsldfjlasfe|
-|maxId|字符串|最后一条记录|是|2323rfasdfasdfasdfsaf|
-|size|数字|消息数|否,默认为10|15|
-####成功返回值
-```
-{
-    "ret": 200,
-    "data": [
-        {
-            "id": "sdflsjdflsjldfjslfdjlsdjflsf",
-            "sender": "sdfsdafsadfasdfsdfasdfasf23223",
-            "receiver": "sdfasfweefweafaef2324e",
-            "senderUser": {
-                "id": "",
-                "nickname": "",
-                "avatar": ""
-            },
-            "receiverUser": {
-                "id": "",
-                "nickname": "",
-                "avatar": ""
-            },
-            "type": "TEXT",
-            "hasRead": false,
-            "sendTime": 1234564561646546,
-            "url": "",
-            "content": "abcdefg",
-            "sessionId": "sdfasfweefweafaef2324e"
-        },
-        {
-            "id": "sdflsjdflsjldfjslfdjlsdjflsdddddf",
-            "sender": "sdfsdafsadfasdfsdfasdfasf23223",
-            "receiver": "sdfasfweefweafaef2324e",
-            "senderUser": {
-                "id": "",
-                "nickname": "",
-                "avatar": ""
-            },
-            "receiverUser": {
-                "id": "",
-                "nickname": "",
-                "avatar": ""
-            },
-            "type": "TEXT",
-            "hasRead": false,
-            "sendTime": 1234564561646546,
-            "url": "",
-            "content": "dfa",
-            "sessionId": "sdfasfweefweafaef2324e"
-        }
-    ]
 }
 ```
 
@@ -1610,50 +1530,6 @@
 			}
 		}]
 	}
-}
-```
-
-##消息相关接口
-###获得未读消息提醒,ios
-####接口:/message/unread/ios
-####请求方式:GET/POST
-####接口参数
-无
-####成功返回值
-
-```
-{
-    "ret": 200,
-    "data": [{
-        "senderId": "",
-        "name": "",
-        "avatar": "",
-        "type": "message",
-        "message": "xxxxxx"
-    }]
-}
-```
-###获得未读消息提醒,android
-####接口:/message/unread/android
-####请求方式:GET/POST
-####接口参数
-无
-####成功返回值
-
-```
-{
-    "ret": 200,
-    "data": [{
-        "sender": {
-        	"id":"",
-        	"avatar":"",
-        	"name":""
-        }
-        "name": "",
-        "avatar": "",
-        "type": "message",
-        "message": "xxxxxx"
-    }]
 }
 ```
 
