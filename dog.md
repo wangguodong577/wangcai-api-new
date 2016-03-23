@@ -1714,8 +1714,9 @@
 ```
 {
     "ret": 200,
-    "data": {
-        "BATH": {
+    "data": [
+        {
+            "type": "BATH",
             "icon": "http://xxxxx.xxx/xxx.jpg",
             "count": 12,
             "lastRecord": {
@@ -1731,19 +1732,22 @@
                 "time": 1232312312312
             }
         },
-        "VACCINATE": {
+        {
+            "type": "VACCINATE",
             "icon": "http://xxxxx.xxx/xxx.jpg",
             "count": 0
         },
-        "REPELLENT": {
+        {
+            "type": "REPELLENT",
             "icon": "http://xxxxx.xxx/xxx.jpg",
             "count": 0
         },
-        "ESTRUS": {
+        {
+            "type": "ESTRUS",
             "icon": "http://xxxxx.xxx/xxx.jpg",
             "count": 0
         }
-    }
+    ]
 }
 ```
 ###事件记录列表接口
