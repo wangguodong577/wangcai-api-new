@@ -1691,6 +1691,7 @@
 |---|---|---|---|---|
 |type|字符串|事件类型，有四种，分别为（BATH，VACCINATE，REPELLENT，ESTRUS）|是|BATH|
 |dogId|字符串|狗id|是|xxxxxxx|
+|date|长整型|记录的时间，若为空，则取服务器当前时间，毫秒数|否|12231345645646456|
 |remark|字符串|备注|否|在宠物店洗的|
 |cycle|整型|周期|否|30|
 |unit|字符串|周期单位，可选值有day,week,month,year。若有cycle，则此必须|否|day|
