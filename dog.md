@@ -959,6 +959,26 @@
     	}
 }
 ```
+###修改狗的资料
+####接口:/dog/modify/profile
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|dogId|字符串|狗id|是|xxxx|
+|name|字符串|狗的名字|否|bobo|
+|avatar|字符串|狗的头像链接|否|http://xxx.xx/xx.jpg|
+|gender|字符串|狗的性别,可选值为male或female|否|male|
+|birthday|字符串|狗的生日，格式为yyyy-MM-dd|否|male|
+|breed|字符串|狗的品种id|否|xxxxxxxxxxx|
+|lineage|布尔值|狗是否为纯种|否|true|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
 
 ###关注一条狗
 ####接口:/dog/follow
