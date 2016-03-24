@@ -1156,10 +1156,13 @@
 ```
 {
     "ret": 200,
-    "data": {
-        "sessionId1":3,
-        "sessionId2":4
-    }
+    "data": [{
+        "sessionId":"xxxxxx",
+        "count":4
+    },{
+        "sessionId":"xxxxxx",
+        "count":2
+    }]
 }
 ```
 
