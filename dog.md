@@ -1080,7 +1080,13 @@
                 "avatar": "",
                 "birthday": "NORMAL",
                 "gender": "Junrui Kang",
-                "breed": "56b00a46e4b021083bb2c8e8"
+                "breed": "56b00a46e4b021083bb2c8e8",
+                "breedInfo":{
+                	"id":"xxx",
+                	"isHot":false,
+                	"name":"xxxx"
+                },
+                "lineage":true,
                 "fans":[{
                 	"id":"",
                 	"nickname":"",
