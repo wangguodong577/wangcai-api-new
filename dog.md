@@ -972,6 +972,8 @@
 |birthday|字符串|狗的生日，格式为yyyy-MM-dd|否|male|
 |breed|字符串|狗的品种id|否|xxxxxxxxxxx|
 |lineage|布尔值|狗是否为纯种|否|true|
+|weight|浮点型|狗的体重|否|10.5|
+|height|浮点型|狗的身高|否|20.5|
 ####成功返回值
 ```
 {
