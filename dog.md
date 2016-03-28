@@ -1798,16 +1798,17 @@ body中的action指定方法，params中设置参数
 ####接口参数
 |格式说明|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|{"sessionId":seq}|sessionId:字符串,seq：long|会话及其最后一条已读消息的seq|是|{"session1":1,"session2",3}|
+|{"oppositeId":"","type":"","seq":seq}|oppositeId:字符串,seq：long|会话及其最后一条已读消息的seq|是|{"oppositeId":"xxxx","type":"PRIVATE","seq",10}|
 ####成功body返回值
 
 ```
 {
     "ret": 200,
-    "data": {
-    	"session1":true,
-    	"session2":true
-    }
+    "data": [{
+        "oppositeId":"xxxxxx",
+        "type":"PRIVATE",
+        "result":true
+    }]
 }
 ```
 
@@ -1820,19 +1821,24 @@ body中的action指定方法，params中设置参数
 ```
 {
     "ret": 200,
-    "data": {
-    	"session1":2,
-    	"session2":3
-    }
+    "data": [{
+        "oppositeId":"xxxxxx",
+        "type":"PRIVATE",
+        "count":4
+    },{
+        "oppositeId":"xxxxxx",
+        "type":"GROUP",
+        "count":2
+    }]
 }
 ```
 
-###根据会话id推送该会话最老的十条未读消息,消息会通过另外一个长连接发送，此消息返回ack
+###根据对方id推送该会话最老的十条未读消息,消息会通过另外一个长连接发送，此消息返回ack
 ####接口action:GetUnreadMessagesBySession
 ####接口参数
 |格式说明|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|sessionId=xxx|sessionId:字符串|会话Id|是|sessionId=xxxxxx|
+|oppositeId=xxx&type=GROUP|oppositeId:字符串,type聊天类型|对方Id加上类型，确认唯一会话|是|oppositeId=xxxxxx&type=GROUP|
 ####成功body返回值
 
 ```
