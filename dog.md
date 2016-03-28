@@ -1263,22 +1263,25 @@
 {
     "ret": 200,
     "data": [{
-        "sessionId":"xxxxxx",
+        "userId":"xxxxxx",
+        "type":"PRIVATE",
         "count":4
     },{
-        "sessionId":"xxxxxx",
+        "groupId":"xxxxxx",
+        "type":"GROUP",
         "count":2
     }]
 }
 ```
 
-###阅读信息,根据当前用户指定会话的未读的消息
+###阅读信息,根据当前用户指定会话（用户或群）的未读的消息
 ####接口:/chat/read
 ####请求方式:GET/POST
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|sessionId|字符串|会话id，上一个接口获得|是|dsdfsldfjlasfe|
+|userId|字符串|对方的id|是|dsdfsldfjlasfe|
+|groupId|字符串|群的id（userId和群id二选一，必须有一个）|是|dsdfsldfjlasfe|
 |size|整型|获得多少条未读消息，默认为10|否|10|
 ####成功返回值
 ```
