@@ -1289,46 +1289,41 @@
     "ret": 200,
     "data": [
         {
+            "oppositeId": "xxxxxx",
+            "chatType": "GROUP",
             "seq": 10,
             "sender": "sdfsdafsadfasdfsdfasdfasf23223",
             "receiver": "sdfasfweefweafaef2324e",
-            "senderUser": {
+            "senderDetail": {
                 "id": "",
-                "nickname": "",
+                "name": "",
                 "avatar": ""
             },
-            "receiverUser": {
+            "groupDetail": {
                 "id": "",
-                "nickname": "",
+                "name": "",
                 "avatar": ""
             },
-            "type": "TEXT",
-            "hasRead": false,
+            "chatMessageType": "TEXT",
             "sendTime": 1234564561646546,
             "url": "",
-            "content": "abcdefg",
-            "sessionId": "sdfasfweefweafaef2324e"
+            "content": "abcdefg"
         },
         {
-            "seq": 11,
+            "oppositeId": "xxxxxx",
+            "chatType": "PRIVATE",
+            "seq": 10,
             "sender": "sdfsdafsadfasdfsdfasdfasf23223",
             "receiver": "sdfasfweefweafaef2324e",
-            "senderUser": {
+            "senderDetail": {
                 "id": "",
-                "nickname": "",
+                "name": "",
                 "avatar": ""
             },
-            "receiverUser": {
-                "id": "",
-                "nickname": "",
-                "avatar": ""
-            },
-            "type": "TEXT",
-            "hasRead": false,
+            "chatMessageType": "TEXT",
             "sendTime": 1234564561646546,
             "url": "",
-            "content": "dfa",
-            "sessionId": "sdfasfweefweafaef2324e"
+            "content": "abcdefg"
         }
     ]
 }
