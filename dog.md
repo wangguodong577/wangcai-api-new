@@ -1347,7 +1347,10 @@
 ```
 {
     "ret":200,
-    "data":""
+    "data":{
+        "oppositeId":"xxxxxx",
+        "type":"GROUP"
+    }
 }
 ```
 
