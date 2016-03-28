@@ -1340,7 +1340,8 @@
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|sessionId|字符串|会话id|是|=dsdfsldfjlasfe1|
+|userId|字符串|对方的id|是|dsdfsldfjlasfe|
+|groupId|字符串|群的id（userId和群id二选一，必须有一个）|是|dsdfsldfjlasfe|
 |seq|长整型|最后一条已读消息的序列号|是|12|
 ####成功返回值
 ```
