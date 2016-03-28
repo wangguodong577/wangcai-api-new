@@ -1263,11 +1263,11 @@
 {
     "ret": 200,
     "data": [{
-        "userId":"xxxxxx",
+        "oppositeId":"xxxxxx",
         "type":"PRIVATE",
         "count":4
     },{
-        "groupId":"xxxxxx",
+        "oppositeId":"xxxxxx",
         "type":"GROUP",
         "count":2
     }]
@@ -1280,8 +1280,8 @@
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|userId|字符串|对方的id|是|dsdfsldfjlasfe|
-|groupId|字符串|群的id（userId和群id二选一，必须有一个）|是|dsdfsldfjlasfe|
+|oppositeId|字符串|对方的id|是|dsdfsldfjlasfe|
+|type|字符串|对方的类型，群聊还是私聊，PRIVATE，GROUP|是|GROUP|
 |size|整型|获得多少条未读消息，默认为10|否|10|
 ####成功返回值
 ```
@@ -1340,8 +1340,8 @@
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|userId|字符串|对方的id|是|dsdfsldfjlasfe|
-|groupId|字符串|群的id（userId和群id二选一，必须有一个）|是|dsdfsldfjlasfe|
+|oppositeId|字符串|对方的id|是|dsdfsldfjlasfe|
+|type|字符串|对方的类型，群聊还是私聊，PRIVATE，GROUP|是|GROUP|
 |seq|长整型|最后一条已读消息的序列号|是|12|
 ####成功返回值
 ```
