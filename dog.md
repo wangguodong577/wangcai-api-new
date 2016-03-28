@@ -680,41 +680,94 @@
 |---|---|---|---|---|
 |familyId|字符串|家庭名称|是|asdf2jr2ojflajfjlkajfsdfsaf|
 |recent|布尔值|是否获得最近六条记录|否|false|
+|tips|布尔值|是否获得用户的tips|否|false|
 ####成功返回值
 ```
 {
     "ret": 200,
     "data": {
-        "id": "",
+        "id": "56b00a46e4b021083bb2c8e8",
+        "dogs": [
+            {
+                "id": "56b00a46e4b021083bb2c8e9",
+                "familyId": "56b00a46e4b021083bb2c8e8",
+                "name": "ggg",
+                "avatar": "http://img2.enterest.me/test-dogs-img/img/2016/03/3e52e347cba352e15eaea90e7874e10d.JPG",
+                "breed": "maltese",
+                "birthday": 2147483647,
+                "lineage": false,
+                "gender": "",
+                "weight": "",
+                "height": "",
+                "createTime": 1454377543000,
+                "creator": ""
+            }
+        ],
+        "members": 1,
         "name": "",
         "background": "",
-        "createTime": "",
-        "creator": "",
-        "owner": "",
-        "recent":[{
-        	"id":"",
-        	"photoUrl":"",
-        	"userId":"",
-        	"familyId":""
-        }]
+        "createTime": 1454377543000,
+        "creator": "56b00a46e4b021083bb2c8e7",
+        "owner": "56b00a46e4b021083bb2c8e7",
+        "recent": [
+            {
+                "id": "56d9395fe4b0757ebf2f5ec3",
+                "createTime": 1457076576000,
+                "hasLocation": false,
+                "dogs": [
+                    "56b00a46e4b021083bb2c8e9"
+                ],
+                "words": "",
+                "familyId": "56b00a46e4b021083bb2c8e8",
+                "userId": "56b00a46e4b021083bb2c8e7",
+                "topicId": "56838b08e4b0691b1083fd42",
+                "lng": "",
+                "photoUrl": "http://img2.enterest.me/test-dogs-img/img/2016/03/9c580b30b49afdbc84fb36c86e782421.JPG",
+                "lat": ""
+            }
+        ],
         "family": [
             {
-                "id": "",
-                "nickname": "",
-                "avatar": ""
-            },
-            {
-                "id": "",
-                "nickname": "",
+                "id": "56b00a46e4b021083bb2c8e7",
+                "thumbnail": "",
+                "lastLoginDate": "",
+                "regTime": 1454377543000,
+                "status": "NORMAL",
+                "nickname": "Junrui Kang",
+                "familyId": "56b00a46e4b021083bb2c8e8",
                 "avatar": ""
             }
         ],
-        "dogs": [
+        "tips": [
             {
-                "id": "",
-                "name": "",
-                "avatar": "",
-                "breed": ""
+                "subHeader": "Southern California",
+                "type": "NOTICE",
+                "header": "Emergency warning",
+                "title": "A massive outbreak in southern California",
+                "summary": "Emergency outbreak, everybody, don't go out!",
+                "url": "",
+                "image": "https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1286576253,1008054910&fm=58",
+                "rating": 4
+            },
+            {
+                "subHeader": "In 3 days…",
+                "type": "REMIND",
+                "header": "Bobo and Lei need to take bath in 3 days.",
+                "title": "Why should dogs take bath?",
+                "summary": "Your dog needs to take bath is because: 1) Clean off the dirt on him/her. 2) Clean the stink off him/her. The stink of dog mainly from ...",
+                "url": "http://www.baidu.com",
+                "image": "http://static.360buyimg.com/finance/base/1.1.0/images/logo-slogan.png",
+                "rating": 0
+            },
+            {
+                "subHeader": "Knowledge",
+                "type": "SWITH",
+                "header": "Behavior Training-Leash Training",
+                "title": "Your puppy should be taught to walk on a loose leash and have good manners from the beginning?",
+                "summary": "Start with a nylon or leather collar. Leave the collar on for short periods. When the puppy is no longer bothered by it, leave it on all the time. Attach a leash that he can drag behind him.",
+                "url": "http://www.baidu.com",
+                "image": "",
+                "rating": 0
             }
         ]
     }
