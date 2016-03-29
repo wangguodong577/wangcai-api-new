@@ -1602,45 +1602,47 @@
 }
 ```
 
-###查看附近的人
+###查看附近的狗
 ####接口:/walk/nearby
 ####请求方式:GET/POST
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|distance|double|半径范围,单位是米|是|3000|
+|distance|double|半径范围,单位是英里|是|3000|
 |lat|double|维度|否|111.8834140000|
 |lng|double|经度|否|37.2888310000|
 ####成功返回值
 ```
 {
-    "ret":200,
-    "data":{
-		"family":[{
-			"name":"",
-			"avatar":"",
-			"location":{
-				"longitude":111.8834140000,
-				"latitude":37.2888310000
-			}
-		}],
-		"friend":[{
-			"name":"",
-			"avatar":"",
-			"location":{
-				"longitude":111.8834140000,
-				"latitude":37.2888310000
-			}
-		}],
-		"stranger":[{
-			"name":"",
-			"avatar":"",
-			"location":{
-				"longitude":111.8834140000,
-				"latitude":37.2888310000
-			}
-		}]
-	}
+    "ret": 200,
+    "data": [
+        {
+            "dog": {
+                "id": "",
+                "avatar": "",
+                "name": ""
+            },
+            "location": {
+                "longitude": 111.883414,
+                "latitude": 37.288831
+            },
+            "wantDate": true,
+            "distance": 5.3
+        },
+        {
+            "dog": {
+                "id": "",
+                "avatar": "",
+                "name": ""
+            },
+            "location": {
+                "longitude": 111.883414,
+                "latitude": 37.288831
+            },
+            "wantDate": true,
+            "distance": 5.3
+        }
+    ]
 }
 ```
 
