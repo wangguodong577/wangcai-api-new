@@ -1478,6 +1478,7 @@
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
+|city|字符串|城市|是|beijing|
 |dogs|字符串数组|本次遛的狗们|是|dogs=ekwjldjslfjasldfj&dogs=sdfjlsdfjlsadfsdf|
 |visible|布尔值|是否对其他人可见|是|true|
 |notice|布尔值|是否通知好友|是|false|
@@ -1493,13 +1494,70 @@
 }
 ```
 
-###结束遛狗
-####接口:/walk/finish
+###是否正在遛狗
+####接口:/walk/iswalking
 ####请求方式:GET/POST
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|walkId|字符串|本次遛狗id|是|ekwjldjslfjasldfj|
+|dogs|字符串数组|本次遛的狗们|是|dogs=ekwjldjslfjasldfj&dogs=sdfjlsdfjlsadfsdf|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":{
+    	"walking":true,
+    	"dogs":["", ""]
+    }
+}
+```
+
+###呼朋引伴
+####接口:/walk/wannadating
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|words|字符串|约炮宣言|是|我在这里，你在哪里？|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+
+###取消呼朋引伴
+####接口:/walk/canceldate
+####请求方式:GET/POST
+####接口参数
+无
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+
+###加入呼朋引伴
+####接口:/walk/joindate
+####请求方式:GET/POST
+####接口参数
+无
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+
+###结束遛狗
+####接口:/walk/finish
+####请求方式:GET/POST
+####接口参数
+无
 ####成功返回值
 ```
 {
@@ -1590,6 +1648,7 @@
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
+|city|字符串|城市|是|beijing|
 |walkId|字符串|本次遛狗id|是|ekwjldjslfjasldfj|
 |lat|double|维度|是|111.8834140000|
 |lng|double|经度|是|37.2888310000|
