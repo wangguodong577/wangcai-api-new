@@ -1488,7 +1488,15 @@
 ```
 {
     "ret":200,
-    "data":""
+    "data":{
+    		"walkId":"",
+    		"startTime":"",
+    		"dogs":[{
+    			"id":"",
+    			"avatar":"",
+    			"name":""
+    		}]
+    	}
 }
 ```
 
@@ -1504,8 +1512,18 @@
 {
     "ret":200,
     "data":{
-    	"walking":true,
-    	"dogs":["", ""]
+    	"userIsWalkIng":true,
+    	"userWalkInfo":{
+    		"walkId":"",
+    		"startTime":"",
+    		"dogs":[{
+    			"id":"",
+    			"avatar":"",
+    			"name":""
+    		}]
+    	},
+    	"anyDogIsWalking": true,
+    	"dogWalkingList":["", ""]
     }
 }
 ```
