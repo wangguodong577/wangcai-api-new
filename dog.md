@@ -1506,7 +1506,7 @@
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|dogs|字符串数组|本次遛的狗们|是|dogs=ekwjldjslfjasldfj&dogs=sdfjlsdfjlsadfsdf|
+|dogs|字符串数组|本次遛的狗们|否|dogs=ekwjldjslfjasldfj&dogs=sdfjlsdfjlsadfsdf|
 ####成功返回值
 ```
 {
@@ -1523,7 +1523,10 @@
     		}]
     	},
     	"anyDogIsWalking": true,
-    	"dogWalkingList":["", ""]
+    	"dogWalkingList":[{
+    		"dogId":"",
+    		"userId":""
+    	}]
     }
 }
 ```
@@ -1702,7 +1705,7 @@
                 "longitude": 111.883414,
                 "latitude": 37.288831
             },
-            "wantDate": true,
+            "wannaDating": true,
             "distance": 5.3
         },
         {
@@ -1715,7 +1718,7 @@
                 "longitude": 111.883414,
                 "latitude": 37.288831
             },
-            "wantDate": true,
+            "wannaDating": true,
             "distance": 5.3
         }
     ]
