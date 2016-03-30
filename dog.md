@@ -1471,7 +1471,7 @@
 }
 ```
 
-##溜溜相关接口
+##遛遛相关接口
 ###出发遛狗
 ####接口:/walk/setoff
 ####请求方式:GET/POST
@@ -1512,7 +1512,7 @@
 {
     "ret":200,
     "data":{
-    	"userIsWalkIng":true,
+    	"userIsWalking":true,
     	"userWalkInfo":{
     		"walkId":"",
     		"startTime":"",
