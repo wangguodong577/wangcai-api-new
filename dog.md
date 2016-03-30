@@ -1735,6 +1735,7 @@
                 "longitude": 111.883414,
                 "latitude": 37.288831
             },
+            "hasFollow":false,
             "wannaDating": true,
             "distance": 5.3
         },
@@ -1748,6 +1749,7 @@
                 "longitude": 111.883414,
                 "latitude": 37.288831
             },
+            "hasFollow":false,
             "wannaDating": true,
             "distance": 5.3
         }
