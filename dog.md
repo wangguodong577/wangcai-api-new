@@ -1472,6 +1472,49 @@
 ```
 
 ##遛遛相关接口
+
+###获得狗今天的运动量
+####接口:/walk/exercise
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|dogs|字符串数组|想要获得运动量的狗们|是|dogs=ekwjldjslfjasldfj&dogs=sdfjlsdfjlsadfsdf|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": [{
+            "dog" : {
+                "id": "56f8e844e4b09c24bc16c600",
+                "createTime": 1459152964000,
+                "birthday": 1459247161226,
+                "breed": "9b2df08f-2f16-4d8c-8e74-cdaa5943d655",
+                "breedInfo": {
+                    "id": "9b2df08f-2f16-4d8c-8e74-cdaa5943d655",
+                    "name": "afghan hound",
+                    "photo": "",
+                    "isHot": false,
+                    "rank": 0,
+                    "createTime": 1452161532000
+                },
+                "height": 5,
+                "weight": 35,
+                "lineage": true,
+                "name": "Norman1",
+                "familyId": "56b16aece4b01201891e8487",
+                "gender": 0,
+                "avatar": "http://img2.enterest.me/test-dogs-img/img/2016/03/BD858C7FAB67A144DDEFB40FFC11261F.jpg",
+                "creator": "56b16aece4b01201891e8486"
+            },
+            "exercise" : {
+            	"expect" : 4234,
+            	"actual" : 2323
+            }
+        }]
+}
+```
+
 ###出发遛狗
 ####接口:/walk/setoff
 ####请求方式:GET/POST
