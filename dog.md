@@ -119,7 +119,6 @@
 |locale|字符串|用户语言|否||
 |timezone|字符串|用户所在时区|是|8|
 |country|字符串|用户所在国家|否|china|
-|city|字符串|用户所在城市|否|beijing|
 |pf|字符串|平台(ios或者android)|是|ios|
 |pushToken|字符串|推送token|是|sdfsdfawefawfasfd|
 ####成功返回值
@@ -432,7 +431,6 @@
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
 |country|字符串|用户所在国家|是|china|
-|city|字符串|用户所在城市|是|beijing|
 |lng|浮点型|经度|是|12.315456|
 |lat|浮点型|维度|是|25.145644|
 |radius|整型|半径,单位英里|是|3|
@@ -482,8 +480,6 @@
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|country|字符串|用户所在国家|是|china|
-|city|字符串|用户所在城市|是|beijing|
 |lng|浮点型|经度|是|12.315456|
 |lat|浮点型|维度|是|25.145644|
 ####成功返回值
@@ -1521,7 +1517,6 @@
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|city|字符串|城市|是|beijing|
 |dogs|字符串数组|本次遛的狗们|是|dogs=ekwjldjslfjasldfj&dogs=sdfjlsdfjlsadfsdf|
 |visible|布尔值|是否对其他人可见|是|true|
 |notice|布尔值|是否通知好友|是|false|
@@ -1569,7 +1564,6 @@
             "avatar": "http://img2.enterest.me/user/avatar/server/b2a79455-6cad-4607-8ce7-bcc31225bbff",
             "lastLoginTime": 1459321073000
         },
-        "city": "Beijing",
         "walkId": "56fcbe31e4b029bef7435f06"
     }
 }
@@ -1581,7 +1575,6 @@
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|city|字符串|城市|是|beijing|
 |dogId|字符串数组|要查看的狗，如果为空，则显示人的信息|否|sdfjlsdfjlsadfsdf|
 ####成功返回值
 ```
@@ -1654,7 +1647,6 @@
                 "avatar": "http://img2.enterest.me/user/avatar/server/b2a79455-6cad-4607-8ce7-bcc31225bbff",
                 "lastLoginTime": 1459321073000
             },
-            "city": "Beijing",
             "walkId": "56fcbe31e4b029bef7435f06",
             "location": {
                 "longitude": 116.42345756292343,
@@ -1848,7 +1840,6 @@
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|city|字符串|城市|是|beijing|
 |lat|double|维度|是|111.8834140000|
 |lng|double|经度|是|37.2888310000|
 |remain|布尔值|是否依然在遛狗,若遛狗时间超过最大遛狗时间,需要明确指明,否则会提示错误|否|true|
@@ -1866,7 +1857,6 @@
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|city|字符串|城市|是|beijing|
 |radius|double|半径范围,单位是英里|是|3000|
 |lat|double|维度|否|111.8834140000|
 |lng|double|经度|否|37.2888310000|
