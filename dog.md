@@ -2079,7 +2079,7 @@ body中的action指定方法，params中设置参数
 ####接口参数
 |格式说明|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|{"oppositeId":"","type":"","seq":seq}|oppositeId:字符串,seq：long|会话及其最后一条已读消息的seq|是|{"oppositeId":"xxxx","type":"PRIVATE","seq",10}|
+|oppositeId=xxxx&type=PRIVATE&seq=xxx|oppositeId:字符串,seq：long|会话及其最后一条已读消息的seq|是|{"oppositeId":"xxxx","type":"PRIVATE","seq",10}|
 ####成功body返回值
 
 ```
@@ -2119,7 +2119,7 @@ body中的action指定方法，params中设置参数
 ####接口参数
 |格式说明|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|oppositeId=xxx&type=GROUP|oppositeId:字符串,type聊天类型|对方Id加上类型，确认唯一会话|是|oppositeId=xxxxxx&type=GROUP|
+|oppositeId=xxx&type=GROUP&size=10|oppositeId:字符串,type聊天类型|对方Id加上类型，确认唯一会话|是|oppositeId=xxxxxx&type=GROUP|
 ####成功body返回值
 
 ```
