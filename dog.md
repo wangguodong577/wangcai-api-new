@@ -2094,7 +2094,7 @@ body中的action指定方法，params中设置参数
 ```
 
 ###获得有未读消息的会话列表
-####接口action:GetUnreadSessionList
+####接口action:GetUnreadChatList
 ####接口参数
 无
 ####成功body返回值
@@ -2115,7 +2115,7 @@ body中的action指定方法，params中设置参数
 ```
 
 ###根据对方id推送该会话最老的十条未读消息,消息会通过另外一个长连接发送，此消息返回ack
-####接口action:GetUnreadMessagesBySession
+####接口action:GetUnreadMessagesByOppositeId
 ####接口参数
 |格式说明|类型|描述|是否必须|示例|
 |---|---|---|---|---|
