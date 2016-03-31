@@ -1487,16 +1487,48 @@
 ####成功返回值
 ```
 {
-    "ret":200,
-    "data":{
-    		"walkId":"",
-    		"startTime":"",
-    		"dogs":[{
-    			"id":"",
-    			"avatar":"",
-    			"name":""
-    		}]
-    	}
+    "ret": 200,
+    "data": {
+        "startTime": 1459404337114,
+        "dogs": [
+            {
+                "id": "56f8e844e4b09c24bc16c600",
+                "createTime": 1459152964000,
+                "birthday": 1459247161226,
+                "breed": "9b2df08f-2f16-4d8c-8e74-cdaa5943d655",
+                "breedInfo": {
+                    "id": "9b2df08f-2f16-4d8c-8e74-cdaa5943d655",
+                    "name": "afghan hound",
+                    "photo": "",
+                    "isHot": false,
+                    "rank": 0,
+                    "createTime": 1452161532000
+                },
+                "height": 5,
+                "weight": 35,
+                "lineage": true,
+                "name": "Norman1",
+                "familyId": "56b16aece4b01201891e8487",
+                "gender": 0,
+                "avatar": "http://img2.enterest.me/test-dogs-img/img/2016/03/BD858C7FAB67A144DDEFB40FFC11261F.jpg",
+                "creator": "56b16aece4b01201891e8486"
+            }
+        ],
+        "visible": false,
+        "userId": "56ebda98e4b081e88c6abcdb",
+        "user": {
+            "id": "56ebda98e4b081e88c6abcdb",
+            "thumbnail": "http://img2.enterest.me/crop/user/avatar/server/b2a79455-6cad-4607-8ce7-bcc31225bbff_100x100_80.jpg",
+            "regTime": 1458297497000,
+            "status": "NORMAL",
+            "nickname": "Light",
+            "familyId": "56ebda98e4b081e88c6abcdc",
+            "avatar": "http://img2.enterest.me/user/avatar/server/b2a79455-6cad-4607-8ce7-bcc31225bbff",
+            "lastLoginTime": 1459321073000
+        },
+        "city": "Beijing",
+        "walkId": "56fcbe31e4b029bef7435f06"
+    }
 }
 ```
 
@@ -1534,27 +1566,103 @@
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|dogs|字符串数组|本次遛的狗们|否|dogs=ekwjldjslfjasldfj&dogs=sdfjlsdfjlsadfsdf|
+|dogs|字符串数组|要检测的狗们，若为空，则检测自己所在家庭的狗们|否|dogs=ekwjldjslfjasldfj&dogs=sdfjlsdfjlsadfsdf|
+|userId|字符串|用户id，判断用户，若为空，则不判断人|否|sdfjlsdfjlsadfsdf|
 ####成功返回值
 ```
 {
-    "ret":200,
-    "data":{
-    	"userIsWalking":true,
-    	"userWalkInfo":{
-    		"walkId":"",
-    		"startTime":"",
-    		"dogs":[{
-    			"id":"",
-    			"avatar":"",
-    			"name":""
-    		}]
-    	},
-    	"anyDogIsWalking": true,
-    	"dogWalkingList":[{
-    		"dogId":"",
-    		"userId":""
-    	}]
+    "ret": 200,
+    "data": {
+        "userWalkInfo": {
+            "startTime": 1459404337114,
+            "dogs": [
+                {
+                    "id": "56f8e844e4b09c24bc16c600",
+                    "createTime": 1459152964000,
+                    "birthday": 1459247161226,
+                    "breed": "9b2df08f-2f16-4d8c-8e74-cdaa5943d655",
+                    "breedInfo": {
+                        "id": "9b2df08f-2f16-4d8c-8e74-cdaa5943d655",
+                        "name": "afghan hound",
+                        "photo": "",
+                        "isHot": false,
+                        "rank": 0,
+                        "createTime": 1452161532000
+                    },
+                    "height": 5,
+                    "weight": 35,
+                    "lineage": true,
+                    "name": "Norman1",
+                    "familyId": "56b16aece4b01201891e8487",
+                    "gender": 0,
+                    "avatar": "http://img2.enterest.me/test-dogs-img/img/2016/03/BD858C7FAB67A144DDEFB40FFC11261F.jpg",
+                    "creator": "56b16aece4b01201891e8486"
+                }
+            ],
+            "visible": false,
+            "userId": "56ebda98e4b081e88c6abcdb",
+            "user": {
+                "id": "56ebda98e4b081e88c6abcdb",
+                "thumbnail": "http://img2.enterest.me/crop/user/avatar/server/b2a79455-6cad-4607-8ce7-bcc31225bbff_100x100_80.jpg",
+                "regTime": 1458297497000,
+                "status": "NORMAL",
+                "nickname": "Light",
+                "familyId": "56ebda98e4b081e88c6abcdc",
+                "avatar": "http://img2.enterest.me/user/avatar/server/b2a79455-6cad-4607-8ce7-bcc31225bbff",
+                "lastLoginTime": 1459321073000
+            },
+            "city": "Beijing",
+            "walkId": "56fcbe31e4b029bef7435f06",
+            "location": {
+                "longitude": 116.42345756292343,
+                "latitude": 39.9434325387362
+            }
+        },
+        "anyDogIsWalking": true,
+        "dogWalkingList": [
+            {
+                "dogId": "56f8e844e4b09c24bc16c600",
+                "wannaDating": false,
+                "location": {
+                    "longitude": 116.42345756292343,
+                    "latitude": 39.9434325387362
+                },
+                "userId": "56ebda98e4b081e88c6abcdb",
+                "dog": {
+                    "id": "56f8e844e4b09c24bc16c600",
+                    "createTime": 1459152964000,
+                    "birthday": 1459247161226,
+                    "breed": "9b2df08f-2f16-4d8c-8e74-cdaa5943d655",
+                    "breedInfo": {
+                        "id": "9b2df08f-2f16-4d8c-8e74-cdaa5943d655",
+                        "name": "afghan hound",
+                        "photo": "",
+                        "isHot": false,
+                        "rank": 0,
+                        "createTime": 1452161532000
+                    },
+                    "height": 5,
+                    "weight": 35,
+                    "lineage": true,
+                    "name": "Norman1",
+                    "familyId": "56b16aece4b01201891e8487",
+                    "gender": 0,
+                    "avatar": "http://img2.enterest.me/test-dogs-img/img/2016/03/BD858C7FAB67A144DDEFB40FFC11261F.jpg",
+                    "creator": "56b16aece4b01201891e8486"
+                },
+                "user": {
+                    "id": "56ebda98e4b081e88c6abcdb",
+                    "thumbnail": "http://img2.enterest.me/crop/user/avatar/server/b2a79455-6cad-4607-8ce7-bcc31225bbff_100x100_80.jpg",
+                    "regTime": 1458297497000,
+                    "status": "NORMAL",
+                    "nickname": "Light",
+                    "familyId": "56ebda98e4b081e88c6abcdc",
+                    "avatar": "http://img2.enterest.me/user/avatar/server/b2a79455-6cad-4607-8ce7-bcc31225bbff",
+                    "lastLoginTime": 1459321073000
+                }
+            }
+        ],
+        "userIsWalking": true
     }
 }
 ```
