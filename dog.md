@@ -1744,6 +1744,18 @@
     "data":""
 }
 ```
+###退出呼朋引伴
+####接口:/walk/quitdate
+####请求方式:GET/POST
+####接口参数
+无
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
 
 ###结束遛狗
 ####接口:/walk/finish
@@ -2128,3 +2140,4 @@ body中的action指定方法，params中设置参数
 |NOT_FOLLOWED|没有关注|
 |ALREADY_FOLLOW|已经关注|
 |PASSWD_NOT_MATCH|密码不匹配|
+|USER_HAS_IN_DATING|用户已经加入了呼朋引伴|
