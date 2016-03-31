@@ -1479,7 +1479,7 @@
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|dogs|字符串数组|想要获得运动量的狗们|是|dogs=ekwjldjslfjasldfj&dogs=sdfjlsdfjlsadfsdf|
+|dogs|字符串数组|想要获得运动量的狗们，若为空，则判断本人所在家庭的所有狗|否|dogs=ekwjldjslfjasldfj&dogs=sdfjlsdfjlsadfsdf|
 ####成功返回值
 ```
 {
