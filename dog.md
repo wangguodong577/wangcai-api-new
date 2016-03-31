@@ -2079,17 +2079,17 @@ body中的action指定方法，params中设置参数
 ####接口参数
 |格式说明|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|oppositeId=xxxx&type=PRIVATE&seq=xxx|oppositeId:字符串,seq：long|会话及其最后一条已读消息的seq|是|{"oppositeId":"xxxx","type":"PRIVATE","seq",10}|
+|oppositeId=xxxx&type=PRIVATE&seq=xxx|oppositeId:字符串,seq：long|会话及其最后一条已读消息的seq|是|oppositeId=xxxx&type=PRIVATE&seq=5|
 ####成功body返回值
 
 ```
 {
     "ret": 200,
-    "data": [{
+    "data": {
         "oppositeId":"xxxxxx",
         "type":"PRIVATE",
         "result":true
-    }]
+    }
 }
 ```
 
@@ -2114,7 +2114,7 @@ body中的action指定方法，params中设置参数
 }
 ```
 
-###根据对方id推送该会话最老的十条未读消息,消息会通过另外一个长连接发送，此消息返回ack
+###根据对方id推送该会话最老的N条未读消息
 ####接口action:GetUnreadMessagesByOppositeId
 ####接口参数
 |格式说明|类型|描述|是否必须|示例|
@@ -2125,7 +2125,8 @@ body中的action指定方法，params中设置参数
 ```
 {
     "ret": 200,
-    "data": ""
+    "data":[{
+    }]
 }
 ```
 
