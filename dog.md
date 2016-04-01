@@ -286,6 +286,7 @@
 |mentionDogId|字符串数组|提到的狗,最多5条|否|asdf2jr2ojflajfjlkajfsdfsaf|
 |lat|double|维度|否|111.8834140000|
 |lng|double|经度|否|37.2888310000|
+|walkId|字符串|遛狗id|否|xxxxxxxxxxxxxx|
 ####成功返回值
 ```
 {
