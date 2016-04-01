@@ -1794,7 +1794,11 @@
 			"visible":"",
 			"duration":"",
 			"distance":"",
-			"calorie":""
+			"calorie":"",
+			"exercise" : {
+                		"expect" : 4234,
+                		"actual" : 2323
+    			}
 		},{
 			"id":"",
 			"walkId":"",
@@ -1805,7 +1809,11 @@
 			"visible":"",
 			"duration":"",
 			"distance":"",
-			"calorie":""
+			"calorie":"",
+			"exercise" : {
+                		"expect" : 4234,
+                		"actual" : 2323
+    			}
 		}]
 	}
 }
