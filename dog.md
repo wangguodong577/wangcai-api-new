@@ -1814,6 +1814,19 @@
                 		"expect" : 4234,
                 		"actual" : 2323
     			}
+		}],
+		"walkTrails":[{
+			"id":"",
+			"walkId":"",
+			"lat":"",
+			"lng":"",
+			"recordTime":12232432424
+		},{
+			"id":"",
+			"walkId":"",
+			"lat":"",
+			"lng":"",
+			"recordTime":12232432424
 		}]
 	}
 }
