@@ -1871,12 +1871,42 @@
 |---|---|---|---|---|
 |lat|double|维度|是|111.8834140000|
 |lng|double|经度|是|37.2888310000|
+|radius|double|半径范围,单位是英里|否|3|
 |remain|布尔值|是否依然在遛狗,若遛狗时间超过最大遛狗时间,需要明确指明,否则会提示错误|否|true|
 ####成功返回值
 ```
 {
-    "ret":200,
-    "data":""
+    "ret": 200,
+    "data": [
+        {
+            "dog": {
+                "id": "",
+                "avatar": "",
+                "name": ""
+            },
+            "location": {
+                "longitude": 111.883414,
+                "latitude": 37.288831
+            },
+            "hasFollow":false,
+            "wannaDating": true,
+            "distance": 5.3
+        },
+        {
+            "dog": {
+                "id": "",
+                "avatar": "",
+                "name": ""
+            },
+            "location": {
+                "longitude": 111.883414,
+                "latitude": 37.288831
+            },
+            "hasFollow":false,
+            "wannaDating": true,
+            "distance": 5.3
+        }
+    ]
 }
 ```
 
@@ -1886,7 +1916,7 @@
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|radius|double|半径范围,单位是英里|是|3000|
+|radius|double|半径范围,单位是英里|是|3|
 |lat|double|维度|否|111.8834140000|
 |lng|double|经度|否|37.2888310000|
 |follow|布尔值|是否只显示关注的狗|否|true|
