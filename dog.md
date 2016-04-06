@@ -942,7 +942,9 @@
                 "nickname": "Junrui Kang",
                 "familyId": "56b00a46e4b021083bb2c8e8",
                 "regDate": "",
-                "avatar": ""
+                "avatar": "",
+                "type" : "PRIVATE" //可取值 PRIVATE / GROUP
+
     	}
     ]
 }
