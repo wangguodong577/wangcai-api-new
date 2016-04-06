@@ -1914,7 +1914,9 @@
             },
             "hasFollow":false,
             "wannaDating": true,
-            "distance": 5.3
+            "dateAds" : "我想你",
+            "distance": 5.3,
+            "iAmJoin" : true
         },
         {
             "dog": {
@@ -1928,7 +1930,9 @@
             },
             "hasFollow":false,
             "wannaDating": true,
-            "distance": 5.3
+            "dateAds" : "我想你",
+            "distance": 5.3,
+            "iAmJoin" : false
         }
     ]
 }
@@ -1961,7 +1965,9 @@
             },
             "hasFollow":false,
             "wannaDating": true,
-            "distance": 5.3
+            "dateAds" : "我想你",
+            "distance": 5.3,
+            "iAmJoin" : false
         },
         {
             "dog": {
@@ -1975,7 +1981,9 @@
             },
             "hasFollow":false,
             "wannaDating": true,
-            "distance": 5.3
+            "dateAds" : "我想你",
+            "distance": 5.3,
+            "iAmJoin" : false
         }
     ]
 }
