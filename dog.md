@@ -383,6 +383,8 @@
             "lng":23.4353,
             "lat":54.2323,
             "likes": 99,
+            "type" : "WALK", //可取值 WALK, PIC
+            
             "comments": [
                 {
                     "id": "56c527eee4b0d4e743a592a2",
@@ -420,7 +422,18 @@
             	"avatar":"",
             	"breed":"",
             	"birthday":"",
-            	"createTime":""
+            	"createTime":"",
+            	
+            	//如果是遛的狗，有一下信息
+            	"startTime" : "xxx",
+            	"endTime" : "xxx",
+            	"duration":"",
+            	"distance":"",
+            	"calorie":"",
+            	"exercise" : {
+                        "expect" : 4234,
+                        "actual" : 2323
+                }
             }]
         }
     ]
