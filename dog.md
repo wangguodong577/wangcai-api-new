@@ -2194,7 +2194,16 @@ body中的action指定方法，params中设置参数
 }
 ```
 
+###獲取可用的chat server端口列表
+####接口action:GetUnreadMessagesByOppositeId
+####成功body返回值
 
+```
+{
+    "ret": 200,
+    "data":[1,2,3]
+}
+```
 
 #错误码
 |错误码|含义|
