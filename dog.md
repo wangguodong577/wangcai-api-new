@@ -1064,6 +1064,34 @@
 }
 ```
 
+###狗粉絲
+####接口:/dog/fans
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|dogId|字符串|狗的id|是|xxxxxxx|
+|page|數字|頁碼|否|1|
+|size|數字|page size|否|10|
+####成功返回值
+```
+{
+  "ret": 200,
+  "data": [
+    {
+      "id": "56d80913e4b026c016f58144",
+      "thumbnail": "http://img2.enterest.me/crop/user/avatar/server/65f2f1d5-f7fb-4a56-8a48-f52d782a536d_100x100_80.jpg",
+      "regTime": 1456998676000,
+      "status": "NORMAL",
+      "nickname": "devosjdi",
+      "familyId": "56d80913e4b026c016f58145",
+      "avatar": "http://img2.enterest.me/user/avatar/server/65f2f1d5-f7fb-4a56-8a48-f52d782a536d",
+      "lastLoginTime": 1460106121552
+    }
+  ]
+}
+```
+
 ###取消关注狗
 ####接口:/dog/unfollow
 ####请求方式:GET/POST
