@@ -2195,7 +2195,7 @@ body中的action指定方法，params中设置参数
 ```
 
 ###獲取可用的chat server端口列表
-####接口action:GetUnreadMessagesByOppositeId
+####接口/chat/avaliableServerPorts
 ####成功body返回值
 
 ```
