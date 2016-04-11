@@ -1306,11 +1306,11 @@
     "ret": 200,
     "data": [{
         "oppositeId":"xxxxxx",
-        "type":"PRIVATE",
+        "chatType":"PRIVATE",
         "count":4
     },{
         "oppositeId":"xxxxxx",
-        "type":"GROUP",
+        "chatType":"GROUP",
         "count":2
     }]
 }
@@ -1323,7 +1323,7 @@
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
 |oppositeId|字符串|对方的id|是|dsdfsldfjlasfe|
-|type|字符串|对方的类型，群聊还是私聊，PRIVATE，GROUP|是|GROUP|
+|chatType|字符串|对方的类型，群聊还是私聊，PRIVATE，GROUP|是|GROUP|
 |size|整型|获得多少条未读消息，默认为10|否|10|
 ####成功返回值
 ```
@@ -1378,7 +1378,7 @@
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
 |oppositeId|字符串|对方的id|是|dsdfsldfjlasfe|
-|type|字符串|对方的类型，群聊还是私聊，PRIVATE，GROUP|是|GROUP|
+|chatType|字符串|对方的类型，群聊还是私聊，PRIVATE，GROUP|是|GROUP|
 |seq|长整型|最后一条已读消息的序列号|是|12|
 ####成功返回值
 ```
@@ -1386,7 +1386,8 @@
     "ret":200,
     "data":{
         "oppositeId":"xxxxxx",
-        "type":"GROUP"
+        "chatType":"GROUP",
+        "result": true
     }
 }
 ```
@@ -2224,7 +2225,7 @@ body中的action指定方法，params中设置参数
 ####接口参数
 |格式说明|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|oppositeId=xxx&type=GROUP&size=10|oppositeId:字符串,type聊天类型|对方Id加上类型，确认唯一会话|是|oppositeId=xxxxxx&type=GROUP|
+|oppositeId=xxx&chatType=GROUP&size=10|oppositeId:字符串,chatType聊天类型|对方Id加上类型，确认唯一会话|是|oppositeId=xxxxxx&chatType=GROUP|
 ####成功body返回值
 
 ```
