@@ -7,7 +7,8 @@
 #接口域名
 ```
   测试:api.test.enterest.me
-  正式:api.enterest.me
+  正式:api.nuzzle.me
+  推送服务器：push.nuzzle.me
 ```
 #接口返回值说明
 1:接口返回类型均为json格式
@@ -312,6 +313,21 @@
 
 ###取消点赞接口
 ####接口:/note/unlike
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|noteId|字符串|动态id|是|xfasdfasdfasdfsdfasdfasdf|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": ""
+}
+```
+
+###删除照片接口
+####接口:/note/delete
 ####请求方式:GET/POST
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
