@@ -1,0 +1,188 @@
+#通用参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|token|字符串|用户登录凭证|是(登录、注册接口除外)||
+|tz|字符串|用户所在时区|是|Asia/Shanghai|
+|pf|字符串|客户端平台类型,ios或者android|是|ios|
+#接口域名
+```
+  测试:
+    接口：apitest.video.iwifiapi.com
+    后台：admintest.video.iwifiapi.com
+  正式:
+    接口：api.video.iwifiapi.com
+    后台：admin.video.iwifiapi.com
+```
+#接口返回值说明
+1:接口返回类型均为json格式
+2:ret参数用于表示是否成功,200为成功,500为失败
+3:若成功,可以在data里获得结果,失败则可以通过errcode获得出错原因,错误代码列表可见本文末尾
+
+如成功:
+```
+{
+    "ret":200,
+    "data":{
+        "token":"",
+        "userId":"",
+        "nickname":"",
+        "avatar":"",
+        "thumbnail":""
+    }
+}
+```
+失败:
+```
+{
+    "ret":500,
+    "errcode":"SERVER_ERROR"
+}
+```
+#接口列表
+##视频相关接口
+###发布视频
+####接口:/video/publish
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|url|字符串|视频url，去除http和域名信息|是|/wow-video/2016/04/xxxxx.mp4|
+|width|整型|宽|否|320|
+|height|整型|高|否|240|
+|anonymous|布尔值|是否匿名|是|false|
+|title|字符串|标题|否|xxxxxxxxxxxxxx|
+|content|字符串|正文|否|xxxx|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+
+###显示视频列表
+####接口:/video/list
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|maxId|字符串|最大的一条记录id|否，若为空，则从最新的一条开始|xxxxxxxxx|
+|size|整型|记录数|否，默认是10|20|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":[{
+      "title":"",
+      "content":"",
+      "url":"",
+      "photo":"",
+      "anonymous":false,
+      "publishTime":13123123121,
+      "likes":23,
+      "comments":23,
+      "views":23,
+      "userInfo":{
+        "id":"",
+        "avatar":"",
+        "nickname":""
+      }
+    }]
+}
+```
+
+###点赞接口
+####接口:/video/like
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|id|字符串|视频id|是|xxxxxxxxxxxxx|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+
+###记录阅读接口
+####接口:/video/view
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|id|字符串|视频id|是|xxxxxxxxxxxxx|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+
+###举报接口
+####接口:/video/report
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|id|字符串|视频id|是|xxxxxxxxxxxxx|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+
+##用户相关接口
+###用户登录
+####接口:/user/login
+####请求方式:POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|accessToken|字符串|第三方登录成功凭证|是(type为fb或gg时必须)|asdf2jr2ojflajfjlkajfsdfsaf|
+|oauthId|字符串|第三方系统唯一标识|是(type为fb或gg时必须)|165464616546|
+|type|字符串|第三方账号来源,值为:fb\gg\email|是|fb|
+|nickname|字符串|昵称|是|廖进|
+|avatar|字符串|头像|是|/avatar/232.png|
+|gender|字符串|性别，可选值有male或female|否|male|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":{
+        "token":"",
+        "userId":"",
+        "nickname":"",
+        "avatar":"",
+        "thumbnail":""
+    }
+}
+```
+
+##存储相关接口
+###获得上传token
+####接口:/store/token
+####请求方式:POST
+####接口参数
+无
+####成功返回值
+```
+{
+    "ret":200,
+    "data":"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+}
+```
+
+#错误码
+|错误码|含义|
+|---|---|
+|SERVER_ERROR|系统错误|
+|PARAM_ERROR|参数错误|
+|USER_NOT_LOGIN|用户未登录|
+|USER_LOGIN_FAIL|用户登录失败|
+|USER_IS_CANCELED|用户被封禁|
+|USER_NOT_EXIST|用户不存在|
