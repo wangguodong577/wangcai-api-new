@@ -776,22 +776,6 @@
 }
 ```
 
-###家长审核申请
-####接口:/families/audit
-####请求方式:GET/POST
-####接口参数
-|参数名|类型|描述|是否必须|示例|
-|---|---|---|---|---|
-|applyId|字符串|邀请id|是|165464616546|
-|accept|布尔值|是否通过该申请|是|true|
-####成功返回值
-```
-{
-    "ret":200,
-    "data":""
-}
-```
-
 ###家长移除成员
 ####接口:/families/remove
 ####请求方式:GET/POST
@@ -1515,11 +1499,11 @@
     }
 }
 ```
+##申请相关接口
 
-##朋友相关接口
 ###申请加为朋友
-####接口:/friend/apply
-####请求方式:POST
+####接口:/apply/friend
+####请求方式:POST/GET
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
@@ -1532,35 +1516,15 @@
     "data":""
 }
 ```
-###获得申请交朋友详情
-####接口:/friend/apply
-####请求方式:GET
-####接口参数
-|参数名|类型|描述|是否必须|示例|
-|---|---|---|---|---|
-|applyId|字符串|申请id|是|dsdfsldfjlasfe|
-####成功返回值
-```
-{
-    "ret":200,
-    "data":{
-		"id":"xxxxxx",
-		"applyUserId":"sfsdfasdfasdfsadfasdfasdfs",
-		"reason":"美女你好啊,交个朋友呗",
-		"operator":"xxxxxxxxx",
-		"handle":false,
-		"applyTime":"15646545616546"
-	}
-}
-```
 
-###取消好友申请
-####接口:/friend/cancel
-####请求方式:GET
+###邀请一个未注册的邮箱加入，一旦其注册后，会收到自己的好友申请
+####接口:/apply/invite
+####请求方式:POST/GET
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|userId|字符串|对方的用户id|是|dsdfsldfjlasfe|
+|email|字符串|对方的邮箱|是|dsdfsldfjlasfe|
+|reason|字符串|理由|否|美女,你的狗好萌啊!我们交个朋友吧?你晚上有空吗?|
 ####成功返回值
 ```
 {
@@ -1569,14 +1533,88 @@
 }
 ```
 
-###审核朋友申请
-####接口:/friend/audit
+###申请加入家庭
+####接口:/apply/family
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|familyId|字符串|家庭的id|是|dsdfsldfjlasfe|
+|reason|字符串|理由|否|美女,你的狗好萌啊!我们做一家人吧！|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+
+###审核申请
+####接口:/apply/audit
 ####请求方式:GET/POST
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|applyId|字符串|申请id|是|dsdfsldfjlasfe|
-|accept|布尔值|是否同意|是|true|
+|applyId|字符串|邀请id|是|165464616546|
+|accept|布尔值|是否通过该申请|是|true|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+
+
+###获得未处理的申请，包括好友申请和家庭加入申请
+####接口:/apply/list
+####请求方式:GET/GET
+####接口参数
+无
+####成功返回值
+```
+{
+    "ret":200,
+    "data":[{
+		"id":"xxxxxx",
+		"applyUserId":"sfsdfasdfasdfsadfasdfasdfs",
+		"reason":"美女你好啊,交个朋友呗",
+		"operator":"xxxxxxxxx",
+		"handle":false,
+		"type":"FRIEND",
+		"applyTime":"15646545616546",
+		"applyUser":{
+			"id":"",
+			"avatar":"",
+			"nickname":""
+		}
+	},{
+		"id":"xxxxxx",
+		"applyUserId":"sfsdfasdfasdfsadfasdfasdfs",
+		"reason":"我想加入你们家",
+		"operator":"xxxxxxxxx",
+		"handle":false,
+		"type":"FAMILY",
+		"applyTime":"15646545616546",
+		"applyUser":{
+			"id":"",
+			"avatar":"",
+			"nickname":""
+		}
+	}]
+}
+```
+
+##朋友相关接口
+
+
+###取消好友申请
+####接口:/friend/cancel
+####请求方式:GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|userId|字符串|对方的用户id|是|dsdfsldfjlasfe|
 ####成功返回值
 ```
 {
@@ -1614,26 +1652,6 @@
 		"familyId":"xxxxxx",
 		"userId":"dfklasjdflsjfl",
 		"time":"23232323232"
-	}]
-}
-```
-
-###显示所有的好友申请
-####接口:/friend/applys
-####请求方式:GET/POST
-####接口参数
-无
-####成功返回值
-```
-{
-    "ret":200,
-    "data":[{
-		"id":"xxxxxx",
-		"applyUserId":"sfsdfasdfasdfsadfasdfasdfs",
-		"reason":"美女你好啊,交个朋友呗",
-		"operator":"xxxxxxxxx",
-		"userId":"xdsfjakldfsaldfjsdf",
-		"applyTime":"15646545616546"
 	}]
 }
 ```
