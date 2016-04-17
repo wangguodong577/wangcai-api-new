@@ -402,6 +402,41 @@
     "data": ""
 }
 ```
+
+###评论列表
+####接口:/comment/delete
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|noteId|字符串|动态id|是|asdf2jr2ojflajfjlkajfsdfsaf|
+|maxId|字符串|最大评论id，分页用，为空则从最新的开始|否|asdf2jr2ojflajfjlkajfsdfsaf|
+|size|整型|记录数，默认是10|否|10|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": [{
+    	"id":"",
+    	"userId":"",
+    	"userInfo":{
+    		"id":"",
+    		"avatar":"",
+    		"nickname":""
+    	},
+    	"noteId":"",
+    	"words":"xxxxxxxxxxxxxx",
+    	"replyUserId":"",
+    	"replyUserInfo":{
+    		"id":"",
+    		"avatar":"",
+    		"nickname":""
+    	},
+    	"createTime":111111111111
+    }]
+}
+```
+
 ##广场相关接口
 
 ###查看好友或关注的狗的照片
