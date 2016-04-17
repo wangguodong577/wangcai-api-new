@@ -326,6 +326,33 @@
 }
 ```
 
+###点赞用户列表接口
+####接口:/note/likelist
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|noteId|字符串|动态id|是|xfasdfasdfasdfsdfasdfasdf|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": [
+        {
+            "id": "570487b0e4b04562f4232c8e",
+            "thumbnail": "http://img2.enterest.me/crop/test-dogs-img/img/2016/04/91765df50a7b7d9d62f263ec8e6ffde8.JPG_100x100_80.jpg",
+            "regTime": 1459914673000,
+            "status": "NORMAL",
+            "nickname": "kang01",
+            "familyId": "570487b0e4b04562f4232c8f",
+            "code": "",
+            "avatar": "http://img2.enterest.me/test-dogs-img/img/2016/04/91765df50a7b7d9d62f263ec8e6ffde8.JPG",
+            "lastLoginTime": 1460620438099
+        }
+    ]
+}
+```
+
 ###删除照片接口
 ####接口:/note/delete
 ####请求方式:GET/POST
