@@ -590,6 +590,13 @@
 		"latitude":23.546446546,
 		"latitude":233.21312312312
 	},
+	"familyId":"xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+	"dogs" : [{
+		"id":"",
+		"avatar":"",
+		"familyId":"",
+		"name":""
+	}]
 	"isFriend":false
     }]
 }
@@ -609,18 +616,23 @@
 {
     "ret":200,
     "data":[{
-        "members": 1,
-        "name": "",
-        "background": "",
-        "createTime": 1454377543000,
-        "creator": "56b00a46e4b021083bb2c8e7",
-        "owner": "56b00a46e4b021083bb2c8e7",
-		"distance":0.32,
-		"location":{
-			"latitude":23.546446546,
-			"latitude":233.21312312312
-		}
+        "id": 1,
+        "nickname": "",
+        "avatar": "",
+	"distance":0.32,
+	"location":{
+		"latitude":23.546446546,
+		"latitude":233.21312312312
+	},
+	"familyId":"xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+	"dogs" : [{
+		"id":"",
+		"avatar":"",
+		"familyId":"",
+		"name":""
 	}]
+	"isFriend":false
+    }]
 }
 ```
 
