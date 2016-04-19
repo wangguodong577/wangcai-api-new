@@ -580,25 +580,29 @@
 ####成功返回值
 ```
 {
-    "ret":200,
-    "data":[{
-        "id": 1,
-        "nickname": "",
-        "avatar": "",
-	"distance":0.32,
-	"location":{
-		"latitude":23.546446546,
-		"latitude":233.21312312312
-	},
-	"familyId":"xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-	"dogs" : [{
-		"id":"",
-		"avatar":"",
-		"familyId":"",
-		"name":""
-	}]
-	"isFriend":false
-    }]
+    "ret": 200,
+    "data": [
+        {
+            "id": 1,
+            "nickname": "",
+            "avatar": "",
+            "distance": 0.32,
+            "location": {
+                "longitude": 23.546446546,
+                "latitude": 233.21312312312
+            },
+            "familyId": "xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "dogs": [
+                {
+                    "id": "",
+                    "avatar": "",
+                    "familyId": "",
+                    "name": ""
+                }
+            ],
+            "isFriend": false
+        }
+    ]
 }
 ```
 
@@ -614,25 +618,29 @@
 ####成功返回值
 ```
 {
-    "ret":200,
-    "data":[{
-        "id": 1,
-        "nickname": "",
-        "avatar": "",
-	"distance":0.32,
-	"location":{
-		"latitude":23.546446546,
-		"latitude":233.21312312312
-	},
-	"familyId":"xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-	"dogs" : [{
-		"id":"",
-		"avatar":"",
-		"familyId":"",
-		"name":""
-	}]
-	"isFriend":false
-    }]
+    "ret": 200,
+    "data": [
+        {
+            "id": 1,
+            "nickname": "",
+            "avatar": "",
+            "distance": 0.32,
+            "location": {
+                "longitude": 23.546446546,
+                "latitude": 233.21312312312
+            },
+            "familyId": "xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "dogs": [
+                {
+                    "id": "",
+                    "avatar": "",
+                    "familyId": "",
+                    "name": ""
+                }
+            ],
+            "isFriend": false
+        }
+    ]
 }
 ```
 
@@ -648,17 +656,19 @@
 ####成功返回值
 ```
 {
-    "ret":200,
-    "data":[{
-        "id": 1,
-        "nickname": "",
-        "avatar": "",
-	"distance":0.32,
-	"location":{
-		"latitude":23.546446546,
-		"latitude":233.21312312312
-	}
-    }]
+    "ret": 200,
+    "data": [
+        {
+            "id": 1,
+            "nickname": "",
+            "avatar": "",
+            "distance": 0.32,
+            "location": {
+                "longitude": 23.546446546,
+                "latitude": 233.21312312312
+            }
+        }
+    ]
 }
 ```
 
