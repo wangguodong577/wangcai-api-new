@@ -1207,8 +1207,8 @@
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
 |name|字符串|狗的名字|是|bobo|
-|avatar|字符串|狗的头像链接|是|http://xxx.xx/xx.jpg|
-|gender|字符串|狗的性别,可选值为male或female|是|male|
+|avatar|字符串|狗的头像链接|否|http://xxx.xx/xx.jpg|
+|gender|字符串|狗的性别,可选值为male或female|否|male|
 ####成功返回值
 ```
 {
