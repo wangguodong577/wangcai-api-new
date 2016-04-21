@@ -52,6 +52,7 @@
 |anonymous|布尔值|是否匿名|是|false|
 |title|字符串|标题|否|xxxxxxxxxxxxxx|
 |content|字符串|正文|否|xxxx|
+|locale|字符串|国家|否|zh_CN|
 ####成功返回值
 ```
 {
