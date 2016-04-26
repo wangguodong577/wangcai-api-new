@@ -2520,6 +2520,106 @@ body中的action指定方法，params中设置参数
 }
 ```
 
+#推送格式
+##申请加为好友
+```
+{
+    "type": "notice",
+    "noticeType":"apply",
+    "action":"friend",
+    "content":"xxx send you a friend request",
+    "user":{
+    	"id":"",
+    	"nickname":"",
+    	"avatar":""
+    }
+}
+```
+##申请加入家庭
+```
+{
+    "type": "notice",
+    "noticeType":"apply",
+    "action":"family",
+    "content":"xxx wanna join your family",
+    "user":{
+    	"id":"",
+    	"nickname":"",
+    	"avatar":""
+    }
+}
+```
+##同意加入家庭
+```
+{
+    "type": "notice",
+    "noticeType":"notification",
+    "action":"agree_family",
+    "content":"You have joined xxx's family",
+    "user":{
+    	"id":"",
+    	"nickname":"",
+    	"avatar":""
+    }
+}
+```
+##拒绝加入家庭
+```
+{
+    "type": "notice",
+    "noticeType":"notification",
+    "action":"disagree_family",
+    "content":"xxx do not accept your join family request",
+    "user":{
+    	"id":"",
+    	"nickname":"",
+    	"avatar":""
+    }
+}
+```
+##同意加为好友
+```
+{
+    "type": "notice",
+    "noticeType":"notification",
+    "action":"agree_friend",
+    "content":"xxx has accepted your friend request",
+    "user":{
+    	"id":"",
+    	"nickname":"",
+    	"avatar":""
+    }
+}
+```
+##拒绝加入家庭
+```
+{
+    "type": "notice",
+    "noticeType":"notification",
+    "action":"disagree_friend",
+    "content":"xxx do not accept your friend request",
+    "user":{
+    	"id":"",
+    	"nickname":"",
+    	"avatar":""
+    }
+}
+```
+##加入呼朋引伴
+```
+{
+    "type": "notice",
+    "noticeType":"QuitDate",
+    "dogId":["xxx","xxx","xxx"],
+    "message":"xxx do not accept your friend request",
+    "user":{
+    	"id":"",
+    	"nickname":"",
+    	"avatar":""
+    }
+}
+```
+
 #错误码
 |错误码|含义|
 |---|---|
