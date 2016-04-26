@@ -2611,12 +2611,7 @@ body中的action指定方法，params中设置参数
     "type": "notice",
     "noticeType":"QuitDate",//JoinDate或者CancelDate
     "dogId":["xxx","xxx","xxx"],
-    "message":"xxx do not accept your friend request",
-    "user":{
-    	"id":"",
-    	"nickname":"",
-    	"avatar":""
-    }
+    "message":"xxx join your dating"
 }
 ```
 
