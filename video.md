@@ -179,6 +179,34 @@
 }
 ```
 
+##升级相关接口
+###检查升级接口
+####接口:/upgrade/check
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|ver|整型|客户端当前版本号|是|12|
+|channel|字符串|渠道|是|gp|
+|locale|字符串|国家|否|zh_CN|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":{
+      "versionCode":12,
+      "forceUpdate":true,
+      "uploadTime":1212321312312,
+      "channel":"gp",
+      "hasAttachment":true,
+      "fileSize":23232,
+      "md5":"sdf2f2fwef24f24f",
+      "downloadUrl":"http://video.iwifiapi.com/prod-holaverse/upgrade/files/12.apk",
+      "packageName":"com.holaverse.test"
+    }
+}
+```
+
 #错误码
 |错误码|含义|
 |---|---|
