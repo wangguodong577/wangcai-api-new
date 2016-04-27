@@ -132,3 +132,21 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 }
 ```
 
+###上报GEO信息
+####接口:/Locations/report
+####请求方式:POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|lat|Double|维度|是|100.10|
+|lng|Double|经度|是|100.10|
+
+####成功返回值
+```
+{
+  "ret": 200,
+  "data": ""
+}
+```
+
+
