@@ -2302,7 +2302,14 @@
         "hasRead": false,
         "content":"xxx wan to make friend with you",
         "action":"friend",
-        "time": 2323232333223
+        "time": 2323232333223,
+        "extraInfo":{
+        	"user":{
+        		"id":"",
+        		"avatar":"",
+        		"nickname":""
+        	}
+        }
     },{
     	"id":"",
         "type": "notification",//通知类型有apply（请求加好友或者请求加入家庭）、notification（通知，自己发出申请的结果等）
@@ -2311,6 +2318,17 @@
         "content":"You have joined xxx's family!",
         "action":"agree_family",
         "time": 2323232333223
+        "extraInfo":{
+        	"user":{
+        		"id":"",
+        		"avatar":"",
+        		"nickname":""
+        	},
+        	"note":{
+        		"id":"",
+        		"comment":""
+        	}
+        }
     }]
 }
 ```
