@@ -416,7 +416,18 @@
 ```
 {
     "ret": 200,
-    "data": ""
+    "data": {
+    	"id":"",
+    	"userId":"",
+    	"userInfo":{
+    		"id":"",
+    		"avatar":"",
+    		"nickname":""
+    	},
+    	"noteId":"",
+    	"words":"xxxxxxxxxxxxxx"
+    	"createTime":111111111111
+    }
 }
 ```
 
