@@ -50,6 +50,17 @@
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
 |introduction|字符串|个人简介|否|asdf2jr2ojflajfjlkajfsdfsaf|
-|pictureUrls|字符串|用户图片，有序， 以逗号分割|否|xxxxxxx|
+|pictureUrls|字符串|用户图片, 数组形式|否|xxxxxxx|
+
+####请求示例
+curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&pictureUrls[]=xxxxxxxx&pictureUrls[]=yyyyyy"
+
+####成功返回值
+```
+{
+  "ret": 200,
+  "data": ""
+}
+```
 
 
