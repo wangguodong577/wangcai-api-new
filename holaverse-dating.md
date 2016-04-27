@@ -63,4 +63,72 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 }
 ```
 
+###获取我的个人信息
+####接口:/Users/getProfile
+####请求方式:GET
+####接口参数
+
+####成功返回值
+```
+{
+  "ret": 200,
+  "data": {
+    "birthday": null,
+    "lastWorkPosition": "Holaverse Farmer",
+    "lastEducation": "dongbeishi daxue",
+    "name": "Zhou Xichao",
+    "id": 1,
+    "avatar": "http://graph.facebook.com/140156023054005/picture",
+    "introduction": "xxxx",
+    "age": null,
+    "pictures": [
+      {
+        "id": 10,
+        "userId": 1,
+        "url": "http://img3.imgtn.bdimg.com/it/u=777984066,3378417135",
+        "sortNum": 0,
+        "status": "NORMAL",
+        "createTime": 1461725982660
+      }
+    ],
+    "token": "38155d4fd4040b7feeffb11d7f149d16"
+  }
+}
+```
+
+###获取其他人的信息
+####接口:/Users/getProfile
+####请求方式:GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|userId|Long|其他人ID|是|1|
+
+####成功返回值
+```
+{
+  "ret": 200,
+  "data": {
+    "birthday": null,
+    "lastWorkPosition": "Holaverse Farmer",
+    "lastEducation": "dongbeishi daxue",
+    "name": "Zhou Xichao",
+    "id": 1,
+    "avatar": "http://graph.facebook.com/140156023054005/picture",
+    "introduction": "xxxx",
+    "age": null,
+    "pictures": [
+      {
+        "id": 10,
+        "userId": 1,
+        "url": "http://img3.imgtn.bdimg.com/it/u=777984066,3378417135",
+        "sortNum": 0,
+        "status": "NORMAL",
+        "createTime": 1461725982660
+      }
+    ],
+    "token": "38155d4fd4040b7feeffb11d7f149d16"
+  }
+}
+```
 
