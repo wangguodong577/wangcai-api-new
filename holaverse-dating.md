@@ -6,7 +6,7 @@
 |pf|字符串|客户端平台类型,ios或者android|是|ios|
 #接口域名
 ```
-  测试:52.88.191.110:9044
+  测试:api.test.dating.holalauncher.com 
   正式:待定
 ```
 #接口返回值说明
