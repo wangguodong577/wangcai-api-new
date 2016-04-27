@@ -2284,7 +2284,7 @@
 }
 ```
 ###获得未读通知列表
-####接口:/apply/unreadlist
+####接口:/notice/unreadlist
 ####请求方式:GET/POST
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
@@ -2297,10 +2297,19 @@
     "ret": 200,
     "data": [{
         "id":"",
-        "type": "apply",//通知类型有apply（请求加好友或者请求加入家庭）、inform（通知，自己发出申请的结果等）
+        "type": "apply",//通知类型有apply（请求加好友或者请求加入家庭）、notification（通知，自己发出申请的结果等）
         "userId": "xxxxxxxxxx",
         "hasRead": false,
         "content":"xxx wan to make friend with you",
+        "action":"friend",
+        "time": 2323232333223
+    },{
+    	"id":"",
+        "type": "notification",//通知类型有apply（请求加好友或者请求加入家庭）、notification（通知，自己发出申请的结果等）
+        "userId": "xxxxxxxxxx",
+        "hasRead": false,
+        "content":"You have joined xxx's family!",
+        "action":"agree_family",
         "time": 2323232333223
     }]
 }
