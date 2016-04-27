@@ -134,6 +134,71 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 }
 ```
 
+###查找附近的人
+####接口:/Users/findNearbyUsers
+####请求方式:GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|gender|0/1/null|男或女，空为全部|否|0|
+
+####注意，如果被like或者dislike的用户不会出现在列表中，目前这个限制没有加，性别的限制也暂时没加
+
+####成功返回值
+```
+{
+  "ret": 200,
+  "data": [
+    {
+      "birthday": null,
+      "lastWorkPosition": "Holaverse Farmer",
+      "lastEducation": "dongbeishi daxue",
+      "pictureUrl": "http://img3.imgtn.bdimg.com/it/u=777984066,3378417135",
+      "name": "Zhou Xichao",
+      "id": 1,
+      "distance" : 1234
+      "avatar": "http://graph.facebook.com/140156023054005/picture",
+      "introduction": "xxxx",
+      "age": null,
+      "token": "38155d4fd4040b7feeffb11d7f149d16"
+    }
+  ]
+}
+```
+
+###like接口
+####接口:/Users/like
+####请求方式:POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|oppositeId|Long|被赞人ID|是|1|
+
+####成功返回值
+```
+{
+  "ret": 200,
+  "data": ""
+}
+```
+
+###dislike接口
+####接口:/Users/dislike
+####请求方式:POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|oppositeId|Long|被否定人ID|是|1|
+
+####成功返回值
+```
+{
+  "ret": 200,
+  "data": ""
+}
+```
+
+
 ###上报GEO信息
 ####接口:/Locations/report
 ####请求方式:POST
