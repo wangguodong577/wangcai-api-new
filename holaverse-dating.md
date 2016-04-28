@@ -31,16 +31,18 @@
 ```
 {
   "ret": 200,
-  "data": {
-    "birthday": "",
-    "lastWorkPosition": "Holaverse Farmer",
+  "data":{
+    "birthday": null,
+    "lastWorkPosition": "Farmer",
     "lastEducation": "dongbeishi daxue",
     "name": "Zhou Xichao",
+    "lastSecondEducation": "Weishi high schooi",
+    "lastWorkCompany": "Farmer",
     "id": 1,
     "avatar": "http://graph.facebook.com/140156023054005/picture",
-    "introduction": "",
-    "age": "",
-    "token": "fc8966e4f58dc2348778ff405d5f60f2"
+    "introduction": "xxxx",
+    "age": null,
+    "token": "1cfe47ceafc6e967d3c8d2c9997e3ddf"
   }
 }
 ```
@@ -76,9 +78,11 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
   "ret": 200,
   "data": {
     "birthday": null,
-    "lastWorkPosition": "Holaverse Farmer",
+    "lastWorkPosition": "Farmer",
     "lastEducation": "dongbeishi daxue",
     "name": "Zhou Xichao",
+    "lastSecondEducation": "Weishi high schooi",
+    "lastWorkCompany": "Farmer",
     "id": 1,
     "avatar": "http://graph.facebook.com/140156023054005/picture",
     "introduction": "xxxx",
@@ -92,8 +96,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "status": "NORMAL",
         "createTime": 1461725982660
       }
-    ],
-    "token": "38155d4fd4040b7feeffb11d7f149d16"
+    ]
   }
 }
 ```
@@ -112,9 +115,11 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
   "ret": 200,
   "data": {
     "birthday": null,
-    "lastWorkPosition": "Holaverse Farmer",
+    "lastWorkPosition": "Farmer",
     "lastEducation": "dongbeishi daxue",
     "name": "Zhou Xichao",
+    "lastSecondEducation": "Weishi high schooi",
+    "lastWorkCompany": "Farmer",
     "id": 1,
     "avatar": "http://graph.facebook.com/140156023054005/picture",
     "introduction": "xxxx",
@@ -128,8 +133,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "status": "NORMAL",
         "createTime": 1461725982660
       }
-    ],
-    "token": "38155d4fd4040b7feeffb11d7f149d16"
+    ]
   }
 }
 ```
@@ -152,34 +156,69 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
   "data": {
     "contentList": [
       {
-        "id": 1,
         "birthday": null,
+        "lastWorkPosition": "Farmer",
         "distance": 1234,
-        "age": null,
-        "lastWorkPosition": "Holaverse Farmer",
+        "lastEducation": "dongbeishi daxue",
+        "lastSecondEducation": "Weishi high schooi",
+        "lastWorkCompany": "Farmer",
+        "likeMe": false,
+        "avatar": "http://graph.facebook.com/140156023054005/picture",
         "pictures": [
           {
-            "id": 14,
+            "id": 10,
             "userId": 1,
-            "url": "http://ww1.sinaimg.cn/large/7a8aed7bjw1f2nxxvgz7xj20hs0qognd.jpg",
-            "sortNum": 4,
+            "url": "http://ww4.sinaimg.cn/large/610dc034jw1f2uyg3nvq7j20gy0p6myx.jpg",
+            "sortNum": 0,
             "status": "NORMAL",
             "createTime": null
           },
           {
-            "id": 15,
+            "id": 11,
             "userId": 1,
-            "url": "http://ww2.sinaimg.cn/large/7a8aed7bjw1f2mteyftqqj20jg0siq6g.jpg",
-            "sortNum": 5,
+            "url": "http://ww4.sinaimg.cn/large/7a8aed7bjw1f2tpr3im0mj20f00l6q4o.jpg",
+            "sortNum": 1,
             "status": "NORMAL",
             "createTime": null
           }
         ],
+        "name": "Zhou Xichao",
+        "id": 1,
+        "age": null,
+        "introduction": "123"
+      },
+      {
+        "birthday": null,
+        "lastWorkPosition": "Farmer",
+        "distance": 1234,
+        "lastEducation": "dongbeishi daxue",
+        "lastSecondEducation": "Weishi high schooi",
+        "lastWorkCompany": "Farmer",
         "likeMe": false,
         "avatar": "http://graph.facebook.com/140156023054005/picture",
-        "lastEducation": "dongbeishi daxue"
-      }
-
+        "pictures": [
+          {
+            "id": 21,
+            "userId": 2,
+            "url": "http://ww4.sinaimg.cn/large/7a8aed7bjw1f2tpr3im0mj20f00l6q4o.jpg",
+            "sortNum": 1,
+            "status": "NORMAL",
+            "createTime": null
+          },
+          {
+            "id": 22,
+            "userId": 2,
+            "url": "http://ww1.sinaimg.cn/large/7a8aed7bjw1f2sm0ns82hj20f00l8tb9.jpg",
+            "sortNum": 2,
+            "status": "NORMAL",
+            "createTime": null
+          }
+        ],
+        "name": "Zhou Xichao",
+        "id": 2,
+        "age": null,
+        "introduction": "123"
+      },
     ],
     "refresh": false //如果refresh为true，表明gender+radius的组合筛选结果已经更新
   }
@@ -236,4 +275,44 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 }
 ```
 
+###获取匹配的用户列表
+####接口:/Users/getMatchList
+####请求方式:GET
+####接口参数
+####成功返回值
 
+```
+{
+  "ret": 200,
+  "data":  [
+      {
+        "birthday": null,
+        "lastWorkPosition": "Farmer",
+        "distance": 1234,
+        "lastEducation": "dongbeishi daxue",
+        "lastSecondEducation": "Weishi high schooi",
+        "lastWorkCompany": "Farmer",
+        "likeMe": false,
+        "avatar": "http://graph.facebook.com/140156023054005/picture",
+        "name": "Zhou Xichao",
+        "id": 1,
+        "age": null,
+        "introduction": "123"
+      },
+      {
+        "birthday": null,
+        "lastWorkPosition": "Farmer",
+        "distance": 1234,
+        "lastEducation": "dongbeishi daxue",
+        "lastSecondEducation": "Weishi high schooi",
+        "lastWorkCompany": "Farmer",
+        "likeMe": false,
+        "avatar": "http://graph.facebook.com/140156023054005/picture",
+        "name": "Zhou Xichao",
+        "id": 2,
+        "age": null,
+        "introduction": "123"
+      }
+  ]
+}
+```
