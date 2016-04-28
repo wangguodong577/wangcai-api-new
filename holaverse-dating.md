@@ -141,6 +141,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
 |gender|0/1/null|男或女，空为全部|否|0|
+|radius|double|搜寻半径，默认为50000，单位为米|否|50000|
 
 ####注意，如果被like或者dislike的用户不会出现在列表中，目前这个限制没有加，性别的限制也暂时没加
 
@@ -148,21 +149,40 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 ```
 {
   "ret": 200,
-  "data": [
-    {
-      "birthday": null,
-      "lastWorkPosition": "Holaverse Farmer",
-      "lastEducation": "dongbeishi daxue",
-      "pictureUrl": "http://img3.imgtn.bdimg.com/it/u=777984066,3378417135",
-      "name": "Zhou Xichao",
-      "id": 1,
-      "distance" : 1234
-      "avatar": "http://graph.facebook.com/140156023054005/picture",
-      "introduction": "xxxx",
-      "age": null,
-      "token": "38155d4fd4040b7feeffb11d7f149d16"
-    }
-  ]
+  "data": {
+    "contentList": [
+      {
+        "id": 1,
+        "birthday": null,
+        "distance": 1234,
+        "age": null,
+        "lastWorkPosition": "Holaverse Farmer",
+        "pictures": [
+          {
+            "id": 14,
+            "userId": 1,
+            "url": "http://ww1.sinaimg.cn/large/7a8aed7bjw1f2nxxvgz7xj20hs0qognd.jpg",
+            "sortNum": 4,
+            "status": "NORMAL",
+            "createTime": null
+          },
+          {
+            "id": 15,
+            "userId": 1,
+            "url": "http://ww2.sinaimg.cn/large/7a8aed7bjw1f2mteyftqqj20jg0siq6g.jpg",
+            "sortNum": 5,
+            "status": "NORMAL",
+            "createTime": null
+          }
+        ],
+        "likeMe": false,
+        "avatar": "http://graph.facebook.com/140156023054005/picture",
+        "lastEducation": "dongbeishi daxue"
+      }
+
+    ],
+    "refresh": false //如果refresh为true，表明gender+radius的组合筛选结果已经更新
+  }
 }
 ```
 
