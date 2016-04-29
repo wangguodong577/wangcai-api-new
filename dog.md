@@ -2682,3 +2682,4 @@ body中的action指定方法，params中设置参数
 |PASSWD_NOT_MATCH|密码不匹配|
 |USER_HAS_IN_DATING|用户已经加入了呼朋引伴|
 |REPEAT_REQUEST|重复请求|
+|WE_ARE_FAMILY|同一个家庭|
