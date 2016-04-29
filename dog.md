@@ -2306,42 +2306,91 @@
 ```
 {
     "ret": 200,
-    "data": [{
-        "id":"",
-        "type": "apply",//通知类型有apply（请求加好友或者请求加入家庭）、notification（通知，自己发出申请的结果等）
-        "userId": "xxxxxxxxxx",
-        "hasRead": false,
-        "content":"xxx wan to make friend with you",
-        "action":"friend",
-        "time": 2323232333223,
-        "extraInfo":{
-        	"user":{
-        		"id":"",
-        		"avatar":"",
-        		"nickname":""
-        	}
+    "data": [
+        {
+            "id": "",
+            "type": "apply",
+            //通知类型有apply（请求加好友或者请求加入家庭）、notification（通知，自己发出申请的结果等）"userId": "xxxxxxxxxx",
+            "hasRead": false,
+            "content": "xxx wan to make friend with you",
+            "action": "friend",
+            "time": 2323232333223,
+            "extraInfo": {
+                "user": {
+                    "id": "",
+                    "avatar": "",
+                    "nickname": ""
+                }
+            }
+        },
+        {
+            "id": "",
+            "type": "notification",
+            //通知类型有apply（请求加好友或者请求加入家庭）、notification（通知，自己发出申请的结果等）"userId": "xxxxxxxxxx",
+            "hasRead": false,
+            "content": "You have joined xxx's family!",
+            "action": "agree_family",
+            "time": 2323232333223"extraInfo": {
+                "user": {
+                    "id": "",
+                    "avatar": "",
+                    "nickname": ""
+                },
+                "note": {
+                    "id": "57223045e4b0b56377615674",
+                    "createTime": 1461858373055,
+                    "hasLocation": false,
+                    "dogs": [
+                        {
+                            "id": "571020e9e4b0973f5a7b6032",
+                            "birthday": 0,
+                            "createTime": 1460674793000,
+                            "lineage": false,
+                            "familyId": "571020e9e4b0973f5a7b6031",
+                            "name": "Calvin",
+                            "gender": 0,
+                            "avatar": "",
+                            "creator": "571020e9e4b0973f5a7b6030"
+                        }
+                    ],
+                    "words": "",
+                    "familyId": "571020e9e4b0973f5a7b6031",
+                    "userId": "571020e9e4b0973f5a7b6030",
+                    "referer": "",
+                    "type": "PIC",
+                    "photoUrl": "http://img.nuzzle.me/prod-dogs-img/img/2016/04/7552DFF7253E1BF1BB251F7B881C4809.jpg",
+                    "commentCount": 0,
+                    "likeCount": 1,
+                    "hasLike": false,
+                    "thumbnail": "http://img.nuzzle.me/crop/prod-dogs-img/img/2016/04/7552DFF7253E1BF1BB251F7B881C4809.jpg_100x100_80.jpg",
+                    "author": {
+                        "id": "571020e9e4b0973f5a7b6030",
+                        "thumbnail": "http://img.nuzzle.me/crop/prod-dogs-img/user/avatar/server/0e2ff44c-f7bd-46e1-97cf-5e43f334467b_100x100_80.jpg",
+                        "regTime": 1460674793142,
+                        "status": "NORMAL",
+                        "nickname": "Eric",
+                        "familyId": "571020e9e4b0973f5a7b6031",
+                        "code": "8578113",
+                        "avatar": "http://img.nuzzle.me/prod-dogs-img/user/avatar/server/0e2ff44c-f7bd-46e1-97cf-5e43f334467b",
+                        "lastLoginTime": 1460674793142
+                    },
+                    "likeUsers": [
+                        {
+                            "id": "570fa765e4b0be4f1bdae775",
+                            "thumbnail": "http://img.nuzzle.me/crop/prod-dogs-img/user/avatar/server/26653f34-b0de-4143-80d9-9c1afe0d36fd_100x100_80.jpg",
+                            "regTime": 1460643686000,
+                            "status": "NORMAL",
+                            "nickname": "HowardLee",
+                            "familyId": "570fa765e4b0be4f1bdae776",
+                            "code": "4482739",
+                            "avatar": "http://img.nuzzle.me/prod-dogs-img/user/avatar/server/26653f34-b0de-4143-80d9-9c1afe0d36fd",
+                            "lastLoginTime": 1461914621248
+                        }
+                    ]
+                }
+            }
         }
-    },{
-    	"id":"",
-        "type": "notification",//通知类型有apply（请求加好友或者请求加入家庭）、notification（通知，自己发出申请的结果等）
-        "userId": "xxxxxxxxxx",
-        "hasRead": false,
-        "content":"You have joined xxx's family!",
-        "action":"agree_family",
-        "time": 2323232333223
-        "extraInfo":{
-        	"user":{
-        		"id":"",
-        		"avatar":"",
-        		"nickname":""
-        	},
-        	"note":{
-        		"id":"",
-        		"photoUrl":"",
-        		"comment":""
-        	}
-        }
-    }]
+    ]
 }
 ```
 
