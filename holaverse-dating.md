@@ -301,7 +301,17 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "name": "Zhou Xichao",
         "id": 1,
         "age": null,
-        "introduction": "123"
+        "introduction": "123",
+        "pictures": [
+          {
+            "id": 10,
+            "userId": 1,
+            "url": "http://img3.imgtn.bdimg.com/it/u=777984066,3378417135",
+            "sortNum": 0,
+            "status": "NORMAL",
+            "createTime": 1461725982660
+          }
+        ]
       },
       {
         "birthday": null,
@@ -315,7 +325,17 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "name": "Zhou Xichao",
         "id": 2,
         "age": null,
-        "introduction": "123"
+        "introduction": "123",
+        "pictures": [
+          {
+            "id": 10,
+            "userId": 1,
+            "url": "http://img3.imgtn.bdimg.com/it/u=777984066,3378417135",
+            "sortNum": 0,
+            "status": "NORMAL",
+            "createTime": 1461725982660
+          }
+        ]
       }
   ]
 }
