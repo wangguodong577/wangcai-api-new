@@ -182,26 +182,24 @@
 }
 ```
 
-###查询用户或群组信息
+###批量查询用户信息
 ####接口:/user/query
 ####请求方式:POST／GET
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|params|字符串|用户id和类型列表|是|[{"type":"group","id":"xxx"},{"type":"user","id":"xxx"}]|
+|ids|字符串|用户id列表|是|["xxxxx","xxxxx","xxxxx","xxxxx"]|
 ####成功返回值
 ```
 {
     "ret": 200,
     "data": [{
         "id":"xxxxxxx",
-        "type":"user",
         "name":"xxf",
         "avatar":"http://xxx.xxx/xx/xx.jpg"
     },{
         "id":"xxxxxxx",
-        "type":"group",
-        "name":"beta-team",
+        "name":"fred",
         "avatar":"http://xxx.xxx/xx/xx.jpg"
     }]
 }
