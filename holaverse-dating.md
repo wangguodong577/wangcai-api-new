@@ -319,3 +319,19 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
   ]
 }
 ```
+
+###解除match
+####接口:/Users/mismatch
+####请求方式:GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|oppositeId|Long|对方id|是|100|
+|lng|Double|经度|是|100.10|
+####成功返回值
+```
+{
+  "ret": 200,
+  "data": ""
+}
+```
