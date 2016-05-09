@@ -2317,6 +2317,53 @@
 }
 ```
 
+###查看我家正在遛的狗
+####接口:/walk/mydogs
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|lat|double|维度|否|111.8834140000|
+|lng|double|经度|否|37.2888310000|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": [
+        {
+            "dog": {
+                "id": "",
+                "avatar": "",
+                "name": ""
+            },
+            "location": {
+                "longitude": 111.883414,
+                "latitude": 37.288831
+            },
+            "wannaDating": true,
+            "dateAds" : "我想你",
+            "distance": 5.3,
+            "iAmJoin" : false
+        },
+        {
+            "dog": {
+                "id": "",
+                "avatar": "",
+                "name": ""
+            },
+            "location": {
+                "longitude": 111.883414,
+                "latitude": 37.288831
+            },
+            "wannaDating": true,
+            "dateAds" : "我想你",
+            "distance": 5.3,
+            "iAmJoin" : false
+        }
+    ]
+}
+```
+
 ##通知相关接口
 ###获得未读通知数目
 ####接口:/notice/unreadcount
