@@ -44,7 +44,8 @@
     "age": null,
     "token": "1cfe47ceafc6e967d3c8d2c9997e3ddf",
     "extras": {
-      "avatarPhotoUrl": "https://scontent.xx.fbcdn.net/hphotos-xpt1/t31.0-8/13047851_140139266389014_4113989213930852584_o.jpg"
+      "avatarPhotoUrl": "https://scontent.xx.fbcdn.net/hphotos-xpt1/t31.0-8/13047851_140139266389014_4113989213930852584_o.jpg",
+      "isNew" : false
     },
   }
 }
