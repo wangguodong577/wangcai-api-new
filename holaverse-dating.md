@@ -148,7 +148,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|facebookId|Long|facebookId|是|1|
+|facebookId|String|facebookId|是|1|
 
 ####成功返回值 同上
 
