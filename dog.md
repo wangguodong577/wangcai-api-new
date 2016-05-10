@@ -2202,12 +2202,14 @@
 			"walkId":"",
 			"lat":"",
 			"lng":"",
+			"seq":1,
 			"recordTime":12232432424
 		},{
 			"id":"",
 			"walkId":"",
 			"lat":"",
 			"lng":"",
+			"seq":2,
 			"recordTime":12232432424
 		}]
 	}
