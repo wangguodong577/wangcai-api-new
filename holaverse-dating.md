@@ -142,6 +142,16 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 }
 ```
 
+###由facebookId获取其他人的信息
+####接口:/Users/getProfileByFacebookId
+####请求方式:GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|facebookId|Long|facebookId|是|1|
+
+####成功返回值 同上
+
 ###查找附近的人
 ####接口:/Users/findNearbyUsers
 ####请求方式:GET
