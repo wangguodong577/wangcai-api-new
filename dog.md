@@ -1129,6 +1129,43 @@
 }
 ```
 
+##举报相关接口
+
+###举报照片
+####接口:/report/note
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|noteId|字符串|照片id|是|dsdfsldfjlasfe|
+|type|字符串|类型（adOrPornographic，violenceOrIllegal，fraud，copyright，threats，other）|是|other|
+|reason|字符串|原因|否|色情|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+
+###举报评论
+####接口:/report/comment
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|noteId|字符串|照片id|是|dsdfsldfjlasfe|
+|commentId|字符串|评论id|是|dsdfsldfjlasfe|
+|type|字符串|类型（adOrPornographic，violenceOrIllegal，fraud，copyright，threats，other）|是|other|
+|reason|字符串|原因|否|色情|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+
 ##用户相关接口
 
 ###更新token信息
