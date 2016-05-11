@@ -2097,7 +2097,12 @@
 ```
 {
     "ret":200,
-    "data":""
+    "data":{
+    	"chatGroup" : {
+    		"id":"",
+    		"name":""
+    	}
+    }
 }
 ```
 
@@ -2349,7 +2354,11 @@
             },
             "hasFollow":false,
             "wannaDating": true,
-            "dateAds" : "我想你",
+            "dateAds" : "来找我玩",
+            "chatGroup":{
+            	"id":"xxxxxxx",
+            	"name":"xxxxxxx"
+            },
             "distance": 5.3,
             "iAmJoin" : false
         },
@@ -2365,7 +2374,11 @@
             },
             "hasFollow":false,
             "wannaDating": true,
-            "dateAds" : "我想你",
+            "dateAds" : "一起遛狗",
+            "chatGroup":{
+            	"id":"xxxxxxx",
+            	"name":"xxxxxxx"
+            },
             "distance": 5.3,
             "iAmJoin" : false
         }
