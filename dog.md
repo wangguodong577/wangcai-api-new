@@ -2030,6 +2030,7 @@
                 "lastLoginTime": 1459321073000
             },
             "walkId": "56fcbe31e4b029bef7435f06",
+            "seq" : 13,
             "location": {
                 "longitude": 116.42345756292343,
                 "latitude": 39.9434325387362
@@ -2076,7 +2077,8 @@
                     "familyId": "56ebda98e4b081e88c6abcdc",
                     "avatar": "http://img2.enterest.me/user/avatar/server/b2a79455-6cad-4607-8ce7-bcc31225bbff",
                     "lastLoginTime": 1459321073000
-                }
+                },
+                "seq" : 13
             }
         ],
         "userIsWalking": true
