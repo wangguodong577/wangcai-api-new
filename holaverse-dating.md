@@ -7,7 +7,7 @@
 #接口域名
 ```
   测试:api.test.dating.holalauncher.com 
-  正式:待定
+  正式:api.lookinsocial.com
 ```
 #接口返回值说明
 ```
