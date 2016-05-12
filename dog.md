@@ -2925,7 +2925,7 @@ body中的action指定方法，params中设置参数
 |NICKNAME_IS_INVALID|昵称不合法|
 |OAUTH_ALREADY_BIND|第三方账号已经绑定别的用户|
 |USER_EXISTS|用户已经存在|
-|USER_HAS_JOIN_FAMILY|用户已经加入某个家庭|
+|ALREADY_IN_OTHER_FAMILY|用户已经加入某个家庭|
 |USER_NOT_EXIST|用户不存在|
 |VALID_FAILED|第三方账号二次校验失败|
 |PUSH_FAILED|推送失败|
