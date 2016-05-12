@@ -2943,3 +2943,4 @@ body中的action指定方法，params中设置参数
 |REPEAT_REQUEST|重复请求|
 |WE_ARE_FAMILY|同一个家庭|
 |IN_BLOCK_LIST|用户在黑名单中|
+|ALREADY_FRIEND|已经是好友了|
