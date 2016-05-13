@@ -195,6 +195,34 @@
 }
 ```
 
+####接口:/user/city/query
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|query|字符串|城市名，支持多语言|是|beijing或北京等|
+|lang|字符串|返回城市等语言，如en，zh等|否|en|
+|page|整型|页码，默认为1|否|1|
+|size|整型|每页大小，默认为10|否|10|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": [
+        {
+            "iso": "zh",
+            "name": "Beijing, Beijing, China",
+            "country": "China"
+        },
+        {
+            "iso": "zh",
+            "name": "Xicheng,Beijing, Beijing, China",
+            "country": "China"
+        }
+    ]
+}
+```
+
 ###批量查询用户信息
 ####接口:/user/query
 ####请求方式:POST／GET
