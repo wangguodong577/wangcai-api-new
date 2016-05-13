@@ -2646,13 +2646,24 @@
 ```
 {
     "ret": 200,
-    "data": [{
-        "id":"",
-        "name": "",
-        "likeCount": 4,
-        "photoCount": 3,
-        "createTime": 2323232333223
-    }]
+    "data": [
+        {
+            "id": "56838b08e4b0691b1083fd42",
+            "name": "topic2",
+            "coverImgUrl": "",
+            "photoCount": 21,
+            "likeCount": 0,
+            "createTime": ""
+        },
+        {
+            "id": "56838b08e4b0691b108f73fe3",
+            "name": "topic1",
+            "coverImgUrl": "",
+            "photoCount": 9,
+            "likeCount": 0,
+            "createTime": ""
+        }
+    ]
 }
 ```
 
