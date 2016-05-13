@@ -2602,8 +2602,6 @@
     "data": ""
 }
 ```
-
-
 ##话题相关接口
 ###获得话题列表
 ####接口:/topic/list
@@ -2626,6 +2624,368 @@
         "photoCount": 3,
         "createTime": 2323232333223
     }]
+}
+```
+
+###获得某个话题的最新内容
+####接口:/note/topic/recent
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|topicId|字符串|话题id|是|xxxxxxxxxxx|
+|page|整型|分页,默认是1|否|1|
+|size|整型|每页大小,默认是10|否|10|
+####成功返回值
+
+```
+{
+    "ret": 200,
+    "data": [
+        {
+            "id": "56c527eee4b0d4e743a592a1",
+            "userId": "56b00a46e4b021083bb2c8e7",
+            "familyId": "56b00a46e4b021083bb2c8e8",
+            "photoUrl": "http://fanyi.baidu.com/static/i18n/zh/widget/translate/head/logo/logo_16ea8bb7.png",
+            "words": "",
+            "topicId": "",
+	    "hasLocation":true,
+            "lng":23.4353,
+            "lat":54.2323,
+            "likes": 99,
+            "type" : "WALK", //可取值 WALK, PIC
+            
+            "comments": [
+                {
+                    "id": "56c527eee4b0d4e743a592a2",
+                    "noteId": "56c527eee4b0d4e743a592a1",
+                    "userId": "56b00a46e4b021083bb2c8e7",
+                    "words": "I'm a reply...",
+                    "replyUserId": "",
+                    "createTime": 1455761390650,
+                    "author": {
+                        "id": "56b00a46e4b021083bb2c8e7",
+                        "thumbnail": "",
+                        "lastLoginDate": "",
+                        "status": "NORMAL",
+                        "nickname": "Junrui Kang",
+                        "familyId": "56b00a46e4b021083bb2c8e8",
+                        "regDate": "",
+                        "avatar": ""
+                    }
+                }
+            ],
+            "createTime": 1455761390606,
+            "author": {
+                "id": "56b00a46e4b021083bb2c8e7",
+                "thumbnail": "",
+                "lastLoginDate": "",
+                "status": "NORMAL",
+                "nickname": "Junrui Kang",
+                "familyId": "56b00a46e4b021083bb2c8e8",
+                "regDate": "",
+                "avatar": ""
+            },
+            "dogs" : [{
+            	"id":"",
+            	"name":"",
+            	"avatar":"",
+            	"breed":"",
+            	"birthday":"",
+            	"createTime":"",
+            	
+            	//如果是遛的狗，有一下信息
+            	"startTime" : "xxx",
+            	"endTime" : "xxx",
+            	"duration":"",
+            	"distance":"",
+            	"calorie":"",
+            	"exercise" : {
+                        "expect" : 4234,
+                        "actual" : 2323
+                }
+            }]
+        }
+    ]
+}
+```
+
+###获得某个话题的最热内容
+####接口:/note/topic/top
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|topicId|字符串|话题id|是|xxxxxxxxxxx|
+|page|整型|分页,默认是1|否|1|
+|size|整型|每页大小,默认是10|否|10|
+####成功返回值
+
+```
+{
+    "ret": 200,
+    "data": [
+        {
+            "id": "56c527eee4b0d4e743a592a1",
+            "userId": "56b00a46e4b021083bb2c8e7",
+            "familyId": "56b00a46e4b021083bb2c8e8",
+            "photoUrl": "http://fanyi.baidu.com/static/i18n/zh/widget/translate/head/logo/logo_16ea8bb7.png",
+            "words": "",
+            "topicId": "",
+	    "hasLocation":true,
+            "lng":23.4353,
+            "lat":54.2323,
+            "likes": 99,
+            "type" : "WALK", //可取值 WALK, PIC
+            
+            "comments": [
+                {
+                    "id": "56c527eee4b0d4e743a592a2",
+                    "noteId": "56c527eee4b0d4e743a592a1",
+                    "userId": "56b00a46e4b021083bb2c8e7",
+                    "words": "I'm a reply...",
+                    "replyUserId": "",
+                    "createTime": 1455761390650,
+                    "author": {
+                        "id": "56b00a46e4b021083bb2c8e7",
+                        "thumbnail": "",
+                        "lastLoginDate": "",
+                        "status": "NORMAL",
+                        "nickname": "Junrui Kang",
+                        "familyId": "56b00a46e4b021083bb2c8e8",
+                        "regDate": "",
+                        "avatar": ""
+                    }
+                }
+            ],
+            "createTime": 1455761390606,
+            "author": {
+                "id": "56b00a46e4b021083bb2c8e7",
+                "thumbnail": "",
+                "lastLoginDate": "",
+                "status": "NORMAL",
+                "nickname": "Junrui Kang",
+                "familyId": "56b00a46e4b021083bb2c8e8",
+                "regDate": "",
+                "avatar": ""
+            },
+            "dogs" : [{
+            	"id":"",
+            	"name":"",
+            	"avatar":"",
+            	"breed":"",
+            	"birthday":"",
+            	"createTime":"",
+            	
+            	//如果是遛的狗，有一下信息
+            	"startTime" : "xxx",
+            	"endTime" : "xxx",
+            	"duration":"",
+            	"distance":"",
+            	"calorie":"",
+            	"exercise" : {
+                        "expect" : 4234,
+                        "actual" : 2323
+                }
+            }]
+        }
+    ]
+}
+```
+
+##标签相关接口
+###查询标签
+####接口:/tag/query
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|query|字符串|标签名，模糊匹配|是|ab|
+|size|整型|每页大小,默认是10|否|10|
+####成功返回值
+
+```
+{
+    "ret": 200,
+    "data": {
+    	"query":"ab",
+    	"total":100,
+    	"tags":[
+    	 {
+    	 	"tag":"abc",
+    	 	"posts":242
+    	 },{
+    	 	"tag":"abcd",
+    	 	"posts":434
+    	 }
+    	]
+    }
+}
+```
+
+###获得某个标签的最新内容
+####接口:/note/tag/recent
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|tag|字符串|标签名|是|xxxxxxxxxxx|
+|page|整型|分页,默认是1|否|1|
+|size|整型|每页大小,默认是10|否|10|
+####成功返回值
+
+```
+{
+    "ret": 200,
+    "data": [
+        {
+            "id": "56c527eee4b0d4e743a592a1",
+            "userId": "56b00a46e4b021083bb2c8e7",
+            "familyId": "56b00a46e4b021083bb2c8e8",
+            "photoUrl": "http://fanyi.baidu.com/static/i18n/zh/widget/translate/head/logo/logo_16ea8bb7.png",
+            "words": "",
+            "topicId": "",
+	    "hasLocation":true,
+            "lng":23.4353,
+            "lat":54.2323,
+            "likes": 99,
+            "type" : "WALK", //可取值 WALK, PIC
+            
+            "comments": [
+                {
+                    "id": "56c527eee4b0d4e743a592a2",
+                    "noteId": "56c527eee4b0d4e743a592a1",
+                    "userId": "56b00a46e4b021083bb2c8e7",
+                    "words": "I'm a reply...",
+                    "replyUserId": "",
+                    "createTime": 1455761390650,
+                    "author": {
+                        "id": "56b00a46e4b021083bb2c8e7",
+                        "thumbnail": "",
+                        "lastLoginDate": "",
+                        "status": "NORMAL",
+                        "nickname": "Junrui Kang",
+                        "familyId": "56b00a46e4b021083bb2c8e8",
+                        "regDate": "",
+                        "avatar": ""
+                    }
+                }
+            ],
+            "createTime": 1455761390606,
+            "author": {
+                "id": "56b00a46e4b021083bb2c8e7",
+                "thumbnail": "",
+                "lastLoginDate": "",
+                "status": "NORMAL",
+                "nickname": "Junrui Kang",
+                "familyId": "56b00a46e4b021083bb2c8e8",
+                "regDate": "",
+                "avatar": ""
+            },
+            "dogs" : [{
+            	"id":"",
+            	"name":"",
+            	"avatar":"",
+            	"breed":"",
+            	"birthday":"",
+            	"createTime":"",
+            	
+            	//如果是遛的狗，有一下信息
+            	"startTime" : "xxx",
+            	"endTime" : "xxx",
+            	"duration":"",
+            	"distance":"",
+            	"calorie":"",
+            	"exercise" : {
+                        "expect" : 4234,
+                        "actual" : 2323
+                }
+            }]
+        }
+    ]
+}
+```
+
+###获得某个标签的最热内容
+####接口:/note/tag/top
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|tag|字符串|标签名|是|xxxxxxxxxxx|
+|page|整型|分页,默认是1|否|1|
+|size|整型|每页大小,默认是10|否|10|
+####成功返回值
+
+```
+{
+    "ret": 200,
+    "data": [
+        {
+            "id": "56c527eee4b0d4e743a592a1",
+            "userId": "56b00a46e4b021083bb2c8e7",
+            "familyId": "56b00a46e4b021083bb2c8e8",
+            "photoUrl": "http://fanyi.baidu.com/static/i18n/zh/widget/translate/head/logo/logo_16ea8bb7.png",
+            "words": "",
+            "topicId": "",
+	    "hasLocation":true,
+            "lng":23.4353,
+            "lat":54.2323,
+            "likes": 99,
+            "type" : "WALK", //可取值 WALK, PIC
+            
+            "comments": [
+                {
+                    "id": "56c527eee4b0d4e743a592a2",
+                    "noteId": "56c527eee4b0d4e743a592a1",
+                    "userId": "56b00a46e4b021083bb2c8e7",
+                    "words": "I'm a reply...",
+                    "replyUserId": "",
+                    "createTime": 1455761390650,
+                    "author": {
+                        "id": "56b00a46e4b021083bb2c8e7",
+                        "thumbnail": "",
+                        "lastLoginDate": "",
+                        "status": "NORMAL",
+                        "nickname": "Junrui Kang",
+                        "familyId": "56b00a46e4b021083bb2c8e8",
+                        "regDate": "",
+                        "avatar": ""
+                    }
+                }
+            ],
+            "createTime": 1455761390606,
+            "author": {
+                "id": "56b00a46e4b021083bb2c8e7",
+                "thumbnail": "",
+                "lastLoginDate": "",
+                "status": "NORMAL",
+                "nickname": "Junrui Kang",
+                "familyId": "56b00a46e4b021083bb2c8e8",
+                "regDate": "",
+                "avatar": ""
+            },
+            "dogs" : [{
+            	"id":"",
+            	"name":"",
+            	"avatar":"",
+            	"breed":"",
+            	"birthday":"",
+            	"createTime":"",
+            	
+            	//如果是遛的狗，有一下信息
+            	"startTime" : "xxx",
+            	"endTime" : "xxx",
+            	"duration":"",
+            	"distance":"",
+            	"calorie":"",
+            	"exercise" : {
+                        "expect" : 4234,
+                        "actual" : 2323
+                }
+            }]
+        }
+    ]
 }
 ```
 
