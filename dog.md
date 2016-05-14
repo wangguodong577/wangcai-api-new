@@ -1561,52 +1561,56 @@
                 "endTime": "",
                 "duration": "",
                 "distance": "",
-                "calorie": ""
-            }
-        ],
-        "note": {
-            "id": "5736a4bfe4b03b0b6ae33d77",
-            "createTime": 1463198911868,
-            "hasLocation": true,
-            "dogs": [
-                {
-                    "id": "5736a48ae4b03b0b6ae33d75",
-                    "birthday": 0,
-                    "createTime": 1463198858716,
-                    "weight": 0,
-                    "height": 0,
-                    "lineage": false,
+                "exercise": {
+                    "actual": 32,
+                    "expect": 3600
+                },
+                "calorie": "",
+                "note": {
+                    "id": "5736a4bfe4b03b0b6ae33d77",
+                    "createTime": 1463198911868,
+                    "hasLocation": true,
+                    "dogs": [
+                        {
+                            "id": "5736a48ae4b03b0b6ae33d75",
+                            "birthday": 0,
+                            "createTime": 1463198858716,
+                            "weight": 0,
+                            "height": 0,
+                            "lineage": false,
+                            "familyId": "5736a48ae4b03b0b6ae33d76",
+                            "name": "Huche",
+                            "gender": 0,
+                            "avatar": "http://img2.enterest.me/test-dogs-img/img/2016/05/b47a329f7f5e0dd3ca258f7d85f6c7dc.PNG",
+                            "creator": "5736a43ae4b03b0b6ae33d73"
+                        }
+                    ],
+                    "words": "Post a picture of w the day",
                     "familyId": "5736a48ae4b03b0b6ae33d76",
-                    "name": "Huche",
-                    "gender": 0,
-                    "avatar": "http://img2.enterest.me/test-dogs-img/img/2016/05/b47a329f7f5e0dd3ca258f7d85f6c7dc.PNG",
-                    "creator": "5736a43ae4b03b0b6ae33d73"
+                    "userId": "5736a43ae4b03b0b6ae33d73",
+                    "lng": 116.4241177217257,
+                    "referer": "",
+                    "type": "PIC",
+                    "photoUrl": "http://img2.enterest.me/test-dogs-img/img/2016/05/cf54760d8d414b325826370211465609.PNG",
+                    "lat": 39.93206094954157,
+                    "commentCount": 0,
+                    "likeCount": 0,
+                    "hasLike": false,
+                    "thumbnail": "http://img2.enterest.me/crop/test-dogs-img/img/2016/05/cf54760d8d414b325826370211465609.PNG_100x100_80.jpg",
+                    "author": {
+                        "id": "5736a43ae4b03b0b6ae33d73",
+                        "thumbnail": "http://img2.enterest.me/crop/test-dogs-img/img/2016/05/d0d6600615a7272da25c0fadf6b56bbb.PNG_100x100_80.jpg",
+                        "regTime": 1463198778085,
+                        "status": "NORMAL",
+                        "nickname": "cl105",
+                        "familyId": "5736a48ae4b03b0b6ae33d76",
+                        "code": "3085622",
+                        "avatar": "http://img2.enterest.me/test-dogs-img/img/2016/05/d0d6600615a7272da25c0fadf6b56bbb.PNG",
+                        "lastLoginTime": 1463198778085
+                    }
                 }
-            ],
-            "words": "Post a picture of w the day",
-            "familyId": "5736a48ae4b03b0b6ae33d76",
-            "userId": "5736a43ae4b03b0b6ae33d73",
-            "lng": 116.4241177217257,
-            "referer": "",
-            "type": "PIC",
-            "photoUrl": "http://img2.enterest.me/test-dogs-img/img/2016/05/cf54760d8d414b325826370211465609.PNG",
-            "lat": 39.93206094954157,
-            "commentCount": 0,
-            "likeCount": 0,
-            "hasLike": false,
-            "thumbnail": "http://img2.enterest.me/crop/test-dogs-img/img/2016/05/cf54760d8d414b325826370211465609.PNG_100x100_80.jpg",
-            "author": {
-                "id": "5736a43ae4b03b0b6ae33d73",
-                "thumbnail": "http://img2.enterest.me/crop/test-dogs-img/img/2016/05/d0d6600615a7272da25c0fadf6b56bbb.PNG_100x100_80.jpg",
-                "regTime": 1463198778085,
-                "status": "NORMAL",
-                "nickname": "cl105",
-                "familyId": "5736a48ae4b03b0b6ae33d76",
-                "code": "3085622",
-                "avatar": "http://img2.enterest.me/test-dogs-img/img/2016/05/d0d6600615a7272da25c0fadf6b56bbb.PNG",
-                "lastLoginTime": 1463198778085
             }
-        }
+        ]
     }
 }
 ```
