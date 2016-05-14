@@ -39,20 +39,43 @@
 }
 ```
 #接口列表
-##视频相关接口
-###发布视频
-####接口:/video/publish
+##话题相关接口
+###话题列表
+####接口:/topic/list
 ####请求方式:POST/GET
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|url|字符串|视频url，去除http和域名信息|是|/wow-video/2016/04/xxxxx.mp4|
-|width|整型|宽|否|320|
-|height|整型|高|否|240|
-|anonymous|布尔值|是否匿名|是|false|
-|title|字符串|标题|否|xxxxxxxxxxxxxx|
-|content|字符串|正文|否|xxxx|
-|locale|字符串|国家|否|zh_CN|
+|maxId|字符串|视频最大id，上一页最后一条记录点id，为空则从第一条开始|否|xxxx|
+|size|整型|返回条数，默认10|否|10|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":[{
+      "id":"",
+      "cover":"",
+      "name":"",
+      "creator":"",
+      "videoCount":54,
+      "userCount":34,
+      "createTime":23233232
+    }]
+}
+```
+
+###发布视频，参加某个话题
+####接口:/topic/join
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|topicId|字符串|话题id|是|xxxxxxxxx|
+|title|字符串|视频标题，预留字段，也许能用得上呢|否|xxxxxxxxx|
+|url|字符串|视频链接|是|http://xxxxxxxxx|
+|cover|字符串|封面图|是|http://xxxxxxxxx|
+|width|整型|高度|是|420|
+|height|整型|高度|是|20|
 ####成功返回值
 ```
 {
@@ -61,35 +84,18 @@
 }
 ```
 
-###显示视频列表
-####接口:/video/list
+###创建话题并上传视频接口
+####接口:/topic/create
 ####请求方式:POST/GET
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|maxId|字符串|最大的一条记录id|否，若为空，则从最新的一条开始|xxxxxxxxx|
-|size|整型|记录数|否，默认是10|20|
+|videos|字符串|{"topicName":"","cover":"","videos":[{"url":"","width":1,"height":3,"title":"xxxxx","cover":"http://xxx.xxx.x/test.cover.jpg"}]}|是|xxxxxxxxxxxxx|
 ####成功返回值
 ```
 {
     "ret":200,
-    "data":[{
-      "id":"",
-      "title":"",
-      "content":"",
-      "url":"",
-      "photo":"",
-      "anonymous":false,
-      "publishTime":13123123121,
-      "likes":23,
-      "comments":23,
-      "views":23,
-      "userInfo":{
-        "id":"",
-        "avatar":"",
-        "nickname":""
-      }
-    }]
+    "data":""
 }
 ```
 
