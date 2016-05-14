@@ -1239,6 +1239,7 @@
 |avatar|字符串|新头像|否|http://xxxx.jpg|
 |email|字符串|新邮箱|否|dsdfsldf@test.com|
 |nickname|字符串|昵称|否|abc|
+|city|字符串|城市|否|beijing|
 |gender|字符串|性别,male,female|否|male|
 ####成功返回值
 ```
