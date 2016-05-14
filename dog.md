@@ -1313,6 +1313,8 @@
                 "regDate": "",
                 "avatar": "",
                 "followCount":50,
+                "email":"",//当用户不是本人时,无此字段
+                "city":"",
                 "isFriend":false,//当用户是本人时,无此字段
                 "hasApply":true,//是否已经发过申请,当且仅当对方不是好友,且发过申请时为true
                 "dogs":[{
