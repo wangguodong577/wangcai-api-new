@@ -213,11 +213,7 @@
         {
             "iso": "zh",
             "name": "Beijing, Beijing, China",
-            "country": "China"
-        },
-        {
-            "iso": "zh",
-            "name": "Xicheng,Beijing, Beijing, China",
+            "city": "Beijing",
             "country": "China"
         }
     ]
