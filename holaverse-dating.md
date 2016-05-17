@@ -51,6 +51,17 @@
 }
 ```
 
+###注销登陆
+####接口: /Users/logout
+####请求方式: POST
+####成功返回值
+```
+{
+  "ret": 200,
+  "data": ""
+}
+```
+
 ###更新个人信息
 ####接口:/Users/updateProfile
 ####请求方式:POST
@@ -368,3 +379,45 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
   "data": ""
 }
 ```
+
+###保存筛选条件
+####接口:/Users/saveSearchCondition
+####请求方式:POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+Integer gender, Integer minDistance, Integer maxDistance, Integer minAge, Integer maxAge
+|gender|Integer|性别，1标示男，0标示女，null标示男女不限|否|1|
+|minDistance|Integer|最小距离，单位是米|是|0|
+|maxDistance|Integer|最大距离，单位是米|是|15000|
+|minAge|Integer|最小年龄|是|15|
+|maxAge|Integer|最大年龄|是|25|
+####成功返回值
+```
+{
+  "ret": 200,
+  "data": ""
+}
+```
+
+###获取筛选条件
+####接口:/Users/getSearchCondition
+####请求方式:GET
+####成功返回值 示例
+```
+{
+  "ret": 200,
+  "data": {
+    "id": 1,
+    "userId": 84,
+    "gender": 1,
+    "minDistance": 0,
+    "maxDistance": 150000,
+    "minAge": 15,
+    "maxAge": 25
+  }
+}
+```
+
+
+
