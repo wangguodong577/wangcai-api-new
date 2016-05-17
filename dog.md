@@ -481,19 +481,22 @@
 ```
 {
     "ret": 200,
-    "data": [
-        {
-            "id": "570487b0e4b04562f4232c8e",
-            "thumbnail": "http://img2.enterest.me/crop/test-dogs-img/img/2016/04/91765df50a7b7d9d62f263ec8e6ffde8.JPG_100x100_80.jpg",
-            "regTime": 1459914673000,
-            "status": "NORMAL",
-            "nickname": "kang01",
-            "familyId": "570487b0e4b04562f4232c8f",
-            "code": "",
-            "avatar": "http://img2.enterest.me/test-dogs-img/img/2016/04/91765df50a7b7d9d62f263ec8e6ffde8.JPG",
-            "lastLoginTime": 1460620438099
-        }
-    ]
+    "data": {
+        "total": 100,
+        "users": [
+            {
+                "id": "570487b0e4b04562f4232c8e",
+                "thumbnail": "http://img2.enterest.me/crop/test-dogs-img/img/2016/04/91765df50a7b7d9d62f263ec8e6ffde8.JPG_100x100_80.jpg",
+                "regTime": 1459914673000,
+                "status": "NORMAL",
+                "nickname": "kang01",
+                "familyId": "570487b0e4b04562f4232c8f",
+                "code": "",
+                "avatar": "http://img2.enterest.me/test-dogs-img/img/2016/04/91765df50a7b7d9d62f263ec8e6ffde8.JPG",
+                "lastLoginTime": 1460620438099
+            }
+        ]
+    }
 }
 ```
 
@@ -569,24 +572,29 @@
 ```
 {
     "ret": 200,
-    "data": [{
-    	"id":"",
-    	"userId":"",
-    	"userInfo":{
-    		"id":"",
-    		"avatar":"",
-    		"nickname":""
-    	},
-    	"noteId":"",
-    	"words":"xxxxxxxxxxxxxx",
-    	"replyUserId":"",
-    	"replyUserInfo":{
-    		"id":"",
-    		"avatar":"",
-    		"nickname":""
-    	},
-    	"createTime":111111111111
-    }]
+    "data": {
+        "total": 100,
+        "comment": [
+            {
+                "id": "",
+                "userId": "",
+                "userInfo": {
+                    "id": "",
+                    "avatar": "",
+                    "nickname": ""
+                },
+                "noteId": "",
+                "words": "xxxxxxxxxxxxxx",
+                "replyUserId": "",
+                "replyUserInfo": {
+                    "id": "",
+                    "avatar": "",
+                    "nickname": ""
+                },
+                "createTime": 111111111111
+            }
+        ]
+    }
 }
 ```
 
