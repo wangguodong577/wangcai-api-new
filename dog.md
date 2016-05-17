@@ -371,6 +371,51 @@
 ```
 
 ##动态接口
+###显示关注的狗照片
+####接口:/note/follow
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|maxId|字符串|最大一个id，上一页最后一个的id|否|xxxxxxxxxx|
+|size|数字|大小|否|10|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": [
+        {
+            "id": "568390cfe4b0691b108f792f",
+            "createTime": 1451462856000,
+            "birthday": 0,
+            "breed": "二哈",
+            "breedInfo": "",
+            "lineage": true,
+            "name": "dogName",
+            "familyId": "568390cfe4b0691b108f792e",
+            "gender": 0,
+            "avatar": "http://img1.test.enterest.me/user/avatar/server/66555880-6fab-4870-a8bc-8b1417476594",
+            "creator": "568390c8e4b0691b108f792d",
+            "type": "DOG"
+        },
+        {
+            "id": "56b00a46e4b021083bb2c8e9",
+            "createTime": 1454377543000,
+            "birthday": 8388607,
+            "breed": "maltese",
+            "breedInfo": "",
+            "lineage": false,
+            "name": "ggg",
+            "familyId": "56b00a46e4b021083bb2c8e8",
+            "gender": 0,
+            "avatar": "http://img2.enterest.me/test-dogs-img/img/2016/03/3e52e347cba352e15eaea90e7874e10d.JPG",
+            "creator": "56b00a46e4b021083bb2c8e7",
+            "type": "DOG"
+        }
+    ]
+}
+```
+
 ###发布照片
 ####接口:/note/publish
 ####请求方式:GET/POST
