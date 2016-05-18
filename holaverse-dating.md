@@ -47,6 +47,15 @@
       "avatarPhotoUrl": "https://scontent.xx.fbcdn.net/hphotos-xpt1/t31.0-8/13047851_140139266389014_4113989213930852584_o.jpg",
       "isNew" : false
     },
+    searchCondition:{
+      "id": 1,
+      "userId": 84,
+      "gender": 1,
+      "minDistance": 0,
+      "maxDistance": 150000,
+      "minAge": 15,
+      "maxAge": 25
+  }
   }
 }
 ```
