@@ -3453,5 +3453,6 @@ body中的action指定方法，params中设置参数
 |USER_HAS_IN_DATING|用户已经加入了呼朋引伴|
 |REPEAT_REQUEST|重复请求|
 |WE_ARE_FAMILY|同一个家庭|
-|IN_BLOCK_LIST|用户在黑名单中|
+|IN_BLOCK_LIST|对方已经被我拉黑|
+|BEING_BLOCK|我被对方拉黑了|
 |ALREADY_FRIEND|已经是好友了|
