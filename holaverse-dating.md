@@ -178,11 +178,10 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|gender|0/1/null|男或女，空为全部|否|0|
-|radius|double|搜寻半径，默认为50000，单位为米|否|50000|
 |pn|int|页码|否|默认为1|
+|pageSize|int|每页条数|否|默认为10|
 
-####注意，如果被like或者dislike的用户不会出现在列表中，目前这个限制没有加，性别的限制也暂时没加
+**筛选条件 见 getSearchCondition，如果个人没有设置，默认为：年龄 16-45， 距离： 150千米， 性别：facebook为男，默认为女，facebook为女性，默认为男，如果facebook没有设置性别，默认为1**
 
 **注意refresh参数，如果refresh为true，表明当前列表更新，服务端返回的是列表刷新后的第一页数据，这个时候客户端注意把当前页码设置为1**
 
