@@ -180,6 +180,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 |---|---|---|---|---|
 |pn|int|页码|否|默认为1|
 |pageSize|int|每页条数|否|默认为10|
+|forceRefresh|boolean|强制刷新列表|否|默认为false|
 
 **筛选条件 见 getSearchCondition，如果个人没有设置，默认为：年龄 16-45， 距离： 150千米， 性别：facebook为男，默认为女，facebook为女性，默认为男，如果facebook没有设置性别，默认为1**
 
