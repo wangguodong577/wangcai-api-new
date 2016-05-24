@@ -2800,6 +2800,12 @@
     "ret": 200,
     "data": 
     "total":43,
+    "topicInfo":{
+    	"id":"",
+    	"name":"",
+    	"coverImgUrl":"",
+    	"creator":""
+    },
     "notes":[
         {
             "id": "56c527eee4b0d4e743a592a1",
@@ -2955,6 +2961,86 @@
 }
 ```
 
+
+###获得某个照片详情
+####接口:/note/detail
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|id|字符串|照片id|是|xxxxxxxxxxx|
+####成功返回值
+
+```
+{
+    "ret": 200,
+    "data": 
+        {
+            "id": "56c527eee4b0d4e743a592a1",
+            "userId": "56b00a46e4b021083bb2c8e7",
+            "familyId": "56b00a46e4b021083bb2c8e8",
+            "photoUrl": "http://fanyi.baidu.com/static/i18n/zh/widget/translate/head/logo/logo_16ea8bb7.png",
+            "words": "",
+            "topicId": "",
+	    "hasLocation":true,
+            "lng":23.4353,
+            "lat":54.2323,
+            "likes": 99,
+            "type" : "WALK", //可取值 WALK, PIC
+            
+            "comments": [
+                {
+                    "id": "56c527eee4b0d4e743a592a2",
+                    "noteId": "56c527eee4b0d4e743a592a1",
+                    "userId": "56b00a46e4b021083bb2c8e7",
+                    "words": "I'm a reply...",
+                    "replyUserId": "",
+                    "createTime": 1455761390650,
+                    "author": {
+                        "id": "56b00a46e4b021083bb2c8e7",
+                        "thumbnail": "",
+                        "lastLoginDate": "",
+                        "status": "NORMAL",
+                        "nickname": "Junrui Kang",
+                        "familyId": "56b00a46e4b021083bb2c8e8",
+                        "regDate": "",
+                        "avatar": ""
+                    }
+                }
+            ],
+            "createTime": 1455761390606,
+            "author": {
+                "id": "56b00a46e4b021083bb2c8e7",
+                "thumbnail": "",
+                "lastLoginDate": "",
+                "status": "NORMAL",
+                "nickname": "Junrui Kang",
+                "familyId": "56b00a46e4b021083bb2c8e8",
+                "regDate": "",
+                "avatar": ""
+            },
+            "dogs" : [{
+            	"id":"",
+            	"name":"",
+            	"avatar":"",
+            	"breed":"",
+            	"birthday":"",
+            	"createTime":"",
+            	
+            	//如果是遛的狗，有一下信息
+            	"startTime" : "xxx",
+            	"endTime" : "xxx",
+            	"duration":"",
+            	"distance":"",
+            	"calorie":"",
+            	"exercise" : {
+                        "expect" : 4234,
+                        "actual" : 2323
+                }
+            }]
+        }
+}
+```
 ##标签相关接口
 ###用户最近的tag历史
 ####接口:/tag/history
