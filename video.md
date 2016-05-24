@@ -46,7 +46,7 @@
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|maxId|字符串|视频最大id，上一页最后一条记录点id，为空则从第一条开始|否|xxxx|
+|score|字符串|上一个视频的score，若为空，则从最大的开始|否|12343131564|
 |size|整型|返回条数，默认10|否|10|
 ####成功返回值
 ```
@@ -57,9 +57,15 @@
       "cover":"",
       "name":"",
       "creator":"",
-      "videoCount":54,
+      "sightCount":54,
       "userCount":34,
-      "createTime":23233232
+      "createTime":23233232,
+      "score": 3224234234,
+      "users"[{
+          "id":"",
+          "score":"",
+          "nickname":""
+      }]
     }]
 }
 ```
@@ -90,7 +96,88 @@
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|videos|字符串|{"topicName":"","cover":"","videos":[{"url":"","width":1,"height":3,"title":"xxxxx","cover":"http://xxx.xxx.x/test.cover.jpg"}]}|是|xxxxxxxxxxxxx|
+|videos|字符串|{"topicName":"","cover":"","sights":[{"url":"","title":"xxxxx","cover":"http://xxx.xxx.x/test.cover.jpg"}]}|是|xxxxxxxxxxxxx|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+###某话题下的视频列表
+####接口:/sight/list
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|topicId|字符串|话题id|是|xxxxxxxxxxxxx|
+|maxId|字符串|上一个列表中最后一个视频id|否|xxxxxxxxxxxxx|
+|size|整型|大小|否|32|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":{
+      "topic":{
+        "creatorUserInfo":{
+          "id":"",
+          "avatar":"",
+          "nickname":""
+        },
+        "name":"",
+        "cover":"",
+        "sightCount":32,
+        "userCount":23
+      },
+      "sights":[
+        {
+          "userInfo":{
+            "id":"",
+            "avatar":"",
+            "nickname":""
+          },
+          "hadLike":false,
+          "likes":32,
+          "views":3443,
+          "width":23,
+          "height":234,
+          "url":"http://sdfsdfsadfsdfsd"
+        }
+      ]
+    }
+}
+```
+
+###视频点赞用户列表
+####接口:/sight/likelist
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|id|字符串|视频id|是|xxxxxxxxxxxxx|
+|size|整型|大小|否|32|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":[
+      {
+        "id":"",
+        "avatar":"",
+        "nickname":""
+      }
+    ]
+}
+```
+
+###点赞接口
+####接口:/sight/like
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|id|字符串|视频id|是|xxxxxxxxxxxxx|
+|topicId|字符串|话题id|是|xxxxxxxxxxxxx|
 ####成功返回值
 ```
 {
@@ -99,13 +186,14 @@
 }
 ```
 
-###点赞接口
-####接口:/video/like
+###取消点赞接口
+####接口:/sight/dislike
 ####请求方式:POST/GET
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
 |id|字符串|视频id|是|xxxxxxxxxxxxx|
+|topicId|字符串|话题id|是|xxxxxxxxxxxxx|
 ####成功返回值
 ```
 {
@@ -115,7 +203,7 @@
 ```
 
 ###记录阅读接口
-####接口:/video/view
+####接口:/sight/view
 ####请求方式:POST/GET
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
@@ -130,7 +218,7 @@
 ```
 
 ###举报接口
-####接口:/video/report
+####接口:/sight/report
 ####请求方式:POST/GET
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
@@ -141,6 +229,21 @@
 {
     "ret":200,
     "data":""
+}
+```
+
+###获得主题库随机主题
+####接口:/recommend/topic
+####请求方式:POST/GET
+####接口参数
+无
+####成功返回值
+```
+{
+    "ret":200,
+    "data":{
+      "name":"xxx"
+    }
 }
 ```
 
