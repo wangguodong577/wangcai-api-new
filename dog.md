@@ -3494,3 +3494,4 @@ body中的action指定方法，params中设置参数
 |IN_BLOCK_LIST|对方已经被我拉黑|
 |BEING_BLOCK|我被对方拉黑了|
 |ALREADY_FRIEND|已经是好友了|
+|NOTE_NOT_EXIST|照片不存在活着已被删除|
