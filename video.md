@@ -96,7 +96,7 @@
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|videos|字符串|{"topicName":"","cover":"","sights":[{"url":"","title":"xxxxx","cover":"http://xxx.xxx.x/test.cover.jpg"}]}|是|xxxxxxxxxxxxx|
+|sights|字符串|{"topicName":"","cover":"","sights":[{"url":"","title":"xxxxx","cover":"http://xxx.xxx.x/test.cover.jpg"}]}|是|xxxxxxxxxxxxx|
 ####成功返回值
 ```
 {
