@@ -79,9 +79,6 @@
 |topicId|字符串|话题id|是|xxxxxxxxx|
 |title|字符串|视频标题，预留字段，也许能用得上呢|否|xxxxxxxxx|
 |url|字符串|视频链接|是|http://xxxxxxxxx|
-|cover|字符串|封面图|是|http://xxxxxxxxx|
-|width|整型|高度|是|420|
-|height|整型|高度|是|20|
 ####成功返回值
 ```
 {
@@ -177,7 +174,8 @@
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
 |id|字符串|视频id|是|xxxxxxxxxxxxx|
-|topicId|字符串|话题id|是|xxxxxxxxxxxxx|
+|topicId|字符串|视频所在组点id|是|xxxxxxxxxxxxx|
+|author|字符串|视频作者id|是|xxxxxxxxxxxxx|
 ####成功返回值
 ```
 {
@@ -193,7 +191,8 @@
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
 |id|字符串|视频id|是|xxxxxxxxxxxxx|
-|topicId|字符串|话题id|是|xxxxxxxxxxxxx|
+|topicId|字符串|视频所在组点id|是|xxxxxxxxxxxxx|
+|author|字符串|视频作者id|是|xxxxxxxxxxxxx|
 ####成功返回值
 ```
 {
@@ -209,6 +208,8 @@
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
 |id|字符串|视频id|是|xxxxxxxxxxxxx|
+|topicId|字符串|视频所在组点id|是|xxxxxxxxxxxxx|
+|author|字符串|视频作者id|是|xxxxxxxxxxxxx|
 ####成功返回值
 ```
 {
@@ -224,6 +225,8 @@
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
 |id|字符串|视频id|是|xxxxxxxxxxxxx|
+|topicId|字符串|视频所在组点id|是|xxxxxxxxxxxxx|
+|author|字符串|视频作者id|是|xxxxxxxxxxxxx|
 ####成功返回值
 ```
 {
