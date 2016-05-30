@@ -482,6 +482,8 @@
     "timestamp": 1464577729286,
     "ret": 200,
     "data": {
+        "sightCount": 10,
+        "sightLimit": -1,
         "topic": {
             "id": "57483425e4b04bf232fa612c",
             "name": "hey，你在吃啥？",
