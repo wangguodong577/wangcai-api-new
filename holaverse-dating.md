@@ -400,6 +400,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 |maxDistance|Integer|最大距离，单位是米|是|15000|
 |minAge|Integer|最小年龄|是|15|
 |maxAge|Integer|最大年龄|是|25|
+|sameCollege|Boolean|同一所大学|否|false|
 ####成功返回值
 ```
 {
@@ -422,7 +423,8 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
     "minDistance": 0,
     "maxDistance": 150000,
     "minAge": 15,
-    "maxAge": 25
+    "maxAge": 25,
+    "sameCollege" : null
   }
 }
 ```
