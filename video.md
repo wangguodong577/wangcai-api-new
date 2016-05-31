@@ -806,10 +806,29 @@
 ####成功返回值
 ```
 {
-    "timestamp": 1464577803154,
+    "timestamp": 1464678112085,
     "ret": 200,
     "data": {
-        "name": "What do your shoes look like?"
+        "names": [
+            "Whats outside your window now",
+            "Hey，what are you eating now？",
+            "Show me an awkward smile",
+            "What would you like to tell your ex in 6 secs",
+            "Say hello to the world",
+            "Your laughter",
+            "Lip Sync a Song",
+            "Guess which animal I am by the sound",
+            "Show Me your room now",
+            "Sexiest part of your body",
+            "What would you like to tell the world if you have 6 seconds",
+            "Say Goodnight to the people who are going to sleep",
+            "What do your shoes look like?",
+            "Two second sexy face",
+            "Your Cat",
+            "Tell Someone They ‘re beautiful",
+            "Show me your best moves",
+            "Your Dog"
+        ]
     }
 }
 ```
