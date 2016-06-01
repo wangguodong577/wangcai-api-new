@@ -462,4 +462,48 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 
 ```
 
+###添加个人兴趣标签
+####接口:/Interests/updateUserInterests
+####请求方式:POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|interestCategoryId|Long|目录Id|是|1|
+|interestItemIds[]|Long[]|标签Id列表|否|interestItemIds[]=1&interestItemIds[]=2|
+|interestItemNames[]|String[]|自定义标签名0|否|interestItemNames[]=xxx&interestItemNames=yyy|
 
+**特别注意的是，interestItemIds里面全是预定义标签， interestItemNames是自定义标签。**
+
+####成功返回值 示例
+```
+{
+  "ret": 200,
+  "data": ""
+}
+```
+
+###获取我的兴趣标签
+####接口:/Interests/getMyInterests
+####请求方式:POST
+####成功返回值 示例
+```
+{
+  "ret": 200,
+  "data": [
+    {
+      "id": 1,
+      "name": "运动", //一级目录
+      "items": [ //二级
+        {
+          "id": 2,
+          "name": "足球"
+        },
+        {
+          "id": null, //id为空表示自定义标签
+          "name": "xxx"
+        }
+      ]
+    }
+  ]
+}
+```
