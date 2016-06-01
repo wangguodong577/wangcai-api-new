@@ -120,13 +120,27 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "status": "NORMAL",
         "createTime": 1461725982660
       }
-    ]
+    ],
+    "interests" : [{
+      "id": 1,
+      "name": "运动", //一级目录
+      "items": [ //二级
+        {
+          "id": 2,
+          "name": "足球"
+        },
+        {
+          "id": null, //id为空表示自定义标签
+          "name": "xxx"
+        }
+      ]
+    }]
   }
 }
 ```
 
 ###获取其他人的信息
-####接口:/Users/getProfile
+####接口:/Users/getProfileByUserId
 ####请求方式:GET
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
@@ -201,6 +215,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "lastWorkCompany": "Farmer",
         "likeMe": false,
         "avatar": "http://graph.facebook.com/140156023054005/picture",
+        "mutualInterests" : ["足球", "篮球"],
         "pictures": [
           {
             "id": 10,
@@ -251,6 +266,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
             "createTime": null
           }
         ],
+        "mutualInterests" : ["足球", "篮球"],
         "name": "Zhou Xichao",
         "id": 2,
         "age": null,
