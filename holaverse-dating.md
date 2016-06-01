@@ -429,5 +429,37 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 }
 ```
 
+###获取全部兴趣标签
+####接口:/Interests/getInterests
+####请求方式:GET
+####成功返回值 示例
+```
+{
+  "ret": 200,
+  "data": [
+    {
+      "id": 1,
+      "name": "运动", //一级目录
+      "items": [  //二级目录
+        {
+          "id": 2,
+          "name": "足球",
+          "modelStatus": "NORMAL",
+          "createTime": 1464774603161
+        },
+        {
+          "id": 1,
+          "name": "篮球",
+          "modelStatus": "NORMAL",
+          "createTime": 1464774601500
+        }
+      ],
+      "modelStatus": "NORMAL",
+      "createTime": 1464774425000
+    }
+    //...
+  ]
+
+```
 
 
