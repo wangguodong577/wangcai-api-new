@@ -486,7 +486,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 |---|---|---|---|---|
 |interestCategoryId|Long|目录Id|是|1|
 |interestItemIds[]|Long[]|标签Id列表|否|interestItemIds[]=1&interestItemIds[]=2|
-|interestItemNames[]|String[]|自定义标签名0|否|interestItemNames[]=xxx&interestItemNames=yyy|
+|interestItemNames[]|String[]|自定义标签名0|否|interestItemNames[]=xxx&interestItemNames[]=yyy|
 
 **特别注意的是，interestItemIds里面全是预定义标签， interestItemNames是自定义标签。**
 
