@@ -523,3 +523,17 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
   ]
 }
 ```
+
+###获取配置
+####接口:/Configurations/getConf
+####请求方式:GET
+####成功返回值 示例
+```
+{
+  "ret": 200,
+  "data": {
+    "like_count_limit": 5,   //最多like次数
+    "first_like_interval_limit": 43200 //单位为秒
+  }
+}
+```
