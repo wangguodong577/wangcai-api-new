@@ -61,7 +61,6 @@
 }
 ```
 
-
 ###用户登录
 ####接口:/passport/login
 ####请求方式:POST
@@ -93,6 +92,9 @@
               "avatar" : "",
               "gender" : ""
             ]
+        },
+        "setting":{
+          "playback":0 //视频播放类型，0:3G、4G或wifi；1:只在wifi；2:从不自动播放
         },
         "groups":[{
           "name":"global",
@@ -133,7 +135,26 @@
         "userId":"",
         "nickname":"",
         "avatar":"",
-        "thumbnail":""
+        "thumbnail":"",
+        "family":{
+            "id" : "",
+            "dogs" : [
+              "id" : "",
+              "name" : "",
+              "avatar" : "",
+              "gender" : ""
+            ]
+        },
+        "setting":{
+          "playback":0 //视频播放类型，0:3G、4G或wifi；1:只在wifi；2:从不自动播放
+        },
+        "groups":[{
+          "name":"global",
+          "id":"xxxx"
+        },{
+          "name":"loser",
+          "id":"xxxxx"
+        }]
     }
 }
 ```
@@ -3057,6 +3078,27 @@
         }
 }
 ```
+##设置相关接口
+
+###更改用户设置
+####接口:/setting/modify
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|playback|整型|视频自动播放类型，0:任何网络自动播放；1:仅wifi自动播放；2:从不自动播放|是|1|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":{
+    	"id":"xxxx",
+    	"userId":"xxxxx",
+    	"playback":2
+    }
+}
+```
+
 ##标签相关接口
 ###用户最近的tag历史
 ####接口:/tag/history
