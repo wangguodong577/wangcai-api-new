@@ -116,6 +116,7 @@
 |oauthId|字符串|第三方系统唯一标识|是|165464616546|
 |nickname|字符串|用户昵称,必须唯一|是|张三|
 |type|字符串|账号来源,可选值有fb\email\gg|是|fb|
+|inviteCode|字符串|邀请码，今后的版本必须|是|234234|
 |avatar|字符串|用户头像|是|/avatar/232.png|
 |birthday|字符串|用户生日,格式为yyyy-MM-dd|否|1985-02-14|
 |gender|字符串|第三方系统里的用户性别|否|male|
@@ -158,6 +159,21 @@
     }
 }
 ```
+###邀请码有效性校验
+####接口:/passport/verifyInviteCode
+####请求方式:POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|inviteCode|字符串|邀请码|是|f243fsdf2f|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+
 ###用户邮箱激活
 ####接口:/passport/verify
 ####请求方式:POST
@@ -439,11 +455,13 @@
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|photo|字符串|图片url|是|http://xxxx.xxx.xxx/xxx.jpg|
+|photo|字符串|图片url，若是视频，则传截图的url|是|xxxx.xxx.xxx/xxx.jpg|
+|video|字符串|视频url|否|xxxx.xxx.xxx/xxx.jpg|
 |words|字符串|配文字|否|xxx|
 |topicId|字符串|所属话题|否|asdf2jr2ojflajfjlkajfsdfsaf|
 |mentionUserId|字符串数组|提到的用户,最多5个人|否|asdf2jr2ojflajfjlkajfsdfsaf|
 |mentionDogId|字符串数组|提到的狗,最多5条|否|asdf2jr2ojflajfjlkajfsdfsaf|
+|shootingTime|长整型|照片或者视频的时间戳|否|123232322341|
 |lat|double|维度|否|111.8834140000|
 |lng|double|经度|否|37.2888310000|
 |walkId|字符串|遛狗id|否|xxxxxxxxxxxxxx|
