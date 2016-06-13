@@ -55,7 +55,8 @@
       "maxDistance": 150000,
       "minAge": 15,
       "maxAge": 25
-  }
+  },
+  likeCount: 3
   }
 }
 ```
