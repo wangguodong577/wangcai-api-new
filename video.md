@@ -467,6 +467,105 @@
     "data":""
 }
 ```
+
+###用户参与的话题列表
+####接口:/topic/joinlist
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|userId|字符串|对方的ID|是|asdf2jr2ojflajfjlkajfsdfsaf|
+|maxId|字符串|上一个列表最后一条记录的ID|否|asdf2jr2ojflajfjlkajfsdfsaf|
+|size|整型|要获取的记录数|否|10|
+####成功返回值
+```
+{
+    "timestamp": 1465790355395,
+    "ret": 200,
+    "data": [
+        {
+            "id": "574bbd55e4b0b55e4efb985a",
+            "name": "Guess which animal I am by the sound",
+            "creator": "574ba46be4b00fa654fb35a2",
+            "cover": "http://testvideo.iwifiapi.com/wow-video/video/2016/05/5453e4f8a77188e7917622799b3159af.jpg",
+            "sightCount": 2,
+            "userCount": 1,
+            "createTime": 1464581462000,
+            "status": "PUBLIC"
+        },
+        {
+            "id": "574bbcf1e4b0b55e4efb9857",
+            "name": "Your Dog",
+            "creator": "574ba46be4b00fa654fb35a2",
+            "cover": "http://testvideo.iwifiapi.com/wow-video/video/2016/05/7996d37f0df1c877fe5c17f31999a6d8.jpg",
+            "sightCount": 10,
+            "userCount": 7,
+            "createTime": 1464581362000,
+            "status": "PUBLIC"
+        },
+        {
+            "id": "574bb1fee4b0b55e4efb984b",
+            "name": "Your laughter",
+            "creator": "574ba46be4b00fa654fb35a2",
+            "cover": "http://testvideo.iwifiapi.com/wow-video/video/2016/05/624005dedfaf79d81a43cac03ba84f61.jpg",
+            "sightCount": 2,
+            "userCount": 1,
+            "createTime": 1464578558000,
+            "status": "PUBLIC"
+        }
+    ]
+}
+```
+
+###用户创建的话题列表
+####接口:/topic/createlist
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|userId|字符串|对方的ID|是|asdf2jr2ojflajfjlkajfsdfsaf|
+|maxId|字符串|上一个列表最后一条记录的ID|否|asdf2jr2ojflajfjlkajfsdfsaf|
+|size|整型|要获取的记录数|否|10|
+####成功返回值
+```
+{
+    "timestamp": 1465790355395,
+    "ret": 200,
+    "data": [
+        {
+            "id": "574bbd55e4b0b55e4efb985a",
+            "name": "Guess which animal I am by the sound",
+            "creator": "574ba46be4b00fa654fb35a2",
+            "cover": "http://testvideo.iwifiapi.com/wow-video/video/2016/05/5453e4f8a77188e7917622799b3159af.jpg",
+            "sightCount": 2,
+            "userCount": 1,
+            "createTime": 1464581462000,
+            "status": "PUBLIC"
+        },
+        {
+            "id": "574bbcf1e4b0b55e4efb9857",
+            "name": "Your Dog",
+            "creator": "574ba46be4b00fa654fb35a2",
+            "cover": "http://testvideo.iwifiapi.com/wow-video/video/2016/05/7996d37f0df1c877fe5c17f31999a6d8.jpg",
+            "sightCount": 10,
+            "userCount": 7,
+            "createTime": 1464581362000,
+            "status": "PUBLIC"
+        },
+        {
+            "id": "574bb1fee4b0b55e4efb984b",
+            "name": "Your laughter",
+            "creator": "574ba46be4b00fa654fb35a2",
+            "cover": "http://testvideo.iwifiapi.com/wow-video/video/2016/05/624005dedfaf79d81a43cac03ba84f61.jpg",
+            "sightCount": 2,
+            "userCount": 1,
+            "createTime": 1464578558000,
+            "status": "PUBLIC"
+        }
+    ]
+}
+```
+
 ###某话题下的视频列表
 ####接口:/sight/list
 ####请求方式:POST/GET
@@ -857,6 +956,99 @@
         "avatar":"",
         "thumbnail":""
     }
+}
+```
+###关注
+####接口:/user/follow
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|userId|字符串|对方的ID|是|asdf2jr2ojflajfjlkajfsdfsaf|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+###取消关注
+####接口:/user/unfollow
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|userId|字符串|对方的ID|是|asdf2jr2ojflajfjlkajfsdfsaf|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
+###关注列表
+####接口:/user/followlist
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|userId|字符串|对方的ID|是|asdf2jr2ojflajfjlkajfsdfsaf|
+|maxId|字符串|上一个列表最后一条记录的ID|否|asdf2jr2ojflajfjlkajfsdfsaf|
+|size|整型|要获取的记录数|否|10|
+####成功返回值
+```
+{
+    "ret":200,
+    "data": [
+        {
+            "id": "574ba46be4b00fa654fb35a2",
+            "nickname": "Zhuomian Wang",
+            "avatar": "https://graph.facebook.com/1548236228815896/picture?type=large&cacheTime=1464575088316"
+        },
+        {
+            "id": "574ab77ce4b00fa654fb35a0",
+            "nickname": "Jingyu Zhao",
+            "avatar": "https://graph.facebook.com/1039369769483637/picture?type=large&cacheTime=1464514410406"
+        },
+        {
+            "id": "574832d0e4b04bf232fa6124",
+            "nickname": "Reborn Zms",
+            "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+        }
+    ]
+}
+```
+
+###粉丝列表
+####接口:/user/fanslist
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|userId|字符串|对方的ID|是|asdf2jr2ojflajfjlkajfsdfsaf|
+|maxId|字符串|上一个列表最后一条记录的ID|否|asdf2jr2ojflajfjlkajfsdfsaf|
+|size|整型|要获取的记录数|否|10|
+####成功返回值
+```
+{
+    "ret":200,
+    "data": [
+        {
+            "id": "574ba46be4b00fa654fb35a2",
+            "nickname": "Zhuomian Wang",
+            "avatar": "https://graph.facebook.com/1548236228815896/picture?type=large&cacheTime=1464575088316"
+        },
+        {
+            "id": "574ab77ce4b00fa654fb35a0",
+            "nickname": "Jingyu Zhao",
+            "avatar": "https://graph.facebook.com/1039369769483637/picture?type=large&cacheTime=1464514410406"
+        },
+        {
+            "id": "574832d0e4b04bf232fa6124",
+            "nickname": "Reborn Zms",
+            "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+        }
+    ]
 }
 ```
 
