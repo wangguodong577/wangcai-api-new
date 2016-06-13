@@ -960,6 +960,53 @@
     }
 }
 ```
+###推荐关注用户列表
+####接口:/recommend/user
+####请求方式:POST/GET
+####接口参数
+无
+####成功返回值
+```
+{
+    "timestamp": 1465808666019,
+    "ret": 200,
+    "data": [
+        {
+            "id": "5717203ce4b0af7349ac8336",
+            "status": "NORMAL",
+            "regTime": 1461133373000,
+            "nickname": "臧春晖",
+            "locale": "zh_CN, zh_CN",
+            "gender": "male",
+            "type": 1,
+            "avatar": "https://graph.facebook.com/1598531320467255/picture?type=large&cacheTime=1461133370983",
+            "lastLoginTime": 1465388550000
+        },
+        {
+            "id": "57184784e4b03799b4b2e593",
+            "status": "NORMAL",
+            "regTime": 1461208965000,
+            "nickname": "曹玉玲",
+            "locale": "zh_CN, zh_CN",
+            "gender": "female",
+            "type": 1,
+            "avatar": "https://graph.facebook.com/1329162890443463/picture?type=large&cacheTime=1461208963734",
+            "lastLoginTime": 1464860815000
+        },
+        {
+            "id": "574832d0e4b04bf232fa6124",
+            "status": "NORMAL",
+            "regTime": 1464349393000,
+            "nickname": "Reborn Zms",
+            "locale": "zh_CN, zh_CN",
+            "gender": "male",
+            "type": 1,
+            "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987",
+            "lastLoginTime": 1465391804000
+        }
+    ]
+}
+```
 ###关注
 ####接口:/user/follow
 ####请求方式:POST/GET
