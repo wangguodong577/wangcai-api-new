@@ -173,6 +173,20 @@
     "data":""
 }
 ```
+###邮箱注册前判断是否有邀请
+####接口:/passport/verifyInviteEmail
+####请求方式:POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|email|字符串|待注册的邮箱|是|f243f@sdf.com|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":""
+}
+```
 
 ###用户邮箱激活
 ####接口:/passport/verify
@@ -3658,3 +3672,4 @@ body中的action指定方法，params中设置参数
 |ALREADY_FRIEND|已经是好友了|
 |NOTE_NOT_EXIST|照片不存在活着已被删除|
 |INVALID_INVITE_CODE|无效的验证码|
+|NOT_INVITE|未被邀请|
