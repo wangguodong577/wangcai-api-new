@@ -512,7 +512,8 @@
             "type": 1,
             "avatar": "https://graph.facebook.com/1548236228815896/picture?type=large&cacheTime=1464575088316",
             "fansCount": 0,
-            "followCount": 0
+            "followCount": 0,
+            "sightCount": 1
         }
     }
 }
@@ -562,7 +563,8 @@
             "type": 1,
             "avatar": "https://graph.facebook.com/1548236228815896/picture?type=large&cacheTime=1464575088316",
             "fansCount": 0,
-            "followCount": 0
+            "followCount": 0,
+            "sightCount": 1
         }
     }
 }
@@ -1047,24 +1049,36 @@
 ####成功返回值
 ```
 {
-    "ret":200,
-    "data": [
-        {
-            "id": "574ba46be4b00fa654fb35a2",
-            "nickname": "Zhuomian Wang",
-            "avatar": "https://graph.facebook.com/1548236228815896/picture?type=large&cacheTime=1464575088316"
-        },
-        {
-            "id": "574ab77ce4b00fa654fb35a0",
-            "nickname": "Jingyu Zhao",
-            "avatar": "https://graph.facebook.com/1039369769483637/picture?type=large&cacheTime=1464514410406"
-        },
-        {
-            "id": "574832d0e4b04bf232fa6124",
-            "nickname": "Reborn Zms",
-            "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
-        }
-    ]
+    "ret": 200,
+    "data": {
+        "recommendUserList": [
+            {
+                "id": "574ba46be4b00fa654fb35a2",
+                "nickname": "Zhuomian Wang",
+                "avatar": "https://graph.facebook.com/1548236228815896/picture?type=large&cacheTime=1464575088316"
+            }
+        ],
+        "followList": [
+            {
+                "id": "574ba46be4b00fa654fb35a2",
+                "nickname": "Zhuomian Wang",
+                "hasFollow" : false,
+                "avatar": "https://graph.facebook.com/1548236228815896/picture?type=large&cacheTime=1464575088316"
+            },
+            {
+                "id": "574ab77ce4b00fa654fb35a0",
+                "nickname": "Jingyu Zhao",
+                "hasFollow" : true,
+                "avatar": "https://graph.facebook.com/1039369769483637/picture?type=large&cacheTime=1464514410406"
+            },
+            {
+                "id": "574832d0e4b04bf232fa6124",
+                "nickname": "Reborn Zms",
+                "hasFollow" : true,
+                "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+            }
+        ]
+    }
 }
 ```
 
@@ -1080,24 +1094,29 @@
 ####成功返回值
 ```
 {
-    "ret":200,
-    "data": [
-        {
-            "id": "574ba46be4b00fa654fb35a2",
-            "nickname": "Zhuomian Wang",
-            "avatar": "https://graph.facebook.com/1548236228815896/picture?type=large&cacheTime=1464575088316"
-        },
-        {
-            "id": "574ab77ce4b00fa654fb35a0",
-            "nickname": "Jingyu Zhao",
-            "avatar": "https://graph.facebook.com/1039369769483637/picture?type=large&cacheTime=1464514410406"
-        },
-        {
-            "id": "574832d0e4b04bf232fa6124",
-            "nickname": "Reborn Zms",
-            "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
-        }
-    ]
+    "ret": 200,
+    "data": {
+        "fansList": [
+            {
+                "id": "574ba46be4b00fa654fb35a2",
+                "nickname": "Zhuomian Wang",
+                "hasFollow" : true,
+                "avatar": "https://graph.facebook.com/1548236228815896/picture?type=large&cacheTime=1464575088316"
+            },
+            {
+                "id": "574ab77ce4b00fa654fb35a0",
+                "nickname": "Jingyu Zhao",
+                "hasFollow" : flase,
+                "avatar": "https://graph.facebook.com/1039369769483637/picture?type=large&cacheTime=1464514410406"
+            },
+            {
+                "id": "574832d0e4b04bf232fa6124",
+                "nickname": "Reborn Zms",
+                "hasFollow" : true,
+                "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+            }
+        ]
+    }
 }
 ```
 
