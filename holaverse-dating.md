@@ -3,7 +3,10 @@
 |---|---|---|---|---|
 |token|字符串|用户登录凭证|是(登录、注册接口除外)||
 |tz|字符串|用户所在时区|是|Asia/Shanghai|
+|lang|字符串|系统语言|是|ZH_cn|
+|ver|字符串|版本号|是|2|
 |pf|字符串|客户端平台类型,ios或者android|是|ios|
+
 #接口域名
 ```
   测试:api.test.dating.holalauncher.com 
