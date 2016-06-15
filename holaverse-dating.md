@@ -538,3 +538,26 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
   }
 }
 ```
+
+###反馈
+####接口:/HolaDesks/feedback
+####请求方式:post
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|pf|String|ios/andoid|是|ios|
+|osVer|int|操作系统版本号|是|25|
+|lang|string|语言|是|TH|
+|pid|int|产品id|是|100211|
+|ver|int|产品版本号|是|100211|
+|verName|string|产品版本名|是|1.2.3|
+|model|string|机器型号|否|MZxxx|
+|content|string|反馈内容|是|太烂了太烂了|
+
+####成功返回值 示例
+```
+{
+  "ret": 200,
+  "data": {}
+}
+```
