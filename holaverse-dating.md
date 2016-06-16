@@ -553,7 +553,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 |lang|string|语言|是|TH|
 |pid|int|产品id|是|100211|
 |ver|int|产品版本号|是|100211|
-|mail|string|邮箱地址|是|aa@bb.com|
+|email|string|邮箱地址|是|aa@bb.com|
 |verName|string|产品版本名|是|1.2.3|
 |model|string|机器型号|否|MZxxx|
 |content|string|反馈内容|是|太烂了太烂了|
