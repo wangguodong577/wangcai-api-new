@@ -480,40 +480,61 @@
 ####成功返回值
 ```
 {
-    "timestamp": 1465803591340,
+    "timestamp": 1466066393840,
     "ret": 200,
     "data": {
         "topicList": [
-            {
-                "id": "574bbd55e4b0b55e4efb985a",
-                "name": "Guess which animal I am by the sound",
-                "creator": "574ba46be4b00fa654fb35a2",
-                "cover": "http://testvideo.iwifiapi.com/wow-video/video/2016/05/5453e4f8a77188e7917622799b3159af.jpg",
-                "sightCount": 2,
-                "userCount": 1,
-                "createTime": 1464581462000,
-                "status": "PUBLIC"
-            },
             {
                 "id": "574bbcf1e4b0b55e4efb9857",
                 "name": "Your Dog",
                 "creator": "574ba46be4b00fa654fb35a2",
                 "cover": "http://testvideo.iwifiapi.com/wow-video/video/2016/05/7996d37f0df1c877fe5c17f31999a6d8.jpg",
-                "sightCount": 10,
+                "sightCount": 11,
                 "userCount": 7,
                 "createTime": 1464581362000,
-                "status": "PUBLIC"
+                "status": "PUBLIC",
+                "firstSightIndex": 5,
+                "creatorUserInfo": {
+                    "id": "574ba46be4b00fa654fb35a2",
+                    "nickname": "Zhuomian Wang",
+                    "type": 1,
+                    "avatar": "https://graph.facebook.com/1548236228815896/picture?type=large&cacheTime=1464575088316"
+                },
+                "likeCount": 13
+            },
+            {
+                "id": "57612f18e4b09518b8c8ae1b",
+                "name": "Sit down keep it real",
+                "creator": "1036998860259618816",
+                "cover": "https://v.cdn.vine.co/r/thumbs/19C0FD0CFC1354743015188643840_4eeec09ad41.0.2.967535600775393501.mp4.jpg?versionId=WUEQEgAsL.YjEBOU1TSoIpR.vIyNTxag",
+                "sightCount": 4,
+                "userCount": 2,
+                "createTime": 1465986841000,
+                "status": "PUBLIC",
+                "firstSightIndex": 1,
+                "creatorUserInfo": {
+                    "id": "1036998860259618816",
+                    "nickname": "Christopher",
+                    "type": 0,
+                    "avatar": "https://v.cdn.vine.co/r/avatars/72760D382E1318774421976141824_41956ccba96.0.2.jpg?versionId=wST.HMu0daKjaSJQyPGsOMuP1W9uWJUU"
+                },
+                "likeCount": 1
             }
         ],
         "userInfo": {
-            "id": "574ba46be4b00fa654fb35a2",
-            "nickname": "Zhuomian Wang",
+            "id": "5757e2dfe4b0b336d4f045bf",
+            "status": "NORMAL",
+            "regTime": 1465377504000,
+            "nickname": "王新宇",
+            "locale": "zh_CN",
             "gender": "male",
             "type": 1,
-            "avatar": "https://graph.facebook.com/1548236228815896/picture?type=large&cacheTime=1464575088316",
-            "fansCount": 0,
-            "followCount": 0,
-            "sightCount": 1
+            "avatar": "https://graph.facebook.com/177798332622820/picture?type=large&cacheTime=1465377441545",
+            "lastLoginTime": 1466063773000,
+            "fansCount": 2,
+            "followCount": 1,
+            "sightCount": 25,
+            "hasFollow": false
         }
     }
 }
@@ -531,40 +552,61 @@
 ####成功返回值
 ```
 {
-    "timestamp": 1465803591340,
+    "timestamp": 1466066393840,
     "ret": 200,
     "data": {
         "topicList": [
-            {
-                "id": "574bbd55e4b0b55e4efb985a",
-                "name": "Guess which animal I am by the sound",
-                "creator": "574ba46be4b00fa654fb35a2",
-                "cover": "http://testvideo.iwifiapi.com/wow-video/video/2016/05/5453e4f8a77188e7917622799b3159af.jpg",
-                "sightCount": 2,
-                "userCount": 1,
-                "createTime": 1464581462000,
-                "status": "PUBLIC"
-            },
             {
                 "id": "574bbcf1e4b0b55e4efb9857",
                 "name": "Your Dog",
                 "creator": "574ba46be4b00fa654fb35a2",
                 "cover": "http://testvideo.iwifiapi.com/wow-video/video/2016/05/7996d37f0df1c877fe5c17f31999a6d8.jpg",
-                "sightCount": 10,
+                "sightCount": 11,
                 "userCount": 7,
                 "createTime": 1464581362000,
-                "status": "PUBLIC"
+                "status": "PUBLIC",
+                "firstSightIndex": 5,
+                "creatorUserInfo": {
+                    "id": "574ba46be4b00fa654fb35a2",
+                    "nickname": "Zhuomian Wang",
+                    "type": 1,
+                    "avatar": "https://graph.facebook.com/1548236228815896/picture?type=large&cacheTime=1464575088316"
+                },
+                "likeCount": 13
+            },
+            {
+                "id": "57612f18e4b09518b8c8ae1b",
+                "name": "Sit down keep it real",
+                "creator": "1036998860259618816",
+                "cover": "https://v.cdn.vine.co/r/thumbs/19C0FD0CFC1354743015188643840_4eeec09ad41.0.2.967535600775393501.mp4.jpg?versionId=WUEQEgAsL.YjEBOU1TSoIpR.vIyNTxag",
+                "sightCount": 4,
+                "userCount": 2,
+                "createTime": 1465986841000,
+                "status": "PUBLIC",
+                "firstSightIndex": 1,
+                "creatorUserInfo": {
+                    "id": "1036998860259618816",
+                    "nickname": "Christopher",
+                    "type": 0,
+                    "avatar": "https://v.cdn.vine.co/r/avatars/72760D382E1318774421976141824_41956ccba96.0.2.jpg?versionId=wST.HMu0daKjaSJQyPGsOMuP1W9uWJUU"
+                },
+                "likeCount": 1
             }
         ],
         "userInfo": {
-            "id": "574ba46be4b00fa654fb35a2",
-            "nickname": "Zhuomian Wang",
+            "id": "5757e2dfe4b0b336d4f045bf",
+            "status": "NORMAL",
+            "regTime": 1465377504000,
+            "nickname": "王新宇",
+            "locale": "zh_CN",
             "gender": "male",
             "type": 1,
-            "avatar": "https://graph.facebook.com/1548236228815896/picture?type=large&cacheTime=1464575088316",
-            "fansCount": 0,
-            "followCount": 0,
-            "sightCount": 1
+            "avatar": "https://graph.facebook.com/177798332622820/picture?type=large&cacheTime=1465377441545",
+            "lastLoginTime": 1466063773000,
+            "fansCount": 2,
+            "followCount": 1,
+            "sightCount": 25,
+            "hasFollow": false
         }
     }
 }
