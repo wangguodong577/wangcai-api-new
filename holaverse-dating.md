@@ -59,7 +59,8 @@
       "minAge": 15,
       "maxAge": 25,
       "sameCollege" : false,
-      "invisibleToFriend" : false
+      "invisibleToFriend" : false,
+      "invisibleToAll" : false
     },
     likeCount: 3
   }
@@ -492,6 +493,8 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 |minAge|Integer|最小年龄|是|15|
 |maxAge|Integer|最大年龄|是|25|
 |sameCollege|Boolean|同一所大学|否|false|
+|invisibleToAll|Boolean|隐身模式|否|false|
+|invisibleToFriend|Boolean|对好友屏蔽|否|false|
 ####成功返回值
 ```
 {
@@ -516,7 +519,8 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
     "minAge": 15,
     "maxAge": 25,
     "sameCollege" : false,
-    "invisibleToFriend" : false
+    "invisibleToFriend" : false，
+    "invisibleToAll" : false
   }
 }
 ```
