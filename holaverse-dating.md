@@ -57,9 +57,11 @@
       "minDistance": 0,
       "maxDistance": 150000,
       "minAge": 15,
-      "maxAge": 25
-  },
-  likeCount: 3
+      "maxAge": 25,
+      "sameCollege" : false,
+      "invisibleToFriend" : false
+    },
+    likeCount: 3
   }
 }
 ```
@@ -91,7 +93,29 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 ```
 {
   "ret": 200,
-  "data": ""
+  "data": {
+    "birthday": null,
+    "lastWorkPosition": "Farmer",
+    "lastEducation": "dongbeishi daxue",
+    "name": "Zhou Xichao",
+    "lastSecondEducation": "Weishi high schooi",
+    "lastWorkCompany": "Farmer",
+    "id": 1,
+    "avatar": "http://graph.facebook.com/140156023054005/picture",
+    "introduction": "xxxx",
+    "age": null,
+    "pictures": [
+      {
+        "id": 10,
+        "userId": 1,
+        "url": "http://img3.imgtn.bdimg.com/it/u=777984066,3378417135",
+        "sortNum": 0,
+        "status": "NORMAL",
+        "createTime": 1461725982660
+      }
+    ],
+    "likeCount" : 3
+  }
 }
 ```
 
@@ -125,20 +149,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "createTime": 1461725982660
       }
     ],
-    "interests" : [{
-      "id": 1,
-      "name": "运动", //一级目录
-      "items": [ //二级
-        {
-          "id": 2,
-          "name": "足球"
-        },
-        {
-          "id": null, //id为空表示自定义标签
-          "name": "xxx"
-        }
-      ]
-    }]
+    "likeCount" : 3
   }
 }
 ```
@@ -188,7 +199,45 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 |---|---|---|---|---|
 |facebookId|String|facebookId|是|1|
 
-####成功返回值 同上
+####成功返回值
+```
+{
+  "ret": 200,
+  "data": {
+        "birthday": null,
+        "lastWorkPosition": "Farmer",
+        "distance": 1234,
+        "lastEducation": "dongbeishi daxue",
+        "lastSecondEducation": "Weishi high schooi",
+        "lastWorkCompany": "Farmer",
+        "avatar": "http://graph.facebook.com/140156023054005/picture",
+        "mutualInterests" : ["足球", "篮球"],
+        "mutualFriends" : [{"facebookName" : "xxx", "avatar" : "xxx"}],
+        "pictures": [
+          {
+            "id": 10,
+            "userId": 1,
+            "url": "http://ww4.sinaimg.cn/large/610dc034jw1f2uyg3nvq7j20gy0p6myx.jpg",
+            "sortNum": 0,
+            "status": "NORMAL",
+            "createTime": null
+          },
+          {
+            "id": 11,
+            "userId": 1,
+            "url": "http://ww4.sinaimg.cn/large/7a8aed7bjw1f2tpr3im0mj20f00l6q4o.jpg",
+            "sortNum": 1,
+            "status": "NORMAL",
+            "createTime": null
+          }
+        ],
+        "name": "Zhou Xichao",
+        "id": 1,
+        "age": null,
+        "introduction": "123"
+  }
+}
+```
 
 ###查找附近的人
 ####接口:/Users/findNearbyUsers
@@ -220,6 +269,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "likeMe": false,
         "avatar": "http://graph.facebook.com/140156023054005/picture",
         "mutualInterests" : ["足球", "篮球"],
+        "mutualFriends" : [{"facebookName" : "xxx", "avatar" : "xxx"}],
         "pictures": [
           {
             "id": 10,
@@ -271,6 +321,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
           }
         ],
         "mutualInterests" : ["足球", "篮球"],
+        "mutualFriends" : [{"facebookName" : "xxx", "avatar" : "xxx"}],
         "name": "Zhou Xichao",
         "id": 2,
         "age": null,
@@ -351,20 +402,30 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "lastWorkCompany": "Farmer",
         "likeMe": false,
         "avatar": "http://graph.facebook.com/140156023054005/picture",
-        "name": "Zhou Xichao",
-        "id": 1,
-        "age": null,
-        "introduction": "123",
+        "mutualInterests" : ["足球", "篮球"],
+        "mutualFriends" : [{"facebookName" : "xxx", "avatar" : "xxx"}],
         "pictures": [
           {
             "id": 10,
             "userId": 1,
-            "url": "http://img3.imgtn.bdimg.com/it/u=777984066,3378417135",
+            "url": "http://ww4.sinaimg.cn/large/610dc034jw1f2uyg3nvq7j20gy0p6myx.jpg",
             "sortNum": 0,
             "status": "NORMAL",
-            "createTime": 1461725982660
+            "createTime": null
+          },
+          {
+            "id": 11,
+            "userId": 1,
+            "url": "http://ww4.sinaimg.cn/large/7a8aed7bjw1f2tpr3im0mj20f00l6q4o.jpg",
+            "sortNum": 1,
+            "status": "NORMAL",
+            "createTime": null
           }
-        ]
+        ],
+        "name": "Zhou Xichao",
+        "id": 1,
+        "age": null,
+        "introduction": "123"
       },
       {
         "birthday": null,
@@ -375,20 +436,30 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "lastWorkCompany": "Farmer",
         "likeMe": false,
         "avatar": "http://graph.facebook.com/140156023054005/picture",
+        "pictures": [
+          {
+            "id": 21,
+            "userId": 2,
+            "url": "http://ww4.sinaimg.cn/large/7a8aed7bjw1f2tpr3im0mj20f00l6q4o.jpg",
+            "sortNum": 1,
+            "status": "NORMAL",
+            "createTime": null
+          },
+          {
+            "id": 22,
+            "userId": 2,
+            "url": "http://ww1.sinaimg.cn/large/7a8aed7bjw1f2sm0ns82hj20f00l8tb9.jpg",
+            "sortNum": 2,
+            "status": "NORMAL",
+            "createTime": null
+          }
+        ],
+        "mutualInterests" : ["足球", "篮球"],
+        "mutualFriends" : [{"facebookName" : "xxx", "avatar" : "xxx"}],
         "name": "Zhou Xichao",
         "id": 2,
         "age": null,
-        "introduction": "123",
-        "pictures": [
-          {
-            "id": 10,
-            "userId": 1,
-            "url": "http://img3.imgtn.bdimg.com/it/u=777984066,3378417135",
-            "sortNum": 0,
-            "status": "NORMAL",
-            "createTime": 1461725982660
-          }
-        ]
+        "introduction": "123"
       }
   ]
 }
@@ -444,7 +515,8 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
     "maxDistance": 150000,
     "minAge": 15,
     "maxAge": 25,
-    "sameCollege" : null
+    "sameCollege" : false,
+    "invisibleToFriend" : false
   }
 }
 ```
@@ -464,13 +536,11 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         {
           "id": 2,
           "name": "足球",
-          "modelStatus": "NORMAL",
           "createTime": 1464774603161
         },
         {
           "id": 1,
           "name": "篮球",
-          "modelStatus": "NORMAL",
           "createTime": 1464774601500
         }
       ],
