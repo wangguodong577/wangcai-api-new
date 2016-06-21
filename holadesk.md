@@ -9,6 +9,7 @@
 |ver|整型|客户端当前版本号|是|12|
 |channel|字符串|渠道|是|gp|
 |locale|字符串|客户端国家语言|否|zh_CN|
+|pf|字符串|手机平台，android或者iOS|否|iOS|
 |net|字符串|网络环境，2G、3G、WIFI|否|WIFI|
 ####成功返回值
 ```
