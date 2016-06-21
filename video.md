@@ -977,7 +977,6 @@
     }
 }
 ```
-
 ##用户相关接口
 ###用户登录
 ####接口:/user/login
@@ -988,6 +987,8 @@
 |accessToken|字符串|第三方登录成功凭证|是(type为fb或gg时必须)|asdf2jr2ojflajfjlkajfsdfsaf|
 |oauthId|字符串|第三方系统唯一标识|是(type为fb或gg时必须)|165464616546|
 |type|字符串|第三方账号来源,值为:fb\gg\email|是|fb|
+|email|字符串|邮箱|是|test@ttt.com|
+|password|字符串|加密后的md5，邮箱时必须|是|MFO23JFO2JF203FJJASFJ2J3LFRJ2L3KJ242|
 |nickname|字符串|昵称|是|廖进|
 |avatar|字符串|头像|是|/avatar/232.png|
 |gender|字符串|性别，可选值有male或female|否|male|
@@ -997,6 +998,35 @@
     "ret":200,
     "data":{
         "token":"",
+        "userId":"",
+        "nickname":"",
+        "avatar":"",
+        "id":"",
+        "thumbnail":""
+    }
+}
+```
+
+###用户注册
+####接口:/user/register
+####请求方式:POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|email|字符串|邮箱|是|test@ttt.com|
+|password|字符串|加密后的md5，邮箱时必须|是|MFO23JFO2JF203FJJASFJ2J3LFRJ2L3KJ242|
+|nickname|字符串|昵称|是|廖进|
+|avatar|字符串|头像|是|/avatar/232.png|
+|tz|字符串|用户时区|是|Asia/Shanghai|
+|locale|字符串|客户端语言|是|zh_CN|
+|gender|字符串|性别，可选值有male或female|否|male|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":{
+        "token":"",
+        "id":"",
         "userId":"",
         "nickname":"",
         "avatar":"",
