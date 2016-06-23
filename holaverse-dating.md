@@ -62,7 +62,9 @@
       "invisibleToFriend" : false,
       "invisibleToAll" : false
     },
-    likeCount: 3
+    likeCount: 3,
+    city : "xxx",
+    country: "xxx"
   }
 }
 ```
@@ -525,14 +527,17 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 }
 ```
 
-###获取全部兴趣标签
+###获取兴趣标签
 ####接口:/Interests/getInterests
 ####请求方式:GET
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|interestCategoryId|Long|目录Id|是|1|
 ####成功返回值 示例
 ```
 {
   "ret": 200,
-  "data": [
+  "data": 
     {
       "id": 1,
       "name": "运动", //一级目录
@@ -551,8 +556,6 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
       "modelStatus": "NORMAL",
       "createTime": 1464774425000
     }
-    //...
-  ]
 
 ```
 
