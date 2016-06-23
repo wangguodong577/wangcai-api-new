@@ -152,6 +152,16 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "createTime": 1461725982660
       }
     ],
+    "educations" : [],
+    works": [
+          {
+            "id": 2775,
+            "userId": 86,
+            "locationName": "Beijing, China",
+            "positionName": "Product Management",
+            "employerName": "昆仑万维"
+          }
+    ],
     "likeCount" : 3
   }
 }
@@ -189,6 +199,15 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "status": "NORMAL",
         "createTime": 1461725982660
       }
+    ],
+    works": [
+          {
+            "id": 2775,
+            "userId": 86,
+            "locationName": "Beijing, China",
+            "positionName": "Product Management",
+            "employerName": "昆仑万维"
+          }
     ]
   }
 }
@@ -232,6 +251,15 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
             "sortNum": 1,
             "status": "NORMAL",
             "createTime": null
+          }
+        ],
+        works": [
+          {
+            "id": 2775,
+            "userId": 86,
+            "locationName": "Beijing, China",
+            "positionName": "Product Management",
+            "employerName": "昆仑万维"
           }
         ],
         "name": "Zhou Xichao",
@@ -294,7 +322,16 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "name": "Zhou Xichao",
         "id": 1,
         "age": null,
-        "introduction": "123"
+        "introduction": "123"，
+        works": [
+          {
+            "id": 2775,
+            "userId": 86,
+            "locationName": "Beijing, China",
+            "positionName": "Product Management",
+            "employerName": "昆仑万维"
+          }
+        ]
       },
       {
         "birthday": null,
@@ -328,7 +365,16 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "name": "Zhou Xichao",
         "id": 2,
         "age": null,
-        "introduction": "123"
+        "introduction": "123"，
+        works": [
+          {
+            "id": 2775,
+            "userId": 86,
+            "locationName": "Beijing, China",
+            "positionName": "Product Management",
+            "employerName": "昆仑万维"
+          }
+        ],
       },
     ],
     "refresh": false //如果refresh为true，表明gender+radius的组合筛选结果已经更新
@@ -428,7 +474,16 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "name": "Zhou Xichao",
         "id": 1,
         "age": null,
-        "introduction": "123"
+        "introduction": "123"，
+        works": [
+          {
+            "id": 2775,
+            "userId": 86,
+            "locationName": "Beijing, China",
+            "positionName": "Product Management",
+            "employerName": "昆仑万维"
+          }
+        ],
       },
       {
         "birthday": null,
@@ -462,7 +517,16 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "name": "Zhou Xichao",
         "id": 2,
         "age": null,
-        "introduction": "123"
+        "introduction": "123"，
+        works": [
+          {
+            "id": 2775,
+            "userId": 86,
+            "locationName": "Beijing, China",
+            "positionName": "Product Management",
+            "employerName": "昆仑万维"
+          }
+        ]
       }
   ]
 }
