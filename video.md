@@ -468,6 +468,45 @@
 }
 ```
 
+###话题点赞用户列表
+####接口:/topic/likelist
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|id|字符串|话题ID|是|asdf2jr2ojflajfjlkajfsdfsaf|
+|maxId|字符串|上一个列表最后一条记录的ID|否|asdf2jr2ojflajfjlkajfsdfsaf|
+|size|整型|要获取的记录数|否|10|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": {
+        "list": [
+            {
+                "id": "574ba46be4b00fa654fb35a2",
+                "nickname": "Zhuomian Wang",
+                "hasFollow" : true,
+                "avatar": "https://graph.facebook.com/1548236228815896/picture?type=large&cacheTime=1464575088316"
+            },
+            {
+                "id": "574ab77ce4b00fa654fb35a0",
+                "nickname": "Jingyu Zhao",
+                "hasFollow" : flase,
+                "avatar": "https://graph.facebook.com/1039369769483637/picture?type=large&cacheTime=1464514410406"
+            },
+            {
+                "id": "574832d0e4b04bf232fa6124",
+                "nickname": "Reborn Zms",
+                "hasFollow" : true,
+                "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+            }
+        ],
+        "recommends":[]
+    }
+}
+```
+
 ###用户参与的话题列表
 ####接口:/topic/joinlist
 ####请求方式:POST/GET
