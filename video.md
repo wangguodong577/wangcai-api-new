@@ -1123,14 +1123,14 @@
 {
     "ret": 200,
     "data": {
-        "recommendUserList": [
+        "recommends": [
             {
                 "id": "574ba46be4b00fa654fb35a2",
                 "nickname": "Zhuomian Wang",
                 "avatar": "https://graph.facebook.com/1548236228815896/picture?type=large&cacheTime=1464575088316"
             }
         ],
-        "followList": [
+        "list": [
             {
                 "id": "574ba46be4b00fa654fb35a2",
                 "nickname": "Zhuomian Wang",
@@ -1168,7 +1168,7 @@
 {
     "ret": 200,
     "data": {
-        "fansList": [
+        "list": [
             {
                 "id": "574ba46be4b00fa654fb35a2",
                 "nickname": "Zhuomian Wang",
@@ -1187,7 +1187,8 @@
                 "hasFollow" : true,
                 "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
             }
-        ]
+        ],
+        "recommends":[]
     }
 }
 ```
