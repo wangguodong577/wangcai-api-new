@@ -474,7 +474,7 @@
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|id|字符串|话题ID|是|asdf2jr2ojflajfjlkajfsdfsaf|
+|topicId|字符串|话题ID|是|asdf2jr2ojflajfjlkajfsdfsaf|
 |maxId|字符串|上一个列表最后一条记录的ID|否|asdf2jr2ojflajfjlkajfsdfsaf|
 |size|整型|要获取的记录数|否|10|
 ####成功返回值
