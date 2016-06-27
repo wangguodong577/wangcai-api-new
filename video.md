@@ -1367,6 +1367,8 @@
 |id|字符串|视频id|是|xxxxxxxxxxxxx|
 |topicId|字符串|视频所在组点id|是|xxxxxxxxxxxxx|
 |author|字符串|视频作者id|是|xxxxxxxxxxxxx|
+|type|整型|举报类型|是|1，2，3，4|
+|reason|字符串|举报原因|否|很黄很暴力|
 ####成功返回值
 ```
 {
@@ -1676,3 +1678,4 @@
 |USER_LOGIN_FAIL|用户登录失败|
 |USER_IS_CANCELED|用户被封禁|
 |USER_NOT_EXIST|用户不存在|
+|NOT_ALLOWED|不允许操作|
