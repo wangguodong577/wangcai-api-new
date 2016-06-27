@@ -433,6 +433,399 @@
 }
 ```
 
+###置顶话题列表
+####接口:/topic/hotlist
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|score|字符串|上一个视频的score，若为空，则从0的开始|否|1|
+|size|整型|返回条数，默认10|否|10|
+####成功返回值
+```
+{
+    "timestamp": 1464577677439,
+    "ret": 200,
+    "data": [
+        {
+            "id": "57483425e4b04bf232fa612c",
+            "name": "hey，你在吃啥？",
+            "creator": "574832d0e4b04bf232fa6124",
+            "cover": "http://testvideo.iwifiapi.com/wow-video/video/2016/05/789c7cefb49d2848b98f540aad764461.jpg",
+            "sightCount": 8,
+            "userCount": 3,
+            "createTime": 1464349733000,
+            "likeCount": 7,
+            "score": 1464575305155,
+            "users": [
+                {
+                    "id": "574832d0e4b04bf232fa6124",
+                    "nickname": "Reborn Zms",
+                    "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+                },
+                {
+                    "id": "574832d0e4b04bf232fa6124",
+                    "nickname": "Reborn Zms",
+                    "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+                },
+                {
+                    "id": "572c9636e4b0a39362b519c6",
+                    "nickname": "廖进",
+                    "avatar": "https://graph.facebook.com/1047978161916701/picture?type=large&cacheTime=1462539837960"
+                },
+                {
+                    "id": "574832d0e4b04bf232fa6124",
+                    "nickname": "Reborn Zms",
+                    "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+                },
+                {
+                    "id": "572c9636e4b0a39362b519c6",
+                    "nickname": "廖进",
+                    "avatar": "https://graph.facebook.com/1047978161916701/picture?type=large&cacheTime=1462539837960"
+                },
+                {
+                    "id": "574832d0e4b04bf232fa6124",
+                    "nickname": "Reborn Zms",
+                    "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+                },
+                {
+                    "id": "574832d0e4b04bf232fa6124",
+                    "nickname": "Reborn Zms",
+                    "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+                },
+                {
+                    "id": "5717203ce4b0af7349ac8336",
+                    "nickname": "臧春晖",
+                    "avatar": "https://graph.facebook.com/1598531320467255/picture?type=large&cacheTime=1461133370983"
+                }
+            ]
+        },
+        {
+            "id": "57490133e4b00fa654fb3598",
+            "name": "你的独特笑声 ",
+            "creator": "574832d0e4b04bf232fa6124",
+            "cover": "http://testvideo.iwifiapi.com/wow-video/video/2016/05/63e1bd433b640085ccad1b160bc7484a.jpg",
+            "sightCount": 5,
+            "userCount": 3,
+            "createTime": 1464402227019,
+            "likeCount": 22,
+            "score": 1464575275328,
+            "users": [
+                {
+                    "id": "5717203ce4b0af7349ac8336",
+                    "nickname": "臧春晖",
+                    "avatar": "https://graph.facebook.com/1598531320467255/picture?type=large&cacheTime=1461133370983"
+                },
+                {
+                    "id": "5718470ee4b03799b4b2e592",
+                    "nickname": "Junxu Wang",
+                    "avatar": "https://graph.facebook.com/108211386249243/picture?type=large&cacheTime=1461208850249"
+                },
+                {
+                    "id": "5718470ee4b03799b4b2e592",
+                    "nickname": "Junxu Wang",
+                    "avatar": "https://graph.facebook.com/108211386249243/picture?type=large&cacheTime=1461208850249"
+                },
+                {
+                    "id": "574832d0e4b04bf232fa6124",
+                    "nickname": "Reborn Zms",
+                    "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+                },
+                {
+                    "id": "574832d0e4b04bf232fa6124",
+                    "nickname": "Reborn Zms",
+                    "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+                }
+            ]
+        },
+        {
+            "id": "5748ef9fe4b00fa654fb3594",
+            "name": "你今天穿啥鞋子？",
+            "creator": "572c9636e4b0a39362b519c6",
+            "cover": "http://testvideo.iwifiapi.com/wow-video/video/2016/05/9327cf5df33febe1f8e0356aaba9fcdb.jpg",
+            "sightCount": 2,
+            "userCount": 1,
+            "createTime": 1464397727357,
+            "likeCount": 5,
+            "score": 1464575085151,
+            "users": [
+                {
+                    "id": "572c9636e4b0a39362b519c6",
+                    "nickname": "廖进",
+                    "avatar": "https://graph.facebook.com/1047978161916701/picture?type=large&cacheTime=1462539837960"
+                },
+                {
+                    "id": "572c9636e4b0a39362b519c6",
+                    "nickname": "廖进",
+                    "avatar": "https://graph.facebook.com/1047978161916701/picture?type=large&cacheTime=1462539837960"
+                }
+            ]
+        },
+        {
+            "id": "5749128ee4b00fa654fb359b",
+            "name": "六秒钟，你想对你的前任说什么？",
+            "creator": "574832d0e4b04bf232fa6124",
+            "cover": "",
+            "sightCount": 2,
+            "userCount": 1,
+            "createTime": 1464406670279,
+            "likeCount": 2,
+            "score": 1464514655217,
+            "users": [
+                {
+                    "id": "574832d0e4b04bf232fa6124",
+                    "nickname": "Reborn Zms",
+                    "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+                },
+                {
+                    "id": "574832d0e4b04bf232fa6124",
+                    "nickname": "Reborn Zms",
+                    "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+                }
+            ]
+        },
+        {
+            "id": "57487ce8e4b092318903e0ae",
+            "name": "夜深了，道声晚安。",
+            "creator": "5717203ce4b0af7349ac8336",
+            "cover": "http://testvideo.iwifiapi.com/wow-video/video/2016/05/be26a8be52f941cf048c6da9da9437ca.jpg",
+            "sightCount": 6,
+            "userCount": 4,
+            "createTime": 1464368361000,
+            "likeCount": 11,
+            "score": 1464406880627,
+            "users": [
+                {
+                    "id": "574832d0e4b04bf232fa6124",
+                    "nickname": "Reborn Zms",
+                    "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+                },
+                {
+                    "id": "572c9636e4b0a39362b519c6",
+                    "nickname": "廖进",
+                    "avatar": "https://graph.facebook.com/1047978161916701/picture?type=large&cacheTime=1462539837960"
+                },
+                {
+                    "id": "5718470ee4b03799b4b2e592",
+                    "nickname": "Junxu Wang",
+                    "avatar": "https://graph.facebook.com/108211386249243/picture?type=large&cacheTime=1461208850249"
+                },
+                {
+                    "id": "5717203ce4b0af7349ac8336",
+                    "nickname": "臧春晖",
+                    "avatar": "https://graph.facebook.com/1598531320467255/picture?type=large&cacheTime=1461133370983"
+                },
+                {
+                    "id": "5717203ce4b0af7349ac8336",
+                    "nickname": "臧春晖",
+                    "avatar": "https://graph.facebook.com/1598531320467255/picture?type=large&cacheTime=1461133370983"
+                },
+                {
+                    "id": "572c9636e4b0a39362b519c6",
+                    "nickname": "廖进",
+                    "avatar": "https://graph.facebook.com/1047978161916701/picture?type=large&cacheTime=1462539837960"
+                }
+            ]
+        },
+        {
+            "id": "57485358e4b03ddb60b1e272",
+            "name": "拍一下HOLA所有加班狗的屏幕",
+            "creator": "574832d0e4b04bf232fa6124",
+            "cover": "http://testvideo.iwifiapi.com/wow-video/video/2016/05/b0531d0b9eaa136a9c89d62f6f280586.jpg",
+            "sightCount": 6,
+            "userCount": 3,
+            "createTime": 1464357721000,
+            "likeCount": 5,
+            "score": 1464373116363,
+            "users": [
+                {
+                    "id": "574832d0e4b04bf232fa6124",
+                    "nickname": "Reborn Zms",
+                    "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+                },
+                {
+                    "id": "574832d0e4b04bf232fa6124",
+                    "nickname": "Reborn Zms",
+                    "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+                },
+                {
+                    "id": "572c9636e4b0a39362b519c6",
+                    "nickname": "廖进",
+                    "avatar": "https://graph.facebook.com/1047978161916701/picture?type=large&cacheTime=1462539837960"
+                },
+                {
+                    "id": "572c9636e4b0a39362b519c6",
+                    "nickname": "廖进",
+                    "avatar": "https://graph.facebook.com/1047978161916701/picture?type=large&cacheTime=1462539837960"
+                },
+                {
+                    "id": "5717203ce4b0af7349ac8336",
+                    "nickname": "臧春晖",
+                    "avatar": "https://graph.facebook.com/1598531320467255/picture?type=large&cacheTime=1461133370983"
+                },
+                {
+                    "id": "572c9636e4b0a39362b519c6",
+                    "nickname": "廖进",
+                    "avatar": "https://graph.facebook.com/1047978161916701/picture?type=large&cacheTime=1462539837960"
+                }
+            ]
+        },
+        {
+            "id": "5748720ae4b032c838af5b49",
+            "name": "六秒钟，你想对你的前任说什么？",
+            "creator": "574832d0e4b04bf232fa6124",
+            "cover": "http://testvideo.iwifiapi.com/wow-video/video/2016/05/e2f0090ef0b067bc3136c716e82c4cfc.jpg",
+            "sightCount": 3,
+            "userCount": 2,
+            "createTime": 1464365578000,
+            "likeCount": 3,
+            "score": 1464373061072,
+            "users": [
+                {
+                    "id": "574832d0e4b04bf232fa6124",
+                    "nickname": "Reborn Zms",
+                    "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+                },
+                {
+                    "id": "574832d0e4b04bf232fa6124",
+                    "nickname": "Reborn Zms",
+                    "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+                },
+                {
+                    "id": "572c9636e4b0a39362b519c6",
+                    "nickname": "廖进",
+                    "avatar": "https://graph.facebook.com/1047978161916701/picture?type=large&cacheTime=1462539837960"
+                }
+            ]
+        },
+        {
+            "id": "57483325e4b04bf232fa6128",
+            "name": "如果这六秒钟你说的话，能被全世界看到，你想说什么？",
+            "creator": "574832d0e4b04bf232fa6124",
+            "cover": "http://testvideo.iwifiapi.com/wow-video/video/2016/05/55df35848196e4352afafdef76c66120.jpg",
+            "sightCount": 3,
+            "userCount": 2,
+            "createTime": 1464349477000,
+            "likeCount": 3,
+            "score": 1464369401188,
+            "users": [
+                {
+                    "id": "574832d0e4b04bf232fa6124",
+                    "nickname": "Reborn Zms",
+                    "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+                },
+                {
+                    "id": "574832d0e4b04bf232fa6124",
+                    "nickname": "Reborn Zms",
+                    "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+                },
+                {
+                    "id": "572c9636e4b0a39362b519c6",
+                    "nickname": "廖进",
+                    "avatar": "https://graph.facebook.com/1047978161916701/picture?type=large&cacheTime=1462539837960"
+                }
+            ]
+        },
+        {
+            "id": "574832e5e4b04bf232fa6125",
+            "name": "Hello world",
+            "creator": "574832d0e4b04bf232fa6124",
+            "cover": "http://testvideo.iwifiapi.com/wow-video/video/2016/05/55df35848196e4352afafdef76c66120.jpg",
+            "sightCount": 8,
+            "userCount": 3,
+            "createTime": 1464349414000,
+            "likeCount": 8,
+            "score": 1464369401187,
+            "users": [
+                {
+                    "id": "574832d0e4b04bf232fa6124",
+                    "nickname": "Reborn Zms",
+                    "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+                },
+                {
+                    "id": "574832d0e4b04bf232fa6124",
+                    "nickname": "Reborn Zms",
+                    "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+                },
+                {
+                    "id": "574832d0e4b04bf232fa6124",
+                    "nickname": "Reborn Zms",
+                    "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+                },
+                {
+                    "id": "5717203ce4b0af7349ac8336",
+                    "nickname": "臧春晖",
+                    "avatar": "https://graph.facebook.com/1598531320467255/picture?type=large&cacheTime=1461133370983"
+                },
+                {
+                    "id": "574832d0e4b04bf232fa6124",
+                    "nickname": "Reborn Zms",
+                    "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+                },
+                {
+                    "id": "572c9636e4b0a39362b519c6",
+                    "nickname": "廖进",
+                    "avatar": "https://graph.facebook.com/1047978161916701/picture?type=large&cacheTime=1462539837960"
+                },
+                {
+                    "id": "5717203ce4b0af7349ac8336",
+                    "nickname": "臧春晖",
+                    "avatar": "https://graph.facebook.com/1598531320467255/picture?type=large&cacheTime=1461133370983"
+                },
+                {
+                    "id": "5717203ce4b0af7349ac8336",
+                    "nickname": "臧春晖",
+                    "avatar": "https://graph.facebook.com/1598531320467255/picture?type=large&cacheTime=1461133370983"
+                }
+            ]
+        },
+        {
+            "id": "574844a7e4b04bf232fa612f",
+            "name": "hey，你在吃啥？",
+            "creator": "574832d0e4b04bf232fa6124",
+            "cover": "http://testvideo.iwifiapi.com/wow-video/video/2016/05/789c7cefb49d2848b98f540aad764461.jpg",
+            "sightCount": 6,
+            "userCount": 2,
+            "createTime": 1464353959000,
+            "likeCount": 0,
+            "score": 1464369401183,
+            "users": [
+                {
+                    "id": "574832d0e4b04bf232fa6124",
+                    "nickname": "Reborn Zms",
+                    "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+                },
+                {
+                    "id": "574832d0e4b04bf232fa6124",
+                    "nickname": "Reborn Zms",
+                    "avatar": "https://graph.facebook.com/10208066453953025/picture?type=large&cacheTime=1464349389987"
+                },
+                {
+                    "id": "572c9636e4b0a39362b519c6",
+                    "nickname": "廖进",
+                    "avatar": "https://graph.facebook.com/1047978161916701/picture?type=large&cacheTime=1462539837960"
+                },
+                {
+                    "id": "572c9636e4b0a39362b519c6",
+                    "nickname": "廖进",
+                    "avatar": "https://graph.facebook.com/1047978161916701/picture?type=large&cacheTime=1462539837960"
+                },
+                {
+                    "id": "572c9636e4b0a39362b519c6",
+                    "nickname": "廖进",
+                    "avatar": "https://graph.facebook.com/1047978161916701/picture?type=large&cacheTime=1462539837960"
+                },
+                {
+                    "id": "572c9636e4b0a39362b519c6",
+                    "nickname": "廖进",
+                    "avatar": "https://graph.facebook.com/1047978161916701/picture?type=large&cacheTime=1462539837960"
+                }
+            ]
+        }
+    ]
+}
+```
+
 ###发布视频，参加某个话题
 ####接口:/topic/join
 ####请求方式:POST/GET
