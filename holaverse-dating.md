@@ -298,6 +298,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "lastSecondEducation": "Weishi high schooi",
         "lastWorkCompany": "Farmer",
         "likeMe": false,
+        "superLikeMe": false,
         "avatar": "http://graph.facebook.com/140156023054005/picture",
         "mutualInterests" : ["足球", "篮球"],
         "mutualFriends" : [{"facebookName" : "xxx", "avatar" : "xxx"}],
@@ -341,6 +342,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "lastSecondEducation": "Weishi high schooi",
         "lastWorkCompany": "Farmer",
         "likeMe": false,
+        "superLikeMe": false,
         "avatar": "http://graph.facebook.com/140156023054005/picture",
         "pictures": [
           {
@@ -698,6 +700,22 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 |verName|string|产品版本名|是|1.2.3|
 |model|string|机器型号|否|MZxxx|
 |content|string|反馈内容|是|太烂了太烂了|
+
+####成功返回值 示例
+```
+{
+  "ret": 200,
+  "data": {}
+}
+```
+
+###SUPER LIKE
+####接口:/Users/superLike
+####请求方式:post
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|oppositeId|long|对方ID|是|12|
 
 ####成功返回值 示例
 ```
