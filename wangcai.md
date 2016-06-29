@@ -97,6 +97,21 @@
 }
 ```
 
+###邮箱找回密码接口
+####接口:/passport/forgot/passwd
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|email|字符串|用户的邮箱|是|jimmy.zhang@holaverse.com|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": ""
+}
+```
+
 ###facebook第三方登录接口
 ####接口:/passport/facebook/login
 ####请求方式:POST
@@ -199,6 +214,172 @@
             "width": 320,
             "photoUrl": "http://img2.enterest.me/test-dogs-img/img/2016/05/F1882DA2BF9CC88E1640800266D902EF.webp",
             "type": "pic"
+        }
+    ]
+}
+```
+##明星相关接口
+###推荐明星接口
+####接口:/star/recommend/list
+####请求方式:POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|size|整型|返回明星的个数|否|6|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": [
+        {
+            "id": "57737578e4b061b8c7241d0c",
+            "feeds": [
+                {
+                    "type": "pic",
+                    "photoUrl": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/afbcb4eb566cff03b586d427a91c6eb2.jpeg"
+                },
+                {
+                    "type": "pic",
+                    "photoUrl": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/a5c587ad663b7da55955a3504c3348ee.jpeg"
+                },
+                {
+                    "type": "video",
+                    "photoUrl": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/162e899f92857b675278af3ce5c985ab.jpeg"
+                }
+            ],
+            "email": "",
+            "nickname": "ovmYQ",
+            "facebookId": "",
+            "regDone": true,
+            "type": "star",
+            "avatar": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/5947de73e29c3a2b98a435af41479504.jpeg",
+            "signature": "I'm a big star!!!plz follow me!",
+            "registerTime": 1467184504300
+        },
+        {
+            "id": "57737578e4b061b8c7241d0d",
+            "feeds": [
+                {
+                    "type": "pic",
+                    "photoUrl": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/afbcb4eb566cff03b586d427a91c6eb2.jpeg"
+                },
+                {
+                    "type": "pic",
+                    "photoUrl": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/a5c587ad663b7da55955a3504c3348ee.jpeg"
+                },
+                {
+                    "type": "video",
+                    "photoUrl": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/162e899f92857b675278af3ce5c985ab.jpeg"
+                }
+            ],
+            "email": "",
+            "nickname": "HNgee",
+            "facebookId": "",
+            "regDone": true,
+            "type": "star",
+            "avatar": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/5947de73e29c3a2b98a435af41479504.jpeg",
+            "signature": "I'm a big star!!!plz follow me!",
+            "registerTime": 1467184504300
+        },
+        {
+            "id": "57737578e4b061b8c7241d0e",
+            "feeds": [
+                {
+                    "type": "pic",
+                    "photoUrl": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/afbcb4eb566cff03b586d427a91c6eb2.jpeg"
+                },
+                {
+                    "type": "pic",
+                    "photoUrl": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/a5c587ad663b7da55955a3504c3348ee.jpeg"
+                },
+                {
+                    "type": "video",
+                    "photoUrl": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/162e899f92857b675278af3ce5c985ab.jpeg"
+                }
+            ],
+            "email": "",
+            "nickname": "IdLGb",
+            "facebookId": "",
+            "regDone": true,
+            "type": "star",
+            "avatar": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/5947de73e29c3a2b98a435af41479504.jpeg",
+            "signature": "I'm a big star!!!plz follow me!",
+            "registerTime": 1467184504300
+        },
+        {
+            "id": "57737578e4b061b8c7241d0f",
+            "feeds": [
+                {
+                    "type": "pic",
+                    "photoUrl": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/afbcb4eb566cff03b586d427a91c6eb2.jpeg"
+                },
+                {
+                    "type": "pic",
+                    "photoUrl": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/a5c587ad663b7da55955a3504c3348ee.jpeg"
+                },
+                {
+                    "type": "video",
+                    "photoUrl": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/162e899f92857b675278af3ce5c985ab.jpeg"
+                }
+            ],
+            "email": "",
+            "nickname": "wJpuU",
+            "facebookId": "",
+            "regDone": true,
+            "type": "star",
+            "avatar": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/5947de73e29c3a2b98a435af41479504.jpeg",
+            "signature": "I'm a big star!!!plz follow me!",
+            "registerTime": 1467184504300
+        },
+        {
+            "id": "57737578e4b061b8c7241d10",
+            "feeds": [
+                {
+                    "type": "pic",
+                    "photoUrl": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/afbcb4eb566cff03b586d427a91c6eb2.jpeg"
+                },
+                {
+                    "type": "pic",
+                    "photoUrl": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/a5c587ad663b7da55955a3504c3348ee.jpeg"
+                },
+                {
+                    "type": "video",
+                    "photoUrl": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/162e899f92857b675278af3ce5c985ab.jpeg"
+                }
+            ],
+            "email": "",
+            "nickname": "lnkjQ",
+            "facebookId": "",
+            "regDone": true,
+            "type": "star",
+            "avatar": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/5947de73e29c3a2b98a435af41479504.jpeg",
+            "signature": "I'm a big star!!!plz follow me!",
+            "registerTime": 1467184504300
+        },
+        {
+            "id": "57737578e4b061b8c7241d11",
+            "feeds": [
+                {
+                    "type": "pic",
+                    "photoUrl": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/afbcb4eb566cff03b586d427a91c6eb2.jpeg"
+                },
+                {
+                    "type": "pic",
+                    "photoUrl": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/a5c587ad663b7da55955a3504c3348ee.jpeg"
+                },
+                {
+                    "type": "video",
+                    "photoUrl": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/162e899f92857b675278af3ce5c985ab.jpeg"
+                }
+            ],
+            "email": "",
+            "nickname": "EvjNo",
+            "facebookId": "",
+            "regDone": true,
+            "type": "star",
+            "avatar": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/5947de73e29c3a2b98a435af41479504.jpeg",
+            "signature": "I'm a big star!!!plz follow me!",
+            "registerTime": 1467184504301
         }
     ]
 }
