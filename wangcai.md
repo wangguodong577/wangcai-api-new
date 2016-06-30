@@ -157,6 +157,40 @@
 ```
 
 ##信息流相关接口
+###举报接口
+####接口:/feed/report
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|type|字符串|类型，图片还是视频，可选值有pic，video|是|pic|
+|id|字符串|feed标识|是|sdf1wef1we1fw5e1f6ewf|
+|reportType|字符串|举报类型，可选值有（adOrPornographic，violenceOrIllegal，fraud，copyright，threats，other）|是|other|
+|reason|字符串|举报原因|否|不喜欢这个|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": ""
+}
+```
+
+###删除接口
+####接口:/feed/delete
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|type|字符串|类型，图片还是视频，可选值有pic，video|是|pic|
+|id|字符串|feed标识|是|sdf1wef1we1fw5e1f6ewf|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": ""
+}
+```
+
 ###信息流接口
 ####接口:/feed/list
 ####请求方式:GET/POST
