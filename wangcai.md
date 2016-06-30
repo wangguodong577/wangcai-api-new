@@ -1,10 +1,10 @@
 #通用参数
-|参数名|类型|描述|是否必须|示例|
+|参数名|类型|位置|描述|是否必须|示例|
 |---|---|---|---|---|
-|token|字符串|用户登录凭证|是(登录、注册接口除外)||
-|tz|字符串|用户所在时区|是|Asia/Shanghai|
-|pf|字符串|客户端平台类型,ios或者android|否|iOS|
-|locale|字符串|客户端语言|否|zh_CN|
+|Authorization|字符串|header|用户登录凭证|是(登录、注册接口除外)||
+|tz|字符串|parameter|用户所在时区|是|Asia/Shanghai|
+|pf|字符串|parameter|客户端平台类型,ios或者android|否|iOS|
+|locale|parameter|字符串|客户端语言|否|zh_CN|
 #接口域名
 ```
   测试:api.test.enterest.me
