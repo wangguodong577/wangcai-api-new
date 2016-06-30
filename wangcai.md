@@ -112,6 +112,19 @@
 }
 ```
 
+###退出接口
+####接口:/passport/logout
+####请求方式:POST/GET
+####接口参数
+无
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": ""
+}
+```
+
 ###facebook第三方登录接口
 ####接口:/passport/facebook/login
 ####请求方式:POST
