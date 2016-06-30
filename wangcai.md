@@ -112,6 +112,22 @@
 }
 ```
 
+###修改密码接口
+####接口:/passport/modify/passwd
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|oldPasswd|字符串|老密码，md5后的值|是|xxxxxxxxxxxxxxx|
+|newPasswd|字符串|新密码，md5后的值|是|xxxxxxxxxxxxxxx|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": true
+}
+```
+
 ###退出接口
 ####接口:/passport/logout
 ####请求方式:POST/GET
