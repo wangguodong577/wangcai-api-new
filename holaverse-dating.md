@@ -301,7 +301,6 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "superLikeMe": false,
         "avatar": "http://graph.facebook.com/140156023054005/picture",
         "mutualInterests" : ["足球", "篮球"],
-        "mutualFriends" : [{"facebookName" : "xxx", "avatar" : "xxx"}],
         "pictures": [
           {
             "id": 10,
@@ -363,7 +362,6 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
           }
         ],
         "mutualInterests" : ["足球", "篮球"],
-        "mutualFriends" : [{"facebookName" : "xxx", "avatar" : "xxx"}],
         "name": "Zhou Xichao",
         "id": 2,
         "age": null,
@@ -515,7 +513,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
           }
         ],
         "mutualInterests" : ["足球", "篮球"],
-        "mutualFriends" : [{"facebookName" : "xxx", "avatar" : "xxx"}],
+       
         "name": "Zhou Xichao",
         "id": 2,
         "age": null,
@@ -725,3 +723,24 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 }
 ```
 **错误返回值： 如果13小时候，使用过一次superlike，再次使用，ret 为701**
+
+###获取共同好友
+####接口:/Users/getMutualFriends
+####请求方式:get
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|userId|long|对方ID|是|12|
+
+####成功返回值 示例
+```
+{
+  "ret": 200,
+  "data": [
+    {
+      "facebookName" : "xxx",
+      "avatar" : "xxx"
+    }
+  ]
+}
+```
