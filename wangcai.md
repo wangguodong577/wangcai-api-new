@@ -208,6 +208,31 @@
 ```
 
 ###信息流接口
+####接口:/feed/post
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|type|字符串|类型，pic或者video|是|pic|
+|photoUrl|字符串|类型，pic或者video|是|pic|
+|videoUrl|字符串|类型，pic或者video|是|pic|
+|width|整型|照片宽度|是|150|
+|height|整型|照片高度|是|100|
+|duration|整型|时长，秒级别|否|100|
+|words|字符串|描述|否|顶顶顶顶顶|
+|tag|字符串|首发还是独家，可选值：exclusive，premiere|否|premiere|
+|free|布尔值|是否免费|是|true|
+|price|浮点型|价格|否|10|
+|mute|布尔值|是否静音|否|false|
+|shootingTime|长整型|拍摄时间的毫秒数|否|116464646464|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": true
+}
+```
+
 ####接口:/feed/list
 ####请求方式:GET/POST
 ####接口参数
@@ -477,6 +502,20 @@
 {
     "ret": 200,
     "data": true
+}
+```
+
+##存储相关接口
+###获得s3上传token
+####接口:/aws/store/token
+####请求方式:POST/GET
+####接口参数
+无
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": "h6/jpoWsgKAXRjEtRW6EhAUqiEQg92MhkrBMqMNRhFWSh+2R8qXjm1QwTNuSke3IkucVTBg6zlc5StULR/Zuev3lfzaqwaN0ucwkzOs8/oIG3+aQ3y766GYGs+GkkMs9laoLDJBVmRc+0yi9ula3SM999allw2mCj7ASgk23w5zU/B2fmHrA/MTsoyMD5mGgL4Bq/3GvTi7I1rfOAmfGp2T5rL6+B1xspsQL9aFHG9cNj5Sr9wjLAPwZywDocAXc5zzu0O7Sb7A0teUPi13TJ+LNgK5gdbtnGEhnmlx9kRadGr5NcS46wlyGE0jwWQq3cijBKcghdOPXyw1N3D7qsHoB4EtcWt+fInl8itYAEzDxdfS9kFjfWB7CHDXjXB4SM/u6otcvm2qfIt3k60Pi/0wD01ozPmCeYFTlJdV0p+cam0ynorMDkbK+OMDxjEyoLR7dnkcfudAUoC7xEzXQ+xg3v2gxsJ1tIm6XnGV/J/7XK5awc+fVptNEWRlX7hjaNDL3T9cbNiC9W+xyW6mzLYLcnoEMFBuyQ9huAGI9j8DLn9QahDWWirRY3iAZhKQrpFp57D8qsKrWNMyk7zWyN7MlwILG1mAiIy0DdJB0U+8JQ8iZMoSu8cAzI0wBKnh/z1G2PP11SVjrIel4CNUa9DYTlO6J8ve/xgsLv6Cy9v02taH2lZ7KaGb/KjRYgWJw/k0e7qJdWKJZ3LkdazwhYQXyKyvfH7BAaO7JucylDWyOMNs38M00xXwtV8BDsLWn"
 }
 ```
 
