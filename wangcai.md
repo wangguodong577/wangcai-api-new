@@ -606,6 +606,31 @@
 }
 ```
 
+###获得个人信息
+####接口:/user/profile
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|userId|字符串|要查看的用户id，若为空，返回自己的详情|否|xxxxxxxxxxxxxxx|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": {
+      "id": "xxxxxxxxx",
+      "email": "",
+      "nickname": "EvjNo",
+      "facebookId": "",
+      "regDone": true,
+      "type": "star",
+      "avatar": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/5947de73e29c3a2b98a435af41479504.jpeg",
+      "signature": "I'm a big star!!!plz follow me!",
+      "registerTime": 1467184504301
+    }
+}
+```
+
 ##存储相关接口
 ###获得s3上传token
 ####接口:/aws/store/token
