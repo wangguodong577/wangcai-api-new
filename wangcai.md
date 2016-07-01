@@ -341,6 +341,51 @@
     ]
 }
 ```
+##支付相关接口
+###支付校验充值
+####接口:/pay/verify
+####请求方式:POST/GET
+####接口参数
+参数示意，在body中
+```
+{
+    "receipt-data": "xxx",
+    "sign": "xxxxx",
+    "recharge": [
+        {
+            "userId": "xxx",
+            "transactionId": "xxxxxx"
+        }
+    ]
+}
+```
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": [
+        "xxxxxx1", //订单号
+        "xxxxxx2"
+    ]
+}
+```
+
+###购买付费视频接口
+####接口:/pay/view
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|type|字符串|类型，视频，可选值暂时只有video|是|video|
+|id|字符串|feed标识|是|sdf1wef1we1fw5e1f6ewf|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": true
+}
+```
+
 ##明星相关接口
 ###明星所有的feed列表接口
 ####接口:/star/feed/list
