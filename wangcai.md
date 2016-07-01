@@ -399,6 +399,7 @@
             "balance": 0,
             "nickname": "Jimmy",
             "facebookId": "",
+            "hasFollow": false,
             "regDone": true,
             "code": "",
             "avatar": "",
