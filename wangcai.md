@@ -201,6 +201,31 @@
 ####成功返回值
 返回页面
 
+###feed详情接口
+####接口:/feed/detail
+####请求方式:GET/POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|type|字符串|类型，图片还是视频，可选值有pic，video|是|pic|
+|id|字符串|feed标识|是|sdf1wef1we1fw5e1f6ewf|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": {
+        "id": "5775edc14568298ccd4fcca5",
+        "author": "57738f8ee4b0d14a93c11564",
+        "height": 260,
+        "words": "",
+        "publishTime": 1467346371766,
+        "width": 200,
+        "photoUrl": "http://img2.enterest.me/test-dogs-img/user/avatar/server/dc5b6bd5-6f0d-4824-8dd4-6656e9c9983b",
+        "type": "pic"
+    }
+}
+```
+
 ###删除接口
 ####接口:/feed/delete
 ####请求方式:GET/POST
