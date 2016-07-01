@@ -307,6 +307,72 @@
 }
 ```
 ##明星相关接口
+###明星所有的feed列表接口
+####接口:/star/feed/list
+####请求方式:POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|userId|字符串|明星id|是|xxxxxx|
+|size|整型|返回feed的个数|否|6|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": [
+        {
+            "id": "5775edc14568298ccd4fcca5",
+            "author": "57738f8ee4b0d14a93c11564",
+            "height": 260,
+            "words": "",
+            "publishTime": 1467346371766,
+            "width": 200,
+            "photoUrl": "http://img2.nuzzle.com/test-dogs-img/user/avatar/server/dc5b6bd5-6f0d-4824-8dd4-6656e9c9983b",
+            "type": "pic"
+        }
+    ]
+}
+```
+
+###明星所有首发及独家的feed列表接口
+####接口:/star/feed/tag/list
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|userId|字符串|明星id|是|xxxxxx|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": {
+        "feeds": [
+            {
+                "id": "5775edc14568298ccd4fcca5",
+                "author": "57738f8ee4b0d14a93c11564",
+                "height": 260,
+                "words": "",
+                "publishTime": 1467346371766,
+                "width": 200,
+                "photoUrl": "http://img2.nuzzle.com/test-dogs-img/user/avatar/server/dc5b6bd5-6f0d-4824-8dd4-6656e9c9983b",
+                "type": "pic"
+            }
+        ],
+        "userMap": {
+            "id": "57738f8ee4b0d14a93c11564",
+            "balance": 0,
+            "nickname": "Jimmy",
+            "facebookId": "",
+            "regDone": true,
+            "code": "",
+            "avatar": "",
+            "signature": "",
+            "fansCount": 54
+        }
+    }
+}
+```
+
 ###推荐明星接口
 ####接口:/star/recommend/list
 ####请求方式:POST
