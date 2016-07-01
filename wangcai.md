@@ -385,6 +385,73 @@
     "data": true
 }
 ```
+##收入相关接口
+###收入摘要
+####接口:/income/summary
+####请求方式:POST/GET
+####接口参数
+无
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": {
+      "summary" :{
+        "coins" : 2324,
+        "counts" : 140
+      },
+      "list" : [{
+         "coins" : 323,
+         "counts" : 4,
+         "feed" : {
+            "id" : "",
+            "photoUrl" : "",
+            "type" : "video",
+            "videoUrl" : ""
+         }
+        }]
+    }
+}
+```
+
+###收入明细
+####接口:/income/detail
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|type|字符串|类型，视频，可选值暂时只有video|是|video|
+|id|字符串|feed标识|是|sdf1wef1we1fw5e1f6ewf|
+|maxId|字符串|上一个列表中最后一条记录的id|否|JFOWEJFOIJIJWOFJSF|
+|size|整型|分页大小|否|10|
+####成功返回值
+```
+{
+    "ret": 200,
+    "data": {
+      "summary" :{
+        "coins" : 323,
+        "counts" : 4,
+        "feed" : {
+           "id" : "",
+           "photoUrl" : "",
+           "type" : "video",
+           "videoUrl" : ""
+        }
+      },
+      "list" : [{
+         "id" : "xxxxxx",
+         "payTime" : 1234242387423423,
+         "coins" : 2323,
+         "user" : {
+            "id" : "",
+            "nickname" : "",
+            "avatar" : "video"
+         }
+        }]
+    }
+}
+```
 
 ##明星相关接口
 ###关注明星接口
