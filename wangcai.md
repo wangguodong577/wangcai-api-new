@@ -363,10 +363,13 @@
 ```
 {
     "ret": 200,
-    "data": [
-        "xxxxxx1", //订单号
-        "xxxxxx2"
-    ]
+    "data": {
+      "balance":3000,
+      "transactions": [{
+        "xxxxxx",
+        "xxxxxx"
+      }]
+    }
 }
 ```
 
