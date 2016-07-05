@@ -89,10 +89,9 @@
 |---|---|---|---|---|
 |introduction|字符串|个人简介|否|asdf2jr2ojflajfjlkajfsdfsaf|
 |pictureUrls|字符串|用户图片, 数组形式|否|xxxxxxx|
-|smallAvatar|字符串|个人头像小图|否|xxxxxxx|
 
 ####请求示例
-curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&pictureUrls[]=xxxxxxxx&pictureUrls[]=yyyyyy&smallAvatar=xxxxx"
+curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&pictureUrls[]=xxxxxxxx&pictureUrls[]=yyyyyy"
 
 ####成功返回值
 ```
