@@ -1426,6 +1426,8 @@
 |nickname|字符串|昵称|是|廖进|
 |avatar|字符串|头像|是|/avatar/232.png|
 |gender|字符串|性别，可选值有male或female|否|male|
+|pf|字符串|客户端平台，可选值有android和iOS|否|iOS|
+|pushToken|字符串|推送token|否|JDKLFJLJLFKJDKLJFLJIOIUJFJFJIODEJFOIJFKL|
 ####成功返回值
 ```
 {
@@ -1454,6 +1456,8 @@
 |tz|字符串|用户时区|是|Asia/Shanghai|
 |locale|字符串|客户端语言|是|zh_CN|
 |gender|字符串|性别，可选值有male或female|否|male|
+|pf|字符串|客户端平台，可选值有android和iOS|否|iOS|
+|pushToken|字符串|推送token|否|JDKLFJLJLFKJDKLJFLJIOIUJFJFJIODEJFOIJFKL|
 ####成功返回值
 ```
 {
