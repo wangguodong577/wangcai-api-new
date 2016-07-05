@@ -1690,6 +1690,73 @@
 }
 ```
 
+#推送格式
+##被点赞
+```
+{
+  "data": {
+    "user":{
+      "id":"",
+      "avatar":"",
+      "nickname":""
+    },
+    "sight":{
+      "id":"",
+      "cover":""
+    },
+    "type":"beingLiked"
+  }
+}
+```
+##新增粉丝
+```
+{
+  "data": {
+    "user":{
+      "id":"",
+      "avatar":"",
+      "nickname":""
+    },
+    "type":"beingFollowed"
+  }
+}
+```
+##关注的人有更新
+```
+{
+  "data": {
+    "user":{
+      "id":"",
+      "avatar":"",
+      "nickname":""
+    },
+    "sight":{
+      "id":"",
+      "cover":""
+    },
+    "type":"followingUpdate"
+  }
+}
+```
+##发布的主题有更新
+```
+{
+  "data": {
+    "user":{
+      "id":"",
+      "avatar":"",
+      "nickname":""
+    },
+    "sight":{
+      "id":"",
+      "cover":""
+    },
+    "type":"topicUpdate"
+  }
+}
+```
+
+
 #错误码
 |错误码|含义|
 |---|---|
