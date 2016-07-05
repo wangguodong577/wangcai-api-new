@@ -1468,6 +1468,23 @@
     }
 }
 ```
+
+###更新用户推送token接口
+####接口:/user/update/pushtoken
+####请求方式:POST/GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|pf|字符串|客户端平台，可选值有android和iOS|是|iOS|
+|pushToken|字符串|推送token|是|JDKLFJLJLFKJDKLJFLJIOIUJFJFJIODEJFOIJFKL|
+####成功返回值
+```
+{
+    "ret":200,
+    "data":true
+}
+```
+
 ###推荐关注用户列表
 ####接口:/recommend/user
 ####请求方式:POST/GET
