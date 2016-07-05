@@ -43,6 +43,7 @@
     "lastWorkCompany": "Farmer",
     "id": 1,
     "avatar": "http://graph.facebook.com/140156023054005/picture",
+    "smallAvatar": "xxx",
     "introduction": "xxxx",
     "age": null,
     "token": "1cfe47ceafc6e967d3c8d2c9997e3ddf",
@@ -88,9 +89,10 @@
 |---|---|---|---|---|
 |introduction|字符串|个人简介|否|asdf2jr2ojflajfjlkajfsdfsaf|
 |pictureUrls|字符串|用户图片, 数组形式|否|xxxxxxx|
+|smallAvatar|字符串|个人头像小图|否|xxxxxxx|
 
 ####请求示例
-curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&pictureUrls[]=xxxxxxxx&pictureUrls[]=yyyyyy"
+curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&pictureUrls[]=xxxxxxxx&pictureUrls[]=yyyyyy&smallAvatar=xxxxx"
 
 ####成功返回值
 ```
@@ -105,6 +107,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
     "lastWorkCompany": "Farmer",
     "id": 1,
     "avatar": "http://graph.facebook.com/140156023054005/picture",
+    "smallAvatar": "xxx",
     "introduction": "xxxx",
     "age": null,
     "pictures": [
@@ -140,6 +143,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
     "lastWorkCompany": "Farmer",
     "id": 1,
     "avatar": "http://graph.facebook.com/140156023054005/picture",
+    "smallAvatar": "xxx",
     "introduction": "xxxx",
     "age": null,
     "pictures": [
@@ -188,6 +192,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
     "lastWorkCompany": "Farmer",
     "id": 1,
     "avatar": "http://graph.facebook.com/140156023054005/picture",
+    "smallAvatar": "xxx",
     "introduction": "xxxx",
     "age": null,
     "pictures": [
@@ -233,6 +238,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "lastSecondEducation": "Weishi high schooi",
         "lastWorkCompany": "Farmer",
         "avatar": "http://graph.facebook.com/140156023054005/picture",
+        "smallAvatar": "xxx",
         "mutualInterests" : ["足球", "篮球"],
         "mutualFriends" : [{"facebookName" : "xxx", "avatar" : "xxx"}],
         "pictures": [
@@ -300,6 +306,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "likeMe": false,
         "superLikeMe": false,
         "avatar": "http://graph.facebook.com/140156023054005/picture",
+        "smallAvatar": "xxx",
         "mutualInterests" : ["足球", "篮球"],
         "pictures": [
           {
@@ -343,6 +350,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "likeMe": false,
         "superLikeMe": false,
         "avatar": "http://graph.facebook.com/140156023054005/picture",
+        "smallAvatar": "xxx",
         "pictures": [
           {
             "id": 21,
@@ -451,6 +459,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "lastWorkCompany": "Farmer",
         "likeMe": false,
         "avatar": "http://graph.facebook.com/140156023054005/picture",
+        "smallAvatar": "xxx",
         "mutualInterests" : ["足球", "篮球"],
         "mutualFriends" : [{"facebookName" : "xxx", "avatar" : "xxx"}],
         "pictures": [
@@ -494,6 +503,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
         "lastWorkCompany": "Farmer",
         "likeMe": false,
         "avatar": "http://graph.facebook.com/140156023054005/picture",
+        "smallAvatar": "xxx",
         "pictures": [
           {
             "id": 21,
