@@ -1513,6 +1513,21 @@
 }
 ```
 
+###用户是否有未读消息
+####接口:/user/hasunread
+####请求方式:POST/GET
+####接口参数
+无
+####成功返回值
+```
+{
+    "ret":200,
+    "data":{
+      "hasUnreadMessage":true
+    }
+}
+```
+
 ###推荐关注用户列表
 ####接口:/recommend/user
 ####请求方式:POST/GET
