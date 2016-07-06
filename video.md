@@ -1489,6 +1489,30 @@
 }
 ```
 
+###用户未读消息列表
+####接口:/user/messagebox
+####请求方式:POST/GET
+####接口参数
+无
+####成功返回值
+```
+{
+    "ret":200,
+    "data":[{
+      "type":"beingFollowed",
+      "oppositeUserInfo":{
+        "id":"",
+        "avatar":"",
+        "nickname":""
+      },
+      "sightInfo": {
+        "id":"",
+        "cover":""
+      }
+      }]
+}
+```
+
 ###推荐关注用户列表
 ####接口:/recommend/user
 ####请求方式:POST/GET
