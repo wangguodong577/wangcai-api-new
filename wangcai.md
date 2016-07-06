@@ -166,6 +166,7 @@
         "facebookId": "2112121212121212",
         "regDone": false,
         "type": "nobody",
+        "isFirstTime" : false,
         "avatar": "https://img.facebook.com/user/xxx/avatar.png",
         "registerTime": 1467042462341
     }
