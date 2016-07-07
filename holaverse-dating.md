@@ -563,7 +563,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|gender|Integer|性别，1标示男，0标示女，null标示男女不限|否|1|
+|gender|Integer|性别，1标示男，0标示女，2标示男女不限|否|1|
 |minDistance|Integer|最小距离，单位是米|是|0|
 |maxDistance|Integer|最大距离，单位是米|是|15000|
 |minAge|Integer|最小年龄|是|15|
