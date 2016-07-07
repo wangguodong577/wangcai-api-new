@@ -852,7 +852,24 @@
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|sights|字符串|{"topicName":"","cover":"","sights":[{"url":"","title":"非必填","cover":"http://xxx.xxx.x/test.cover.jpg","height":3323,"width":3232}]}|是|xxxxxxxxxxxxx|
+|sights|字符串|创建话题的数据，详见示例|是|xxxxxxxxxxxxx|
+示例：
+```
+{
+    "topicName": "",
+    "cover": "",
+    "type": 1,
+    "sights": [
+        {
+            "url": "",
+            "title": "xxxxx",
+            "cover": "",
+            "width": 4,
+            "height": 43
+        }
+    ]
+}
+```
 ####成功返回值
 ```
 {
