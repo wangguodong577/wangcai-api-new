@@ -811,3 +811,4 @@
 |PASSWD_NOT_MATCH|密码不匹配|
 |BALANCE_NOT_ENOUGH|余额不足|
 |NOT_ALLOWED|不允许的操作|
+|USER_BOUGHT|已有用户购买|
