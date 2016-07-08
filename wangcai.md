@@ -738,7 +738,17 @@
 ```
 {
     "ret": 200,
-    "data": true
+    "data": {
+      "id": "xxxxxxxxx",
+      "email": "",
+      "nickname": "EvjNo",
+      "facebookId": "",
+      "regDone": true,
+      "type": "star",
+      "avatar": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/5947de73e29c3a2b98a435af41479504.jpeg",
+      "signature": "I'm a big star!!!plz follow me!",
+      "registerTime": 1467184504301
+    }
 }
 ```
 
@@ -754,7 +764,17 @@
 ```
 {
     "ret": 200,
-    "data": true
+    "data": {
+      "id": "xxxxxxxxx",
+      "email": "",
+      "nickname": "EvjNo",
+      "facebookId": "",
+      "regDone": true,
+      "type": "star",
+      "avatar": "http://video.iwifiapi.com/wow-video/cover/480/video/2016/06/5947de73e29c3a2b98a435af41479504.jpeg",
+      "signature": "I'm a big star!!!plz follow me!",
+      "registerTime": 1467184504301
+    }
 }
 ```
 
