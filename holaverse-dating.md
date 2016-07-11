@@ -754,3 +754,23 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
   ]
 }
 ```
+
+
+###举报
+####接口:/HolaDesks/report
+####请求方式:POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|oppositeId|long|对方ID|是|12|
+|reason|string|举报原因|是|涉黄|
+
+####成功返回值 示例
+```
+{
+  "ret": 200,
+  "data": ""
+}
+```
+
+
