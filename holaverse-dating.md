@@ -774,3 +774,40 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 ```
 
 
+###我关注（like）的人的列表
+####接口:/QAs/getFollows
+####请求方式:GET
+####接口参数
+
+####成功返回值 示例
+```
+{
+  "ret": 200,
+  "data": [
+    {
+      "smallAvatar": "https://non-prod-test.s3.amazonaws.com/dating/s/img/avatar/691bd2db1695d3fc2993ef358315bb98.jpg",
+      "questions": [ //问题列表
+        {
+          "id": 2871,
+          "userId": 86,
+          "content": "我帅吗",
+          "createTime": 1468319020419,
+          "answer": { //答案
+            "id": 2867,
+            "userId": 81,
+            "questionId": 2871,
+            "content": "123456",
+            "createTime": 1468319083559
+          }
+        }
+      ],
+      "avatar": "http://graph.facebook.com/1730863817151745/picture",
+      "name": "王凯",
+      "id": 86,
+      "vip": false,
+    }
+  ]
+}
+
+```
+
