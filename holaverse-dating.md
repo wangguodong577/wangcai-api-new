@@ -811,3 +811,49 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 
 ```
 
+###关注我（be liked）的人的列表
+####接口:/QAs/getFollowers
+####请求方式:GET
+####接口参数
+
+####成功返回值  同上
+
+
+###提问
+####接口:/QAs/question
+####请求方式:POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|receivers|array|问题接受人id列表|是|receivers[]=1&receivers[]=2|
+|content|string|问题内容|是|我帅吗?|
+####成功返回值  同上
+
+####成功返回值  同上
+```
+{
+  "ret": 200,
+  "data": ""
+}
+```
+
+###回答
+####接口:/QAs/answer
+####请求方式:POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|questionId|long|问题id||是|123|
+|content|string|答案内容|是|帅|
+####成功返回值  同上
+
+####成功返回值  同上
+```
+{
+  "ret": 200,
+  "data": ""
+}
+```
+
+
+
