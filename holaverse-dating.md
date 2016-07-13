@@ -845,9 +845,8 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 |---|---|---|---|---|
 |questionId|long|问题id||是|123|
 |content|string|答案内容|是|帅|
-####成功返回值  同上
 
-####成功返回值  同上
+####成功返回值 
 ```
 {
   "ret": 200,
@@ -855,5 +854,137 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 }
 ```
 
+
+###回答
+####接口:/QAs/getChats
+####请求方式:GET
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|oppositeId|long|对方id||是|123|
+
+####成功返回值  同上
+```
+// 20160713144842
+// http://localhost:9111/QAs/getChats?token=df91ea2dcac39bb2e29b54ce68cc4a99&oppositeId=86
+
+{
+  "ret": 200,
+  "data": [
+    {
+      "id": 27305,
+      "sessionId": "77_86",
+      "content": "123",
+      "senderId": 86,
+      "receiverId": 77,
+      "type": "TEXT_QUESTION",
+      "createTime": 1468392143720,
+      "sender": {
+        "id": 86,
+        "code": 471652,
+        "email": "starshinewk@gmail.com",
+        "facebookId": "1730863817151745",
+        "name": "王凯",
+        "introduction": "",
+        "avatar": "http://graph.facebook.com/1730863817151745/picture",
+        "smallAvatar": "https://non-prod-test.s3.amazonaws.com/dating/s/img/avatar/691bd2db1695d3fc2993ef358315bb98.jpg",
+        "gender": 1,
+        "birthday": 584150400000,
+        "lastWorkCompany": "Holaverse ",
+        "lastWorkPosition": "",
+        "lastEducation": "华北科技学院（ncist）",
+        "country": "CA",
+        "lastLoginTime": 1468328912681,
+        "fake": false,
+        "isHuman": false,
+        "extras": {
+          "avatarPhotoUrl": "https://scontent.xx.fbcdn.net/t31.0-8/10620257_1536846629886799_4560690116868969691_o.jpg",
+          "isNew": false
+        },
+        "age": 28,
+        "vip": false
+      },
+      "receiver": {
+        "id": 77,
+        "code": 125495,
+        "email": "shixiaolei52@gmail.com",
+        "facebookId": "1199750173369332",
+        "name": "Severus Shi",
+        "introduction": "好vv几句话",
+        "avatar": "http://graph.facebook.com/1199750173369332/picture",
+        "smallAvatar": "https://non-prod-test.s3.amazonaws.com/dating/s/img/avatar/13055497_1195278577149825_4069527621766643353_n.jpg?oh=bb88a5c59dc9bbc11fafca2e9db2b837&oe=580BB2EC",
+        "gender": 1,
+        "birthday": 504316800000,
+        "country": "CA",
+        "lastLoginTime": 1468321647539,
+        "fake": false,
+        "isHuman": true,
+        "extras": {
+          "avatarPhotoUrl": "https://scontent.xx.fbcdn.net/v/t1.0-9/13055497_1195278577149825_4069527621766643353_n.jpg?oh=daa86d81d157108cbb446dc995cbb535&oe=58333FEC",
+          "isNew": false
+        },
+        "age": 30,
+        "vip": false
+      }
+    },
+    {
+      "id": 27306,
+      "sessionId": "77_86",
+      "content": "123",
+      "senderId": 77,
+      "receiverId": 86,
+      "type": "TEXT_ANSWER",
+      "createTime": 1468392248710,
+      "sender": {
+        "id": 77,
+        "code": 125495,
+        "email": "shixiaolei52@gmail.com",
+        "facebookId": "1199750173369332",
+        "name": "Severus Shi",
+        "introduction": "好vv几句话",
+        "avatar": "http://graph.facebook.com/1199750173369332/picture",
+        "smallAvatar": "https://non-prod-test.s3.amazonaws.com/dating/s/img/avatar/13055497_1195278577149825_4069527621766643353_n.jpg?oh=bb88a5c59dc9bbc11fafca2e9db2b837&oe=580BB2EC",
+        "gender": 1,
+        "birthday": 504316800000,
+        "country": "CA",
+        "lastLoginTime": 1468321647539,
+        "fake": false,
+        "isHuman": true,
+        "extras": {
+          "avatarPhotoUrl": "https://scontent.xx.fbcdn.net/v/t1.0-9/13055497_1195278577149825_4069527621766643353_n.jpg?oh=daa86d81d157108cbb446dc995cbb535&oe=58333FEC",
+          "isNew": false
+        },
+        "age": 30,
+        "vip": false
+      },
+      "receiver": {
+        "id": 86,
+        "code": 471652,
+        "email": "starshinewk@gmail.com",
+        "facebookId": "1730863817151745",
+        "name": "王凯",
+        "introduction": "",
+        "avatar": "http://graph.facebook.com/1730863817151745/picture",
+        "smallAvatar": "https://non-prod-test.s3.amazonaws.com/dating/s/img/avatar/691bd2db1695d3fc2993ef358315bb98.jpg",
+        "gender": 1,
+        "birthday": 584150400000,
+        "lastWorkCompany": "Holaverse ",
+        "lastWorkPosition": "",
+        "lastEducation": "华北科技学院（ncist）",
+        "country": "CA",
+        "lastLoginTime": 1468328912681,
+        "fake": false,
+        "isHuman": false,
+        "extras": {
+          "avatarPhotoUrl": "https://scontent.xx.fbcdn.net/t31.0-8/10620257_1536846629886799_4560690116868969691_o.jpg",
+          "isNew": false
+        },
+        "age": 28,
+        "vip": false
+      }
+    }
+  ]
+}
+```
 
 
