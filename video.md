@@ -1437,7 +1437,7 @@
 |---|---|---|---|---|
 |accessToken|字符串|第三方登录成功凭证|是(type为fb或gg时必须)|asdf2jr2ojflajfjlkajfsdfsaf|
 |oauthId|字符串|第三方系统唯一标识|是(type为fb或gg时必须)|165464616546|
-|type|字符串|第三方账号来源,值为:fb\gg\email|是|fb|
+|type|字符串|第三方账号来源,值为:fb\gg\email\nickname|是|fb|
 |email|字符串|邮箱|是|test@ttt.com|
 |password|字符串|加密后的md5，邮箱时必须|是|MFO23JFO2JF203FJJASFJ2J3LFRJ2L3KJ242|
 |nickname|字符串|昵称|是|廖进|
@@ -1466,7 +1466,7 @@
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|email|字符串|邮箱|是|test@ttt.com|
+|email|字符串|邮箱|否|test@ttt.com|
 |password|字符串|加密后的md5，邮箱时必须|是|MFO23JFO2JF203FJJASFJ2J3LFRJ2L3KJ242|
 |nickname|字符串|昵称|是|廖进|
 |avatar|字符串|头像|是|/avatar/232.png|
