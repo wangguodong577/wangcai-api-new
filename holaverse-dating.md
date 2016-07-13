@@ -806,6 +806,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
       "name": "王凯",
       "id": 86,
       "vip": false,
+      "facebookId" : "xxxxxx"
     }
   ]
 }
