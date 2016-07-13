@@ -801,6 +801,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
           }
         }
       ],
+      isNew: true, //表明该记录有更新，要显示小红点
       "avatar": "http://graph.facebook.com/1730863817151745/picture",
       "name": "王凯",
       "id": 86,
@@ -810,6 +811,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 }
 
 ```
+
 
 ###关注我（be liked）的人的列表
 ####接口:/QAs/getFollowers
@@ -855,15 +857,15 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 ```
 
 
-###回答
+###获取会话列表
 ####接口:/QAs/getChats
 ####请求方式:GET
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|oppositeId|long|对方id||是|123|
+|oppositeId|long|对方id|是|123|
 
-####成功返回值  同上
+####成功返回值 
 ```
 // 20160713144842
 // http://localhost:9111/QAs/getChats?token=df91ea2dcac39bb2e29b54ce68cc4a99&oppositeId=86
@@ -988,3 +990,18 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 ```
 
 
+###上报已读时间
+####接口:/QAs/reportLastReadMessage
+####请求方式:POST
+####接口参数
+|参数名|类型|描述|是否必须|示例|
+|---|---|---|---|---|
+|chatId|long|对方id|是|123|
+
+####成功返回值 
+```
+{
+  "ret": 200,
+  "data": ""
+}
+```
