@@ -903,7 +903,7 @@ curl "http://localhost:9111/Users/updateProfile" -d "introduction=xxxxxx&picture
 ####接口参数
 |参数名|类型|描述|是否必须|示例|
 |---|---|---|---|---|
-|chatId|long|对方id|是|123|
+|chatId|long|回话ID|是|123|
 
 ####成功返回值 
 ```
