@@ -1354,6 +1354,24 @@
 ```
 
 #推送格式
+##主题被点赞
+```
+{
+  "data": {
+    "user":{
+      "id":"",
+      "avatar":"",
+      "nickname":""
+    },
+    "topic":{
+      "id":"",
+      "cover":"",
+      "name":""
+    },
+    "type":"topicBeingLiked"
+  }
+}
+```
 ##被点赞
 ```
 {
